@@ -23,6 +23,7 @@
 		79C0E4AC1029A91200A3D584 /* BlogBridge.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 79C0E4AB1029A91200A3D584 /* BlogBridge.sqlite */; };
 		79C0E4F91029ADD200A3D584 /* ArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E4F71029ADD200A3D584 /* ArticleViewController.m */; };
 		79C0E4FA1029ADD200A3D584 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C0E4F81029ADD200A3D584 /* ArticleViewController.xib */; };
+		79C0E5591029C66C00A3D584 /* GuidesTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E5571029C66C00A3D584 /* GuidesTabController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		79C0E4F61029ADD200A3D584 /* ArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleViewController.h; sourceTree = "<group>"; };
 		79C0E4F71029ADD200A3D584 /* ArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleViewController.m; sourceTree = "<group>"; };
 		79C0E4F81029ADD200A3D584 /* ArticleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ArticleViewController.xib; path = Classes/ArticleViewController.xib; sourceTree = "<group>"; };
+		79C0E5561029C66C00A3D584 /* GuidesTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidesTabController.h; sourceTree = "<group>"; };
+		79C0E5571029C66C00A3D584 /* GuidesTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidesTabController.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BlogBridge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BlogBridge-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +163,8 @@
 				28C286E00D94DF7D0034E888 /* GuideViewController.m */,
 				79C0E4F61029ADD200A3D584 /* ArticleViewController.h */,
 				79C0E4F71029ADD200A3D584 /* ArticleViewController.m */,
+				79C0E5561029C66C00A3D584 /* GuidesTabController.h */,
+				79C0E5571029C66C00A3D584 /* GuidesTabController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				79C0E31E1029911C00A3D584 /* Article.m in Sources */,
 				79C0E3CD10299D1900A3D584 /* ArticleCell.m in Sources */,
 				79C0E4F91029ADD200A3D584 /* ArticleViewController.m in Sources */,
+				79C0E5591029C66C00A3D584 /* GuidesTabController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

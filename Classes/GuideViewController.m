@@ -16,9 +16,10 @@
 
 @synthesize fetchedResultsController, managedObjectContext;
 
-- (id)initWithGuide:(Guide *)aGuide {
+- (id)initWithGuide:(Guide *)aGuide andSelectionDelegate:(id)aSelectionDelegate {
 	if (self = [super initWithStyle:UITableViewStylePlain]) {
 		guide = [aGuide retain];
+		selectionDelegate = [aSelectionDelegate retain];
 
 		self.title = guide.name;
 		self.tabBarItem = [[[UITabBarItem alloc] 
@@ -100,18 +101,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
-	ArticleViewController *articleViewController = [[ArticleViewController alloc] initWithArticle:article];
-	
-	[self.navigationController pushViewController:articleViewController animated:YES];
-	[articleViewController release];
-	
-    // Navigation logic may go here -- for example, create and push another view controller.
-	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
-    // NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    // Pass the selected object to the new view controller.
-    /// ...
-	// [self.navigationController pushViewController:anotherViewController animated:YES];
-	// [anotherViewController release];
+	SEL sel = @selector(articleDidSelect:);
+	if (selectionDelegate && [selectionDelegate respondsToSelector:sel]) {
+		[selectionDelegate performSelector:sel withObject:article];
+	}
 }
 
 
@@ -160,6 +153,7 @@
 
 - (void)dealloc {
 	[guide release];
+	[selectionDelegate release];
 	[fetchedResultsController release];
 	[managedObjectContext release];
     [super dealloc];

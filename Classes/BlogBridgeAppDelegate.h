@@ -13,7 +13,7 @@
     NSPersistentStoreCoordinator	*persistentStoreCoordinator;
 
     UIWindow						*window;
-	UITabBarController				*tabBarController;
+	UINavigationController			*navigationController;
 }
 
 - (IBAction)saveAction:sender;
@@ -26,7 +26,6 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-- (NSArray *)loadAndCreateGuideControllers;
 - (void)initDefaultDatabaseIfNeeded;
 
 @end
