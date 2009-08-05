@@ -7,26 +7,26 @@
 //
 
 #import "BlogBridgeAppDelegate.h"
-#import "RootViewController.h"
+#import "GuideViewController.h"
+#import "Guide.h"
 
 
 @implementation BlogBridgeAppDelegate
 
 @synthesize window;
-@synthesize navigationController;
 
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
-    
-    // Override point for customization after app launch    
-
-	RootViewController *rootViewController = (RootViewController *)[navigationController topViewController];
-	rootViewController.managedObjectContext = self.managedObjectContext;
+	// Create tab bar controller
+	tabBarController = [[UITabBarController alloc] init];
 	
-	[window addSubview:[navigationController view]];
+	// Load the list of guides and create controllers for them
+	tabBarController.viewControllers = [self loadAndCreateGuideControllers];
+
+	[window addSubview:tabBarController.view];
     [window makeKeyAndVisible];
 }
 
@@ -116,6 +116,7 @@
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
         // Handle error
+		NSLog(@"%@", error);
     }    
 	
     return persistentStoreCoordinator;
@@ -145,9 +146,48 @@
     [managedObjectModel release];
     [persistentStoreCoordinator release];
     
-	[navigationController release];
+	[tabBarController release];
 	[window release];
 	[super dealloc];
+}
+
+/**
+ * Loads the list of guides and creates the controllers for them.
+ * Controllers don't load their data before they are actually shown, so it's cheap.
+ */
+- (NSArray *)loadAndCreateGuideControllers {
+	NSMutableArray *controllers = [[NSMutableArray alloc] init];
+	UINavigationController *navigrationController;
+	GuideViewController *guideController;
+	
+	// Create the fetch request
+	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity  = [NSEntityDescription entityForName:@"Guide" inManagedObjectContext:self.managedObjectContext];
+	[fetchRequest setEntity:entity];
+	
+	// Edit the sort key as appropriate.
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
+	[fetchRequest setSortDescriptors:sortDescriptors];
+	
+	NSError *error;
+	NSArray *guides = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+	
+	for (Guide *guide in guides) {
+		guideController = [[GuideViewController alloc] initWithGuide:guide];
+		guideController.managedObjectContext = self.managedObjectContext;
+
+		navigrationController = [[UINavigationController alloc] initWithRootViewController:guideController];
+		[controllers addObject:navigrationController];
+		
+		[guideController release];
+		[navigrationController release];
+	}
+	
+	[fetchRequest release];
+	[sortDescriptor release];
+
+	return [controllers autorelease];
 }
 
 

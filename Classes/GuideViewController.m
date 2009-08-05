@@ -1,18 +1,27 @@
 //
-//  RootViewController.m
+//  GuideViewController.m
 //  BlogBridge
 //
 //  Created by Aleksey Gureiev on 8/5/09.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "GuideViewController.h"
+#import "Guide.h"
 
 
-@implementation RootViewController
+@implementation GuideViewController
 
 @synthesize fetchedResultsController, managedObjectContext;
 
+- (id)initWithGuide:(Guide *)aGuide {
+	if (self = [super initWithStyle:UITableViewStylePlain]) {
+		guide = [aGuide retain];
+		self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:guide.name image:[UIImage imageNamed:@"images/002.png"] tag:0] autorelease];
+	}
+	
+	return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,14 +41,13 @@
 
 
 - (void)insertNewObject {
-	
 	// Create a new instance of the entity managed by the fetched results controller.
 	NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
 	NSEntityDescription *entity = [[fetchedResultsController fetchRequest] entity];
 	NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
 	
 	// If appropriate, configure the new managed object.
-	[newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+	[newManagedObject setValue:@"Test" forKey:@"name"];
 	
 	// Save the context.
     NSError *error;
@@ -120,7 +128,7 @@
 
 	NSManagedObject *managedObject = [fetchedResultsController objectAtIndexPath:indexPath];
 
-	cell.textLabel.text = [[managedObject valueForKey:@"timeStamp"] description];
+	cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
 	
     return cell;
 }
@@ -181,28 +189,29 @@
 
 - (NSFetchedResultsController *)fetchedResultsController {
     
-    if (fetchedResultsController != nil) {
-        return fetchedResultsController;
-    }
+    if (fetchedResultsController != nil) return fetchedResultsController;
     
     /*
 	 Set up the fetched results controller.
 	*/
+
 	// Create the fetch request for the entity.
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-	// Edit the entity name as appropriate.
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Event" inManagedObjectContext:managedObjectContext];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Guide" inManagedObjectContext:managedObjectContext];
 	[fetchRequest setEntity:entity];
 	
 	// Edit the sort key as appropriate.
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:YES];
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
 	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
-	
 	[fetchRequest setSortDescriptors:sortDescriptors];
 	
 	// Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-	NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:managedObjectContext sectionNameKeyPath:nil cacheName:@"Root"];
+	NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] 
+															 initWithFetchRequest:fetchRequest 
+															 managedObjectContext:managedObjectContext 
+															 sectionNameKeyPath:nil 
+															 cacheName:@"Root"];
     aFetchedResultsController.delegate = self;
 	self.fetchedResultsController = aFetchedResultsController;
 	
@@ -216,6 +225,7 @@
 
 
 - (void)dealloc {
+	[guide release];
 	[fetchedResultsController release];
 	[managedObjectContext release];
     [super dealloc];
