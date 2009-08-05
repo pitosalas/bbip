@@ -10,6 +10,7 @@
 #import "Guide.h"
 #import "Article.h"
 #import "ArticleCell.h"
+#import "ArticleViewController.h"
 
 @implementation GuideViewController
 
@@ -32,38 +33,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	// Set up the edit and add buttons.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    [addButton release];
-	
 	NSError *error;
 	if (![[self fetchedResultsController] performFetch:&error]) {
-		// Handle the error...
+		// TODO: Handle the error...
 	}
 }
-
-
-- (void)insertNewObject {
-	// Create a new instance of the entity managed by the fetched results controller.
-	NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
-	NSEntityDescription *entity = [[fetchedResultsController fetchRequest] entity];
-	NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-	
-	// If appropriate, configure the new managed object.
-	[newManagedObject setValue:@"Test" forKey:@"name"];
-	
-	// Save the context.
-    NSError *error;
-    if (![context save:&error]) {
-		// Handle the error...
-    }
-
-    [self.tableView reloadData];
-}
-
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -98,6 +72,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[ArticleCell alloc] initWithIdentifier:CellIdentifier] autorelease];
+		cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
 	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
@@ -123,11 +98,13 @@
 	return labelSize.height + detailSize.height;
 }
 
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-	return UITableViewCellAccessoryDisclosureIndicator;
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
+	ArticleViewController *articleViewController = [[ArticleViewController alloc] initWithArticle:article];
+	
+	[self.navigationController pushViewController:articleViewController animated:YES];
+	[articleViewController release];
+	
     // Navigation logic may go here -- for example, create and push another view controller.
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
     // NSManagedObject *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
