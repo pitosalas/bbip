@@ -8,12 +8,12 @@
 
 @interface BlogBridgeAppDelegate : NSObject <UIApplicationDelegate> {
     
-    NSManagedObjectModel *managedObjectModel;
-    NSManagedObjectContext *managedObjectContext;	    
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
+    NSManagedObjectModel			*managedObjectModel;
+    NSManagedObjectContext			*managedObjectContext;	    
+    NSPersistentStoreCoordinator	*persistentStoreCoordinator;
 
-    UIWindow *window;
-	UITabBarController *tabBarController;
+    UIWindow						*window;
+	UITabBarController				*tabBarController;
 }
 
 - (IBAction)saveAction:sender;
@@ -27,6 +27,7 @@
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
 - (NSArray *)loadAndCreateGuideControllers;
+- (void)initDefaultDatabaseIfNeeded;
 
 @end
 

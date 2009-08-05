@@ -10,16 +10,16 @@
 #import "GuideViewController.h"
 #import "Guide.h"
 
-
 @implementation BlogBridgeAppDelegate
 
 @synthesize window;
-
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
+	[self initDefaultDatabaseIfNeeded];
+	
 	// Create tab bar controller
 	tabBarController = [[UITabBarController alloc] init];
 	
@@ -190,6 +190,27 @@
 	return [controllers autorelease];
 }
 
+/**
+ * Creates a writable copy of the default database.
+ */
+- (void)initDefaultDatabaseIfNeeded {
+    // Check if the database exists
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"BlogBridge.sqlite"];
+
+    if (![fileManager fileExistsAtPath:writableDBPath]) {
+		// The writable database does not exist, so copy the default to the appropriate location.
+		NSError *error;
+		NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"BlogBridge.sqlite"];
+		NSLog(@"%@", defaultDBPath);
+		NSLog(@"%@", writableDBPath);
+		if (![fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error]) {
+			NSLog(@"Failed to install default DB: %@", error);
+		};
+	}
+}
 
 @end
 

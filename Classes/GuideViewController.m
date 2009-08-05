@@ -8,7 +8,8 @@
 
 #import "GuideViewController.h"
 #import "Guide.h"
-
+#import "Article.h"
+#import "ArticleCell.h"
 
 @implementation GuideViewController
 
@@ -19,7 +20,10 @@
 		guide = [aGuide retain];
 
 		self.title = guide.name;
-		self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:guide.name image:[UIImage imageNamed:[NSString stringWithFormat:@"images/%@.png", guide.iconName]] tag:0] autorelease];
+		self.tabBarItem = [[[UITabBarItem alloc] 
+							initWithTitle:guide.name 
+							image:[UIImage imageNamed:[NSString stringWithFormat:@"images/%@.png", guide.iconName]] 
+							tag:0] autorelease];
 	}
 	
 	return self;
@@ -118,23 +122,46 @@
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ArticleCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[ArticleCell alloc] initWithIdentifier:CellIdentifier] autorelease];
     }
     
 	// Configure the cell.
 
-	NSManagedObject *managedObject = [fetchedResultsController objectAtIndexPath:indexPath];
+	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
 
-	cell.textLabel.text = [[managedObject valueForKey:@"title"] description];
+	cell.textLabel.text = article.title;
+	cell.detailTextLabel.text  = article.briefBody;
 	
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
+	NSString *cellDetailText = article.briefBody;
+	NSString *cellText = article.title;
+
+	// The width subtracted from the tableView frame depends on:
+	// 40.0 for detail accessory
+	// Width of icon image
+	// Editing width
+	// I don't think you can count on the cell being properly laid out here, so you've
+	// got to hard code it based on the state of the table.
+	int frameWidth = tableView.frame.size.width;
+	NSLog(@"Frame=%d", frameWidth);
+	CGSize constraintSize = CGSizeMake(tableView.frame.size.width - 40.0, CGFLOAT_MAX);
+	CGSize labelSize      = [cellText       sizeWithFont: [UIFont systemFontOfSize:20.0] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	CGSize detailSize     = [cellDetailText sizeWithFont: [UIFont systemFontOfSize:14.0] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	
+	return labelSize.height + detailSize.height + 12;
+}
+
+- (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
+	return UITableViewCellAccessoryDisclosureIndicator;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here -- for example, create and push another view controller.

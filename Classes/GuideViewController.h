@@ -6,7 +6,7 @@
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
-@class Guide;
+@class Guide, CellsOwner;
 
 @interface GuideViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
 	NSFetchedResultsController	*fetchedResultsController;
