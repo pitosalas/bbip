@@ -65,35 +65,6 @@
 }
 
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-}
-*/
-/*
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-*/
-/*
-- (void)viewWillDisappear:(BOOL)animated {
-	[super viewWillDisappear:animated];
-}
-*/
-/*
-- (void)viewDidDisappear:(BOOL)animated {
-	[super viewDidDisappear:animated];
-}
-*/
-
-/*
- // Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Return YES for supported orientations.
-	return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
- */
-
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -129,12 +100,11 @@
         cell = [[[ArticleCell alloc] initWithIdentifier:CellIdentifier] autorelease];
     }
     
-	// Configure the cell.
-
 	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
 
-	cell.textLabel.text = article.title;
-	cell.detailTextLabel.text  = article.briefBody;
+	// Configure the cell
+	cell.textLabel.text			= article.title;
+	cell.detailTextLabel.text	= article.briefBody;
 	
     return cell;
 }
@@ -146,17 +116,11 @@
 
 	// The width subtracted from the tableView frame depends on:
 	// 40.0 for detail accessory
-	// Width of icon image
-	// Editing width
-	// I don't think you can count on the cell being properly laid out here, so you've
-	// got to hard code it based on the state of the table.
-	int frameWidth = tableView.frame.size.width;
-	NSLog(@"Frame=%d", frameWidth);
 	CGSize constraintSize = CGSizeMake(tableView.frame.size.width - 40.0, CGFLOAT_MAX);
-	CGSize labelSize      = [cellText       sizeWithFont: [UIFont systemFontOfSize:20.0] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
-	CGSize detailSize     = [cellDetailText sizeWithFont: [UIFont systemFontOfSize:14.0] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	CGSize labelSize      = [cellText       sizeWithFont: [UIFont boldSystemFontOfSize:ARTICLE_CELL_TEXTLABEL_FONT_SIZE] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	CGSize detailSize     = [cellDetailText sizeWithFont: [UIFont systemFontOfSize:ARTICLE_CELL_DETAILTEXTLABEL_FONT_SIZE] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
 	
-	return labelSize.height + detailSize.height + 12;
+	return labelSize.height + detailSize.height;
 }
 
 - (UITableViewCellAccessoryType)tableView:(UITableView *)tableView accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
@@ -174,39 +138,10 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the managed object for the given index path
-		NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
-		[context deleteObject:[fetchedResultsController objectAtIndexPath:indexPath]];
-		
-		// Save the context.
-		NSError *error;
-		if (![context save:&error]) {
-			// Handle the error...
-		}
-		
-		[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-}
-
-
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // The table view should not be re-orderable.
     return NO;
 }
-
 
 /*
 // NSFetchedResultsControllerDelegate method to notify the delegate that all section and object changes have been processed. 
@@ -215,15 +150,9 @@
 }
 */
 
-
 - (NSFetchedResultsController *)fetchedResultsController {
-    
     if (fetchedResultsController != nil) return fetchedResultsController;
     
-    /*
-	 Set up the fetched results controller.
-	*/
-
 	// Create the fetch request for the entity.
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Article" inManagedObjectContext:managedObjectContext];
@@ -236,8 +165,6 @@
 	
 	[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"ANY feed.guides == %@", guide]];
 	
-	// Edit the section name key path and cache name if appropriate.
-    // nil for section name key path means "no sections".
 	NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] 
 															 initWithFetchRequest:fetchRequest 
 															 managedObjectContext:managedObjectContext 
@@ -253,7 +180,6 @@
 	
 	return fetchedResultsController;
 }    
-
 
 - (void)dealloc {
 	[guide release];

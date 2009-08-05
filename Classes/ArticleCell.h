@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+extern float const ARTICLE_CELL_TEXTLABEL_FONT_SIZE;
+extern float const ARTICLE_CELL_DETAILTEXTLABEL_FONT_SIZE;
 
 @interface ArticleCell : UITableViewCell {
 }
