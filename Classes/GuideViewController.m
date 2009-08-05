@@ -17,7 +17,9 @@
 - (id)initWithGuide:(Guide *)aGuide {
 	if (self = [super initWithStyle:UITableViewStylePlain]) {
 		guide = [aGuide retain];
-		self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:guide.name image:[UIImage imageNamed:@"images/002.png"] tag:0] autorelease];
+
+		self.title = guide.name;
+		self.tabBarItem = [[[UITabBarItem alloc] initWithTitle:guide.name image:[UIImage imageNamed:[NSString stringWithFormat:@"images/%@.png", guide.iconName]] tag:0] autorelease];
 	}
 	
 	return self;
@@ -128,7 +130,7 @@
 
 	NSManagedObject *managedObject = [fetchedResultsController objectAtIndexPath:indexPath];
 
-	cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
+	cell.textLabel.text = [[managedObject valueForKey:@"title"] description];
 	
     return cell;
 }
@@ -197,13 +199,15 @@
 
 	// Create the fetch request for the entity.
 	NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Guide" inManagedObjectContext:managedObjectContext];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Article" inManagedObjectContext:managedObjectContext];
 	[fetchRequest setEntity:entity];
 	
 	// Edit the sort key as appropriate.
-	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"pubDate" ascending:NO];
 	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
 	[fetchRequest setSortDescriptors:sortDescriptors];
+	
+	[fetchRequest setPredicate:[NSPredicate predicateWithFormat:@"ANY feed.guides == %@", guide]];
 	
 	// Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
@@ -211,7 +215,7 @@
 															 initWithFetchRequest:fetchRequest 
 															 managedObjectContext:managedObjectContext 
 															 sectionNameKeyPath:nil 
-															 cacheName:@"Root"];
+															 cacheName:@"GuideArticles"];
     aFetchedResultsController.delegate = self;
 	self.fetchedResultsController = aFetchedResultsController;
 	
