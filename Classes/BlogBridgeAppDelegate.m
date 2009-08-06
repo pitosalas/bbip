@@ -19,13 +19,20 @@
 #pragma mark Application lifecycle
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
+	NSDate *hideSplashScreenAfter = [NSDate dateWithTimeIntervalSinceNow:2];
+	
 	[self initDefaultDatabaseIfNeeded];
 	
 	// Create tab bar controller
 	tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
 
 	[window addSubview:tabBarController.view];
-    [window makeKeyAndVisible];
+
+	// Wait a couple of seconds for the splash screen
+	[NSThread sleepUntilDate:hideSplashScreenAfter];
+	
+	[[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES]; 
+	[window makeKeyAndVisible];
 }
 
 /**
