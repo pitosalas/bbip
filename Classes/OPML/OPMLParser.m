@@ -16,6 +16,7 @@ static NSString *ATTR_TEXT			= @"text";
 static NSString *ATTR_XML_URL		= @"xmlUrl";
 static NSString *ATTR_HTML_URL		= @"htmlUrl";
 static NSString *ATTR_READ_KEYS		= @"bb:readArticles";
+static NSString *ATTR_ICON			= @"bb:icon";
 
 @implementation OPMLParser
 
@@ -28,8 +29,18 @@ static NSString *ATTR_READ_KEYS		= @"bb:readArticles";
  * Returns the list of OPMLGuide objects.
  */
 - (NSArray *)parseURL:(NSURL *)url {
-	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-	
+	return [self parse:[[NSXMLParser alloc] initWithContentsOfURL:url]];
+}
+
+/**
+ * Returns the list of OPMLGuide objects.
+ */
+- (NSArray *)parseString:(NSString *)opml {
+	return [self parse:[[NSXMLParser alloc] initWithData:[opml dataUsingEncoding:NSUTF8StringEncoding]]];
+}
+
+- (NSArray *)parse:(NSXMLParser *)parser {
+	[parser setShouldProcessNamespaces:YES];
 	[parser setDelegate:self];
 	[parser parse];
 	
@@ -62,9 +73,13 @@ static NSString *ATTR_READ_KEYS		= @"bb:readArticles";
 	if ([qualifiedName isEqual:ELEMENT_OUTLINE]) {
 		NSString *type = [attributeDict valueForKey:ATTR_TYPE];
 		if ([type isEqual:@"rss"]) {
-			[self parseFeed:attributeDict];
+			if (currentGuide != nil) {
+				OPMLFeed *feed = [self parseFeed:attributeDict];
+				if (feed != nil) [currentGuide addFeed:feed];
+			}
 		} else {
-			[self parseGuide:attributeDict];
+			currentGuide = [self parseGuide:attributeDict];
+			if (currentGuide != nil) [guides addObject:currentGuide];
 		}
 	}
 }
@@ -72,21 +87,21 @@ static NSString *ATTR_READ_KEYS		= @"bb:readArticles";
 /**
  * Parses feed attributes.
  */
-- (void)parseFeed:(NSDictionary *)attributeDict {
-	if (currentGuide == nil) return;
-	
+- (OPMLFeed *)parseFeed:(NSDictionary *)attributeDict {
 	OPMLFeed *feed = [[OPMLFeed alloc] initWithTitle:[attributeDict valueForKey:ATTR_TEXT]
 											  xmlURL:[attributeDict valueForKey:ATTR_XML_URL]
 											 htmlURL:[attributeDict valueForKey:ATTR_HTML_URL]
 									 readArticleKeys:[self parseReadKeys:attributeDict]];
-	[currentGuide addFeed:feed];
-	[feed release];
+	return [feed autorelease];
 }
 
 /**
  * Parses guide attributes.
  */
-- (void)parseGuide:(NSDictionary *)attributeDict {
+- (OPMLGuide *)parseGuide:(NSDictionary *)attributeDict {
+	OPMLGuide *guide = [[OPMLGuide alloc] initWithName:[attributeDict valueForKey:ATTR_TEXT]
+											  iconName:[attributeDict valueForKey:ATTR_ICON]];
+	return [guide autorelease];
 }
 
 /**

@@ -29,7 +29,22 @@
 		79C0E4FA1029ADD200A3D584 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C0E4F81029ADD200A3D584 /* ArticleViewController.xib */; };
 		79C0E5591029C66C00A3D584 /* GuidesTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E5571029C66C00A3D584 /* GuidesTabController.m */; };
 		79C722AA102AC8E900F863AA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79C722A9102AC8E900F863AA /* Settings.bundle */; };
+		79FDB8F6102AFF8300AF94A2 /* OPMLParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */; };
+		79FDBA75102B12E800AF94A2 /* OPMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E72D102AD23500D559D9 /* OPMLParser.m */; };
+		79FDBA77102B12FC00AF94A2 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
+		79FDBA79102B12FE00AF94A2 /* OPMLGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E721102ACF5300D559D9 /* OPMLGuide.m */; };
+		79FDBAF9102B235700AF94A2 /* sample.opml in Resources */ = {isa = PBXBuildFile; fileRef = 79FDBAF8102B235700AF94A2 /* sample.opml */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79FDBA49102B0E0B00AF94A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79FDB8EB102AFF5400AF94A2;
+			remoteInfo = LogicTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -66,6 +81,12 @@
 		79C0E5561029C66C00A3D584 /* GuidesTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidesTabController.h; sourceTree = "<group>"; };
 		79C0E5571029C66C00A3D584 /* GuidesTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidesTabController.m; sourceTree = "<group>"; };
 		79C722A9102AC8E900F863AA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMLParserTests.h; sourceTree = "<group>"; };
+		79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLParserTests.m; sourceTree = "<group>"; };
+		79FDB8BA102AFDCC00AF94A2 /* BlogBridge-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlogBridge-Info copy.plist"; sourceTree = "<group>"; };
+		79FDB8EC102AFF5400AF94A2 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
+		79FDBAF8102B235700AF94A2 /* sample.opml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sample.opml; path = "Test Resources/sample.opml"; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BlogBridge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BlogBridge-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +99,13 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79FDB8E9102AFF5400AF94A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				1D6058910D05DD3D006BFB54 /* BlogBridge.app */,
+				79FDB8EC102AFF5400AF94A2 /* LogicTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +141,10 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				79FDB86B102AF5A000AF94A2 /* Tests */,
+				79FDBAF7102B235700AF94A2 /* Test Resources */,
+				79FDBAF8102B235700AF94A2 /* sample.opml */,
+				79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -136,6 +169,7 @@
 				8D1107310486CEB800E47090 /* BlogBridge-Info.plist */,
 				79C0E4AB1029A91200A3D584 /* BlogBridge.sqlite */,
 				79C722A9102AC8E900F863AA /* Settings.bundle */,
+				79FDB8BA102AFDCC00AF94A2 /* BlogBridge-Info copy.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -198,6 +232,22 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		79FDB86B102AF5A000AF94A2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */,
+				79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		79FDBAF7102B235700AF94A2 /* Test Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Test Resources";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,11 +262,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				79FDBA4A102B0E0B00AF94A2 /* PBXTargetDependency */,
 			);
 			name = BlogBridge;
 			productName = BlogBridge;
 			productReference = 1D6058910D05DD3D006BFB54 /* BlogBridge.app */;
 			productType = "com.apple.product-type.application";
+		};
+		79FDB8EB102AFF5400AF94A2 /* LogicTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79FDB8F3102AFF5500AF94A2 /* Build configuration list for PBXNativeTarget "LogicTests" */;
+			buildPhases = (
+				79FDB8E7102AFF5400AF94A2 /* Resources */,
+				79FDB8E8102AFF5400AF94A2 /* Sources */,
+				79FDB8E9102AFF5400AF94A2 /* Frameworks */,
+				79FDB8EA102AFF5400AF94A2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LogicTests;
+			productName = LogicTests;
+			productReference = 79FDB8EC102AFF5400AF94A2 /* LogicTests.octest */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -238,6 +307,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* BlogBridge */,
+				79FDB8EB102AFF5400AF94A2 /* LogicTests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,7 +326,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79FDB8E7102AFF5400AF94A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FDBAF9102B235700AF94A2 /* sample.opml in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79FDB8EA102AFF5400AF94A2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -278,7 +372,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79FDB8E8102AFF5400AF94A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79FDB8F6102AFF8300AF94A2 /* OPMLParserTests.m in Sources */,
+				79FDBA75102B12E800AF94A2 /* OPMLParser.m in Sources */,
+				79FDBA77102B12FC00AF94A2 /* OPMLFeed.m in Sources */,
+				79FDBA79102B12FE00AF94A2 /* OPMLGuide.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79FDBA4A102B0E0B00AF94A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79FDB8EB102AFF5400AF94A2 /* LogicTests */;
+			targetProxy = 79FDBA49102B0E0B00AF94A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
@@ -304,6 +417,60 @@
 				GCC_PREFIX_HEADER = BlogBridge_Prefix.pch;
 				INFOPLIST_FILE = "BlogBridge-Info.plist";
 				PRODUCT_NAME = BlogBridge;
+			};
+			name = Release;
+		};
+		79FDB8F1102AFF5500AF94A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "LogicTests-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = LogicTests;
+				SDKROOT = iphonesimulator3.0;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		79FDB8F2102AFF5500AF94A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "LogicTests-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = LogicTests;
+				SDKROOT = iphonesimulator3.0;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -341,6 +508,15 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79FDB8F3102AFF5500AF94A2 /* Build configuration list for PBXNativeTarget "LogicTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79FDB8F1102AFF5500AF94A2 /* Debug */,
+				79FDB8F2102AFF5500AF94A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

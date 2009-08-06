@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml xmlns:bb="http://blogbridge.com/ns/2006/opml" version="1.1">
+  <head>
+    <title>BlogBridge Feeds</title>
+    <dateModified>Thu, 6 Aug 2009 11:38:44 EEST</dateModified>
+  </head>
+  <body>
+    <outline text="mySubscriptions" bb:icon="cg.23.icon" bb:notificationsAllowed="true" bb:pubRating="0">
+      <outline type="rss" text="Онлайн Японский язык:  Японские иероглифы;  русско японский словарь; японско русский словарь" bb:viewtype="0" bb:viewMode="1" xmlUrl="http://www.nihongo.aikidoka.ru/rss.xml" htmlUrl="http://www.nihongo.aikidoka.ru/"/>
+      <outline type="rss" text="Comments on: Page layout with OmniGraffle" bb:readArticles="1e2ce5da0,1dccd7a83,19af885fa,17696f79c,1e3003bd7,1e24ea99e,1e106a822,1b5b408b3,186789bf2,1d85acb95" bb:viewtype="0" bb:viewMode="1" xmlUrl="http://blog.omnigroup.com/2009/08/03/page-layout-with-omnigraffle/feed/" htmlUrl="http://blog.omnigroup.com/2009/08/03/page-layout-with-omnigraffle/"/>
+    </outline>
+    <outline text="Design &amp; Art" bb:icon="cg.39.icon" bb:pubRating="0">
+      <outline type="rss" text="CSS-Tricks" bb:viewtype="0" bb:viewMode="1" bb:updatePeriod="3600000" xmlUrl="http://css-tricks.com/feed/" htmlUrl="http://css-tricks.com"/>
+    </outline>
+  </body>
+</opml>

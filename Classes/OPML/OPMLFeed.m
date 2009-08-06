@@ -18,7 +18,7 @@
 		title			= [aTitle copy];
 		xmlURL			= [anXmlURL copy];
 		htmlURL			= [anHtmlURL copy];
-		readArticleKeys	= [aReadArticleKeys copy];
+		readArticleKeys	= [aReadArticleKeys retain];
 	}
 	
 	return self;

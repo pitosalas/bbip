@@ -8,20 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
-@class OPMLGuide;
+@class OPMLGuide, OPMLFeed;
 
 @interface OPMLParser : NSObject {
 	NSMutableArray  *guides;
 	OPMLGuide		*currentGuide;
 }
 
-/**
- * Returns the list of OPMLGuide objects.
- */
+/** Returns the list of OPMLGuide objects from URL. */
 - (NSArray *)parseURL:(NSURL *)url;
 
-- (void)parseGuide:(NSDictionary *)attributeDict;
-- (void)parseFeed:(NSDictionary *)attributeDict;
+/** Returns the list of OPMLGuide objects from OPML string. */
+- (NSArray *)parseString:(NSString *)opml;
+
+@end
+
+@interface OPMLParser (private)
+
+/** Returns the list of OPMLGuide objects from the configured parser. */
+- (NSArray *)parse:(NSXMLParser *)parser;
+
+/** Parses the guide. */
+- (OPMLGuide *)parseGuide:(NSDictionary *)attributeDict;
+
+/** Parses the feed. */
+- (OPMLFeed *)parseFeed:(NSDictionary *)attributeDict;
+
+/** Parses the list of read keys. */
 - (NSArray *)parseReadKeys:(NSDictionary *)attributeDict;
 
 @end
