@@ -6,6 +6,8 @@
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
+@class GuidesTabController;
+
 @interface BlogBridgeAppDelegate : NSObject <UIApplicationDelegate> {
     
     NSManagedObjectModel			*managedObjectModel;
@@ -13,7 +15,7 @@
     NSPersistentStoreCoordinator	*persistentStoreCoordinator;
 
     UIWindow						*window;
-	UINavigationController			*navigationController;
+	GuidesTabController				*tabBarController;
 }
 
 - (IBAction)saveAction:sender;

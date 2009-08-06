@@ -22,13 +22,9 @@
 	[self initDefaultDatabaseIfNeeded];
 	
 	// Create tab bar controller
-	GuidesTabController *tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
+	tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
 
-	navigationController = [[UINavigationController alloc] initWithRootViewController:tabBarController];
-	navigationController.navigationBar.barStyle = UIBarStyleBlack;
-	[tabBarController release];
-
-	[window addSubview:navigationController.view];
+	[window addSubview:tabBarController.view];
     [window makeKeyAndVisible];
 }
 
@@ -147,7 +143,7 @@
     [managedObjectModel release];
     [persistentStoreCoordinator release];
     
-	[navigationController release];
+	[tabBarController release];
 	[window release];
 	[super dealloc];
 }

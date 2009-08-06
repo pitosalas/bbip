@@ -13,12 +13,11 @@
 	NSManagedObjectContext		*managedObjectContext;
 	
 	Guide						*guide;
-	id							selectionDelegate;
 }
 
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
-- (id)initWithGuide:(Guide *)aGuide andSelectionDelegate:(id)aSelectionDelegate;
+- (id)initWithGuide:(Guide *)aGuide;
 
 @end

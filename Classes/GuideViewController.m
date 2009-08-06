@@ -16,10 +16,9 @@
 
 @synthesize fetchedResultsController, managedObjectContext;
 
-- (id)initWithGuide:(Guide *)aGuide andSelectionDelegate:(id)aSelectionDelegate {
+- (id)initWithGuide:(Guide *)aGuide {
 	if (self = [super initWithStyle:UITableViewStylePlain]) {
 		guide = [aGuide retain];
-		selectionDelegate = [aSelectionDelegate retain];
 
 		self.title = guide.name;
 		self.tabBarItem = [[[UITabBarItem alloc] 
@@ -101,10 +100,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
-	SEL sel = @selector(articleDidSelect:);
-	if (selectionDelegate && [selectionDelegate respondsToSelector:sel]) {
-		[selectionDelegate performSelector:sel withObject:article];
-	}
+
+	ArticleViewController *articleViewController = [[ArticleViewController alloc] initWithArticle:article];	
+	[self.navigationController pushViewController:articleViewController animated:YES];
+	[articleViewController release];
 }
 
 
@@ -153,7 +152,6 @@
 
 - (void)dealloc {
 	[guide release];
-	[selectionDelegate release];
 	[fetchedResultsController release];
 	[managedObjectContext release];
     [super dealloc];

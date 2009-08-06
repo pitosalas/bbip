@@ -16,6 +16,7 @@
 - (id)initWithArticle:(Article *)anArticle {
 	if (self = [super initWithNibName:@"ArticleViewController" bundle:nil]) {
 		article = [anArticle retain];
+		self.hidesBottomBarWhenPushed = YES;
 	}
 	
 	return self;
