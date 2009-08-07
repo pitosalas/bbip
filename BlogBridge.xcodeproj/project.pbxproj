@@ -43,6 +43,9 @@
 		79C0E4FA1029ADD200A3D584 /* ArticleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C0E4F81029ADD200A3D584 /* ArticleViewController.xib */; };
 		79C0E5591029C66C00A3D584 /* GuidesTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E5571029C66C00A3D584 /* GuidesTabController.m */; };
 		79C722AA102AC8E900F863AA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79C722A9102AC8E900F863AA /* Settings.bundle */; };
+		79CE5D84102C981600D3E652 /* Cleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CE5D83102C981600D3E652 /* Cleaner.m */; };
+		79CE5D87102CB9CF00D3E652 /* CleanerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CE5D86102CB9CF00D3E652 /* CleanerTests.m */; };
+		79CE5D88102CBA5300D3E652 /* Cleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CE5D83102C981600D3E652 /* Cleaner.m */; };
 		79FDB8F6102AFF8300AF94A2 /* OPMLParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */; };
 		79FDBA75102B12E800AF94A2 /* OPMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E72D102AD23500D559D9 /* OPMLParser.m */; };
 		79FDBA77102B12FC00AF94A2 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
@@ -104,6 +107,10 @@
 		79C0E5561029C66C00A3D584 /* GuidesTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidesTabController.h; sourceTree = "<group>"; };
 		79C0E5571029C66C00A3D584 /* GuidesTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidesTabController.m; sourceTree = "<group>"; };
 		79C722A9102AC8E900F863AA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
+		79CE5D82102C981600D3E652 /* Cleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cleaner.h; sourceTree = "<group>"; };
+		79CE5D83102C981600D3E652 /* Cleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cleaner.m; sourceTree = "<group>"; };
+		79CE5D85102CB9CF00D3E652 /* CleanerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CleanerTests.h; sourceTree = "<group>"; };
+		79CE5D86102CB9CF00D3E652 /* CleanerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CleanerTests.m; sourceTree = "<group>"; };
 		79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMLParserTests.h; sourceTree = "<group>"; };
 		79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLParserTests.m; sourceTree = "<group>"; };
 		79FDB8EC102AFF5400AF94A2 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,6 +151,7 @@
 				79C0E4F21029AD6200A3D584 /* Controllers */,
 				79C0E3C710299CF200A3D584 /* Views */,
 				79C0E2851029724B00A3D584 /* Models */,
+				79CE5D81102C97E500D3E652 /* Utils */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -270,6 +278,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		79CE5D81102C97E500D3E652 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				79CE5D82102C981600D3E652 /* Cleaner.h */,
+				79CE5D83102C981600D3E652 /* Cleaner.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		79FDB86B102AF5A000AF94A2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +294,8 @@
 				79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */,
 				7953D916102C371000E87B72 /* OPMLUpdaterTests.h */,
 				7953D917102C371000E87B72 /* OPMLUpdaterTests.m */,
+				79CE5D85102CB9CF00D3E652 /* CleanerTests.h */,
+				79CE5D86102CB9CF00D3E652 /* CleanerTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -417,6 +436,7 @@
 				7953D8C7102C330F00E87B72 /* OPMLUpdater.m in Sources */,
 				7953DB59102C71AF00E87B72 /* RSSItem.m in Sources */,
 				7953DB5C102C724D00E87B72 /* RSSFeedParser.m in Sources */,
+				79CE5D84102C981600D3E652 /* Cleaner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +452,8 @@
 				7953D919102C38BC00E87B72 /* OPMLUpdater.m in Sources */,
 				7953DA0C102C442400E87B72 /* BlogBridge.xcdatamodel in Sources */,
 				7953DA5D102C587300E87B72 /* Guide.m in Sources */,
+				79CE5D87102CB9CF00D3E652 /* CleanerTests.m in Sources */,
+				79CE5D88102CBA5300D3E652 /* Cleaner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

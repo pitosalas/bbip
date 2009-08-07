@@ -11,6 +11,7 @@
 #import "GuidesTabController.h"
 #import "Guide.h"
 #import "OPMLUpdater.h"
+#import "Cleaner.h"
 
 @implementation BlogBridgeAppDelegate
 
@@ -30,8 +31,12 @@
 	NSDate *hideSplashScreenAfter = [NSDate dateWithTimeIntervalSinceNow:2];
 	
 	[self initDefaultDatabaseIfNeeded];
-	
 	[self updateOPML];
+	
+	// Clean articles
+	Cleaner *cleaner = [[Cleaner alloc] initWithManagedObjectContext:self.managedObjectContext defaults:defaults];
+	[cleaner performCleanup];
+	[cleaner release];
 	
 	// Create tab bar controller
 	tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
