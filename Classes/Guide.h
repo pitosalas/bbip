@@ -21,6 +21,7 @@
 
 
 @interface Guide (CoreDataGeneratedAccessors)
+
 - (void)addFeedsObject:(NSManagedObject *)value;
 - (void)removeFeedsObject:(NSManagedObject *)value;
 - (void)addFeeds:(NSSet *)value;

@@ -18,7 +18,7 @@
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) NSString *iconName;
-@property (nonatomic, readonly) NSArray *feeds;
+@property (nonatomic, readonly) NSMutableArray *feeds;
 
 - (id)initWithName:(NSString *)aName iconName:(NSString *)anIconName;
 - (void)addFeed:(OPMLFeed *)feed;

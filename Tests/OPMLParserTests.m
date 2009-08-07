@@ -64,6 +64,19 @@
 	STAssertNil(feed.readArticleKeys, @"Wrong keys");
 }
 
+- (void)testParseFeedAlternativeTitle {
+	NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:
+						   @"rss",   @"type",
+						   @"title", @"title",
+						   @"xml",   @"xmlUrl",
+						   @"html",  @"htmlUrl",
+						   nil];
+	
+	OPMLFeed *feed = [parser parseFeed:attrs];
+	STAssertEqualObjects(feed.title, @"title", @"Wrong title");
+}
+
+
 #pragma mark Guides
 
 - (void)testParseGuide {

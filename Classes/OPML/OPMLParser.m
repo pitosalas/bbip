@@ -13,6 +13,7 @@
 static NSString *ELEMENT_OUTLINE	= @"outline";
 static NSString *ATTR_TYPE			= @"type";
 static NSString *ATTR_TEXT			= @"text";
+static NSString *ATTR_TITLE			= @"title";
 static NSString *ATTR_XML_URL		= @"xmlUrl";
 static NSString *ATTR_HTML_URL		= @"htmlUrl";
 static NSString *ATTR_READ_KEYS		= @"bb:readArticles";
@@ -88,7 +89,10 @@ static NSString *ATTR_ICON			= @"bb:icon";
  * Parses feed attributes.
  */
 - (OPMLFeed *)parseFeed:(NSDictionary *)attributeDict {
-	OPMLFeed *feed = [[OPMLFeed alloc] initWithTitle:[attributeDict valueForKey:ATTR_TEXT]
+	NSString *title = [attributeDict valueForKey:ATTR_TEXT];
+	if (title == nil) title = [attributeDict valueForKey:ATTR_TITLE];
+	
+	OPMLFeed *feed = [[OPMLFeed alloc] initWithTitle:title
 											  xmlURL:[attributeDict valueForKey:ATTR_XML_URL]
 											 htmlURL:[attributeDict valueForKey:ATTR_HTML_URL]
 									 readArticleKeys:[self parseReadKeys:attributeDict]];

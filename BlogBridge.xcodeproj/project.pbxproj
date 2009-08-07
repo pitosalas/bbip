@@ -20,6 +20,18 @@
 		7914E722102ACF5300D559D9 /* OPMLGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E721102ACF5300D559D9 /* OPMLGuide.m */; };
 		7914E725102AD0C700D559D9 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
 		7914E72E102AD23500D559D9 /* OPMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E72D102AD23500D559D9 /* OPMLParser.m */; };
+		7953D88F102C2FFE00E87B72 /* Defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7953D876102C2F5C00E87B72 /* Defaults.plist */; };
+		7953D8C7102C330F00E87B72 /* OPMLUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */; };
+		7953D918102C371000E87B72 /* OPMLUpdaterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953D917102C371000E87B72 /* OPMLUpdaterTests.m */; };
+		7953D919102C38BC00E87B72 /* OPMLUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */; };
+		7953D996102C3F8800E87B72 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
+		7953D997102C3F8A00E87B72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		7953D998102C3F8B00E87B72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		7953D999102C3F8C00E87B72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
+		7953D9ED102C432000E87B72 /* LogicTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */; };
+		7953DA07102C440500E87B72 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
+		7953DA0C102C442400E87B72 /* BlogBridge.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28860B760F44E54D00985440 /* BlogBridge.xcdatamodel */; };
+		7953DA5D102C587300E87B72 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E28E1029733C00A3D584 /* Guide.m */; };
 		79C0E27A1029718F00A3D584 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 79C0E2761029718F00A3D584 /* images */; };
 		79C0E28F1029733C00A3D584 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E28E1029733C00A3D584 /* Guide.m */; };
 		79C0E31E1029911C00A3D584 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E31D1029911C00A3D584 /* Article.m */; };
@@ -67,6 +79,11 @@
 		7914E724102AD0C700D559D9 /* OPMLFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OPMLFeed.m; path = OPML/OPMLFeed.m; sourceTree = "<group>"; };
 		7914E72C102AD23500D559D9 /* OPMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OPMLParser.h; path = OPML/OPMLParser.h; sourceTree = "<group>"; };
 		7914E72D102AD23500D559D9 /* OPMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OPMLParser.m; path = OPML/OPMLParser.m; sourceTree = "<group>"; };
+		7953D876102C2F5C00E87B72 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
+		7953D8C5102C330F00E87B72 /* OPMLUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMLUpdater.h; sourceTree = "<group>"; };
+		7953D8C6102C330F00E87B72 /* OPMLUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLUpdater.m; sourceTree = "<group>"; };
+		7953D916102C371000E87B72 /* OPMLUpdaterTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMLUpdaterTests.h; sourceTree = "<group>"; };
+		7953D917102C371000E87B72 /* OPMLUpdaterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLUpdaterTests.m; sourceTree = "<group>"; };
 		79C0E2761029718F00A3D584 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
 		79C0E28D1029733C00A3D584 /* Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guide.h; sourceTree = "<group>"; };
 		79C0E28E1029733C00A3D584 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
@@ -83,10 +100,9 @@
 		79C722A9102AC8E900F863AA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMLParserTests.h; sourceTree = "<group>"; };
 		79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLParserTests.m; sourceTree = "<group>"; };
-		79FDB8BA102AFDCC00AF94A2 /* BlogBridge-Info copy.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlogBridge-Info copy.plist"; sourceTree = "<group>"; };
 		79FDB8EC102AFF5400AF94A2 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicTests-Info.plist"; sourceTree = "<group>"; };
-		79FDBAF8102B235700AF94A2 /* sample.opml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = sample.opml; path = "Test Resources/sample.opml"; sourceTree = "<group>"; };
+		79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "LogicTests-Info.plist"; path = "../LogicTests-Info.plist"; sourceTree = "<group>"; };
+		79FDBAF8102B235700AF94A2 /* sample.opml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = sample.opml; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* BlogBridge-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "BlogBridge-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +122,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7953D996102C3F8800E87B72 /* CoreData.framework in Frameworks */,
+				7953D997102C3F8A00E87B72 /* Foundation.framework in Frameworks */,
+				7953D998102C3F8B00E87B72 /* UIKit.framework in Frameworks */,
+				7953D999102C3F8C00E87B72 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +163,6 @@
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				79FDB86B102AF5A000AF94A2 /* Tests */,
 				79FDBAF7102B235700AF94A2 /* Test Resources */,
-				79FDBAF8102B235700AF94A2 /* sample.opml */,
-				79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -161,15 +179,15 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				790D4BDB102AEABF0091EA1B /* Default.png */,
 				79C0E2761029718F00A3D584 /* images */,
+				790D4BDB102AEABF0091EA1B /* Default.png */,
 				28860B760F44E54D00985440 /* BlogBridge.xcdatamodel */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				79C0E4F81029ADD200A3D584 /* ArticleViewController.xib */,
+				7953D876102C2F5C00E87B72 /* Defaults.plist */,
 				8D1107310486CEB800E47090 /* BlogBridge-Info.plist */,
 				79C0E4AB1029A91200A3D584 /* BlogBridge.sqlite */,
 				79C722A9102AC8E900F863AA /* Settings.bundle */,
-				79FDB8BA102AFDCC00AF94A2 /* BlogBridge-Info copy.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -194,6 +212,8 @@
 				7914E724102AD0C700D559D9 /* OPMLFeed.m */,
 				7914E72C102AD23500D559D9 /* OPMLParser.h */,
 				7914E72D102AD23500D559D9 /* OPMLParser.m */,
+				7953D8C5102C330F00E87B72 /* OPMLUpdater.h */,
+				7953D8C6102C330F00E87B72 /* OPMLUpdater.m */,
 			);
 			name = OPML;
 			sourceTree = "<group>";
@@ -237,6 +257,8 @@
 			children = (
 				79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */,
 				79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */,
+				7953D916102C371000E87B72 /* OPMLUpdaterTests.h */,
+				7953D917102C371000E87B72 /* OPMLUpdaterTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -244,6 +266,8 @@
 		79FDBAF7102B235700AF94A2 /* Test Resources */ = {
 			isa = PBXGroup;
 			children = (
+				79FDBAF8102B235700AF94A2 /* sample.opml */,
+				79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */,
 			);
 			path = "Test Resources";
 			sourceTree = "<group>";
@@ -317,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7953D88F102C2FFE00E87B72 /* Defaults.plist in Resources */,
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				79C0E27A1029718F00A3D584 /* images in Resources */,
 				79C0E4AC1029A91200A3D584 /* BlogBridge.sqlite in Resources */,
@@ -331,6 +356,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				79FDBAF9102B235700AF94A2 /* sample.opml in Resources */,
+				7953D9ED102C432000E87B72 /* LogicTests-Info.plist in Resources */,
+				7953DA07102C440500E87B72 /* MainWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +396,7 @@
 				7914E722102ACF5300D559D9 /* OPMLGuide.m in Sources */,
 				7914E725102AD0C700D559D9 /* OPMLFeed.m in Sources */,
 				7914E72E102AD23500D559D9 /* OPMLParser.m in Sources */,
+				7953D8C7102C330F00E87B72 /* OPMLUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +408,10 @@
 				79FDBA75102B12E800AF94A2 /* OPMLParser.m in Sources */,
 				79FDBA77102B12FC00AF94A2 /* OPMLFeed.m in Sources */,
 				79FDBA79102B12FE00AF94A2 /* OPMLGuide.m in Sources */,
+				7953D918102C371000E87B72 /* OPMLUpdaterTests.m in Sources */,
+				7953D919102C38BC00E87B72 /* OPMLUpdater.m in Sources */,
+				7953DA0C102C442400E87B72 /* BlogBridge.xcdatamodel in Sources */,
+				7953DA5D102C587300E87B72 /* Guide.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

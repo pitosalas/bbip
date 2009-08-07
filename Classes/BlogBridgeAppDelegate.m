@@ -10,10 +10,18 @@
 #import "GuideViewController.h"
 #import "GuidesTabController.h"
 #import "Guide.h"
+#import "OPMLUpdater.h"
 
 @implementation BlogBridgeAppDelegate
 
 @synthesize window;
+
+- (id) init {
+	if (self = [super init]) {
+		defaults = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]];
+	}
+	return self;
+}
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -22,6 +30,8 @@
 	NSDate *hideSplashScreenAfter = [NSDate dateWithTimeIntervalSinceNow:2];
 	
 	[self initDefaultDatabaseIfNeeded];
+	
+	[self updateOPML];
 	
 	// Create tab bar controller
 	tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
@@ -77,43 +87,35 @@
  If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
  */
 - (NSManagedObjectContext *) managedObjectContext {
-	
-    if (managedObjectContext != nil) {
-        return managedObjectContext;
-    }
+    if (managedObjectContext != nil) return managedObjectContext;
 	
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
         managedObjectContext = [[NSManagedObjectContext alloc] init];
         [managedObjectContext setPersistentStoreCoordinator: coordinator];
     }
-    return managedObjectContext;
+ 
+	return managedObjectContext;
 }
-
 
 /**
  Returns the managed object model for the application.
  If the model doesn't already exist, it is created by merging all of the models found in the application bundle.
  */
 - (NSManagedObjectModel *)managedObjectModel {
-	
-    if (managedObjectModel != nil) {
-        return managedObjectModel;
-    }
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
+    if (managedObjectModel != nil) return managedObjectModel;
+
+	managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
+
     return managedObjectModel;
 }
-
 
 /**
  Returns the persistent store coordinator for the application.
  If the coordinator doesn't already exist, it is created and the application's store added to it.
  */
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
-	
-    if (persistentStoreCoordinator != nil) {
-        return persistentStoreCoordinator;
-    }
+    if (persistentStoreCoordinator != nil) return persistentStoreCoordinator;
 	
     NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"BlogBridge.sqlite"]];
 	
@@ -135,10 +137,8 @@
  Returns the path to the application's documents directory.
  */
 - (NSString *)applicationDocumentsDirectory {
-	
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
-    return basePath;
+    return ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
 }
 
 
@@ -150,14 +150,13 @@
     [managedObjectModel release];
     [persistentStoreCoordinator release];
     
+	[defaults release];
 	[tabBarController release];
 	[window release];
 	[super dealloc];
 }
 
-/**
- * Creates a writable copy of the default database.
- */
+/** Makes sure the database file is there and loaded with defaults. */
 - (void)initDefaultDatabaseIfNeeded {
     // Check if the database exists
     NSFileManager *fileManager = [NSFileManager defaultManager];
@@ -169,12 +168,30 @@
 		// The writable database does not exist, so copy the default to the appropriate location.
 		NSError *error;
 		NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"BlogBridge.sqlite"];
-		NSLog(@"%@", defaultDBPath);
-		NSLog(@"%@", writableDBPath);
 		if (![fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error]) {
 			NSLog(@"Failed to install default DB: %@", error);
 		};
 	}
+}
+
+/** Takes OPML from the server if possible and updates the list of guides. */
+- (void)updateOPML {
+	if ([self isConnected]) {
+		NSString *opmlURL;
+		
+		// Take default for now
+		opmlURL = [defaults objectForKey:@"opml.url"];
+		
+		OPMLUpdater *updater = [[OPMLUpdater alloc] init];
+		NSURL *url = [NSURL URLWithString:opmlURL];
+		[updater updateFromOPMLURL:url managedObjectContext:[self managedObjectContext]];
+		[updater release];
+	}
+}
+
+/** Returns YES if connected. */
+- (BOOL)isConnected {
+	return YES;
 }
 
 @end

@@ -16,6 +16,7 @@
 
     UIWindow						*window;
 	GuidesTabController				*tabBarController;
+	NSDictionary					*defaults;
 }
 
 - (IBAction)saveAction:sender;
@@ -28,7 +29,18 @@
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 
-- (void)initDefaultDatabaseIfNeeded;
-
 @end
 
+/** Private methods */
+@interface BlogBridgeAppDelegate (private)
+
+/** Makes sure the database file is there and loaded with defaults. */
+- (void)initDefaultDatabaseIfNeeded;
+
+/** Takes OPML from the server if possible and updates the list of guides. */
+- (void)updateOPML;
+
+/** Returns YES if connected. */
+- (BOOL)isConnected;
+
+@end
