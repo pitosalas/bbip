@@ -4,5 +4,9 @@
 <dict>
 	<key>opml.url</key>
 	<string>http://blogbridge.com/points/bbip.opml</string>
+	<key>max.read.age</key>
+	<integer>300</integer>
+	<key>max.unread.age</key>
+	<integer>432000</integer>
 </dict>
 </plist>
