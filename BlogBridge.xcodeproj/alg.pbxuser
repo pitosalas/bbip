@@ -221,8 +221,8 @@
 			79C0E6111029CDC000A3D584 /* GuideViewController.m:104 */,
 			7953D8E4102C349B00E87B72 /* BlogBridgeAppDelegate.m:185 */,
 			7953D8F2102C34D100E87B72 /* BlogBridgeAppDelegate.m:187 */,
-			7953DA97102C5AE000E87B72 /* OPMLUpdater.m:117 */,
-			7953DAB7102C5BFE00E87B72 /* OPMLUpdater.m:117 */,
+			7953DA97102C5AE000E87B72 /* OPMLUpdater.m:114 */,
+			7953DAB7102C5BFE00E87B72 /* OPMLUpdater.m:114 */,
 			7953DB3C102C5E0000E87B72 /* malloc_error_break */,
 		);
 		codeSenseManager = 79C0E1F610295B7D00A3D584 /* Code sense */;
@@ -648,6 +648,8 @@
 			7953DB38102C5DE600E87B72 /* PBXTextBookmark */ = 7953DB38102C5DE600E87B72 /* PBXTextBookmark */;
 			7953DB3E102C5E0200E87B72 /* PBXTextBookmark */ = 7953DB3E102C5E0200E87B72 /* PBXTextBookmark */;
 			7953DB41102C5E7C00E87B72 /* PBXTextBookmark */ = 7953DB41102C5E7C00E87B72 /* PBXTextBookmark */;
+			7953DB43102C602D00E87B72 /* PBXTextBookmark */ = 7953DB43102C602D00E87B72 /* PBXTextBookmark */;
+			7953DB44102C602D00E87B72 /* PBXTextBookmark */ = 7953DB44102C602D00E87B72 /* PBXTextBookmark */;
 			79C0E21A1029667D00A3D584 = 79C0E21A1029667D00A3D584 /* PBXTextBookmark */;
 			79C0E21B1029667D00A3D584 = 79C0E21B1029667D00A3D584 /* PBXTextBookmark */;
 			79C0E21C1029667D00A3D584 = 79C0E21C1029667D00A3D584 /* PBXTextBookmark */;
@@ -1230,9 +1232,9 @@
 	};
 	7953D8C6102C330F00E87B72 /* OPMLUpdater.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1095, 2400}}";
-			sepNavSelRange = "{4434, 0}";
-			sepNavVisRange = "{3030, 1421}";
+			sepNavIntBoundsRect = "{{0, 0}, {1095, 2352}}";
+			sepNavSelRange = "{1790, 0}";
+			sepNavVisRange = "{1306, 1335}";
 		};
 	};
 	7953D8CC102C347000E87B72 /* PBXTextBookmark */ = {
@@ -5116,7 +5118,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 101";
 		rLen = 153;
-		rLoc = 2708;
+		rLoc = 2642;
 		rType = 0;
 		vrLen = 1237;
 		vrLoc = 1699;
@@ -5136,7 +5138,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 114";
 		rLen = 46;
-		rLoc = 4018;
+		rLoc = 3952;
 		rType = 0;
 		vrLen = 1116;
 		vrLoc = 2440;
@@ -5156,7 +5158,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 114";
 		rLen = 0;
-		rLoc = 3972;
+		rLoc = 3906;
 		rType = 0;
 		vrLen = 1222;
 		vrLoc = 2225;
@@ -5176,7 +5178,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 112";
 		rLen = 0;
-		rLoc = 3375;
+		rLoc = 3309;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 2257;
@@ -5349,7 +5351,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 117";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 2540;
@@ -5369,7 +5371,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 133";
 		rLen = 57;
-		rLoc = 4064;
+		rLoc = 3998;
 		rType = 0;
 		vrLen = 1261;
 		vrLoc = 2918;
@@ -5479,7 +5481,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 117";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 2462;
@@ -5489,7 +5491,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 117";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1442;
 		vrLoc = 2462;
@@ -5509,7 +5511,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 118";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1397;
 		vrLoc = 2437;
@@ -5692,7 +5694,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 116";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 2396;
@@ -5702,7 +5704,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 118";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 2437;
@@ -5875,7 +5877,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 116";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 2396;
@@ -5895,7 +5897,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 116";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1544;
 		vrLoc = 2400;
@@ -5905,12 +5907,12 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 119";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 2400;
 	};
-	7953DA97102C5AE000E87B72 /* OPMLUpdater.m:117 */ = {
+	7953DA97102C5AE000E87B72 /* OPMLUpdater.m:114 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -5922,7 +5924,7 @@
 		functionName = "-syncGuides:inManagedObjectContext:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 117;
+		lineNumber = 114;
 		location = BlogBridge;
 		modificationTime = 271343110.226577;
 		state = 2;
@@ -5932,7 +5934,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 117";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1493;
 		vrLoc = 2400;
@@ -5942,7 +5944,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 117";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1503;
 		vrLoc = 2400;
@@ -5952,7 +5954,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 116";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1528;
 		vrLoc = 2400;
@@ -5962,7 +5964,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 116";
 		rLen = 0;
-		rLoc = 3493;
+		rLoc = 3427;
 		rType = 0;
 		vrLen = 1528;
 		vrLoc = 2400;
@@ -5972,7 +5974,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 117";
 		rLen = 3;
-		rLoc = 3941;
+		rLoc = 3875;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 2962;
@@ -6002,12 +6004,12 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 134";
 		rLen = 0;
-		rLoc = 4140;
+		rLoc = 4074;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 2962;
 	};
-	7953DAB7102C5BFE00E87B72 /* OPMLUpdater.m:117 */ = {
+	7953DAB7102C5BFE00E87B72 /* OPMLUpdater.m:114 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -6019,7 +6021,7 @@
 		functionName = "-syncGuides:inManagedObjectContext:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 117;
+		lineNumber = 114;
 		location = BlogBridge;
 		modificationTime = 271343110.226722;
 		state = 2;
@@ -6049,7 +6051,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 128";
 		rLen = 0;
-		rLoc = 3945;
+		rLoc = 3879;
 		rType = 0;
 		vrLen = 1521;
 		vrLoc = 2962;
@@ -6059,7 +6061,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 117";
 		rLen = 0;
-		rLoc = 3536;
+		rLoc = 3470;
 		rType = 0;
 		vrLen = 1501;
 		vrLoc = 2932;
@@ -6089,7 +6091,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 83";
 		rLen = 0;
-		rLoc = 2448;
+		rLoc = 2415;
 		rType = 0;
 		vrLen = 1550;
 		vrLoc = 1924;
@@ -6099,7 +6101,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 128";
 		rLen = 0;
-		rLoc = 3940;
+		rLoc = 3874;
 		rType = 0;
 		vrLen = 1444;
 		vrLoc = 3030;
@@ -6124,7 +6126,7 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 128";
 		rLen = 0;
-		rLoc = 3940;
+		rLoc = 3874;
 		rType = 0;
 		vrLen = 1444;
 		vrLoc = 3030;
@@ -6134,10 +6136,30 @@
 		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
 		name = "OPMLUpdater.m: 146";
 		rLen = 0;
-		rLoc = 4434;
+		rLoc = 4368;
 		rType = 0;
 		vrLen = 1421;
 		vrLoc = 3030;
+	};
+	7953DB43102C602D00E87B72 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
+		name = "OPMLUpdater.m: 91";
+		rLen = 0;
+		rLoc = 2610;
+		rType = 0;
+		vrLen = 1336;
+		vrLoc = 1306;
+	};
+	7953DB44102C602D00E87B72 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953D8C6102C330F00E87B72 /* OPMLUpdater.m */;
+		name = "OPMLUpdater.m: 67";
+		rLen = 0;
+		rLoc = 1790;
+		rType = 0;
+		vrLen = 1335;
+		vrLoc = 1306;
 	};
 	79C0E1ED10295B7A00A3D584 /* BlogBridge */ = {
 		isa = PBXExecutable;

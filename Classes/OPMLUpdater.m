@@ -80,8 +80,6 @@
 			[feed setValue:opmlFeed.xmlURL forKey:@"url"];
 			[context insertObject:feed];
 			[feed release];
-			
-			NSLog(@"Added: %@", feed);
 		}
 	}
 	
@@ -90,7 +88,6 @@
 		NSString *url = [feed valueForKey:@"url"];
 		if (![newURLs containsObject:url]) {
 			[context deleteObject:feed];
-			NSLog(@"Removed: %@", feed);
 		}
 	}
 	
