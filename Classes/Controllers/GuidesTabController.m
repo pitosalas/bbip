@@ -10,6 +10,7 @@
 #import "GuideViewController.h"
 #import "ArticleViewController.h"
 #import "Article.h"
+#import "Constants.h"
 
 @implementation GuidesTabController
 
@@ -46,6 +47,17 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+	// Select the previously selected guide
+	int index = [[NSUserDefaults standardUserDefaults] integerForKey:BBSettingSelectedGuide];
+	if ([self.viewControllers count] > index) {
+		UIViewController *controller = [self.viewControllers objectAtIndex:index];
+		self.selectedViewController = controller;
+	}
+	
+	[super viewWillAppear:animated];
+}
+
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
@@ -58,6 +70,7 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
 	self.title = viewController.title;
+	[[NSUserDefaults standardUserDefaults] setInteger:self.selectedIndex forKey:BBSettingSelectedGuide];
 }
 
 /**

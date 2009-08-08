@@ -12,3 +12,4 @@ extern NSString * const BBSettingCurrentFontBias;
 extern NSString * const BBSettingReadArticleAge;
 extern NSString * const BBSettingUnreadArticleAge;
 extern NSString * const BBSettingDefaultOpmlUrl;
+extern NSString * const BBSettingSelectedGuide;

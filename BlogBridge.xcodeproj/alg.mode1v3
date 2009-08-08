@@ -279,6 +279,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>10</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -323,7 +325,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Constants.m</string>
+								<string>GuidesTabController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -331,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>Constants.m</string>
+										<string>GuidesTabController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>79545F25102D70EB001D5F29</string>
+										<string>79545F92102D7C69001D5F29</string>
 										<key>history</key>
 										<array>
 											<string>79C0E2E810297A6900A3D584</string>
@@ -364,19 +366,18 @@
 											<string>79CE5DA5102CC11B00D3E652</string>
 											<string>79545E27102D6277001D5F29</string>
 											<string>79545E28102D6277001D5F29</string>
-											<string>79545EEE102D70EB001D5F29</string>
 											<string>79545EEF102D70EB001D5F29</string>
-											<string>79545EF0102D70EB001D5F29</string>
-											<string>79545EF1102D70EB001D5F29</string>
-											<string>79545EF2102D70EB001D5F29</string>
-											<string>79545EF3102D70EB001D5F29</string>
-											<string>79545EF4102D70EB001D5F29</string>
-											<string>79545EF5102D70EB001D5F29</string>
 											<string>79545EF6102D70EB001D5F29</string>
 											<string>79545EF7102D70EB001D5F29</string>
 											<string>79545EF8102D70EB001D5F29</string>
-											<string>79545EF9102D70EB001D5F29</string>
-											<string>79545EFA102D70EB001D5F29</string>
+											<string>79545F2E102D7229001D5F29</string>
+											<string>79545F2F102D7229001D5F29</string>
+											<string>79545F31102D7229001D5F29</string>
+											<string>79545F32102D7229001D5F29</string>
+											<string>79545F6D102D7691001D5F29</string>
+											<string>79545F75102D7826001D5F29</string>
+											<string>79545F84102D7B9F001D5F29</string>
+											<string>79545F74102D7826001D5F29</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -433,25 +434,20 @@
 											<string>79545E70102D67A2001D5F29</string>
 											<string>79545E71102D67A2001D5F29</string>
 											<string>79545EFB102D70EB001D5F29</string>
-											<string>79545EFC102D70EB001D5F29</string>
 											<string>79545EFD102D70EB001D5F29</string>
 											<string>79545EFE102D70EB001D5F29</string>
 											<string>79545EFF102D70EB001D5F29</string>
-											<string>79545F00102D70EB001D5F29</string>
 											<string>79545F01102D70EB001D5F29</string>
 											<string>79545F02102D70EB001D5F29</string>
 											<string>79545F03102D70EB001D5F29</string>
 											<string>79545F04102D70EB001D5F29</string>
 											<string>79545F05102D70EB001D5F29</string>
-											<string>79545F06102D70EB001D5F29</string>
 											<string>79545F07102D70EB001D5F29</string>
 											<string>79545F08102D70EB001D5F29</string>
 											<string>79545F09102D70EB001D5F29</string>
-											<string>79545F0A102D70EB001D5F29</string>
 											<string>79545F0B102D70EB001D5F29</string>
 											<string>79545F0C102D70EB001D5F29</string>
 											<string>79545F0D102D70EB001D5F29</string>
-											<string>79545F0E102D70EB001D5F29</string>
 											<string>79545F0F102D70EB001D5F29</string>
 											<string>79545F10102D70EB001D5F29</string>
 											<string>79545F11102D70EB001D5F29</string>
@@ -459,11 +455,8 @@
 											<string>79545F13102D70EB001D5F29</string>
 											<string>79545F14102D70EB001D5F29</string>
 											<string>79545F15102D70EB001D5F29</string>
-											<string>79545F16102D70EB001D5F29</string>
 											<string>79545F17102D70EB001D5F29</string>
-											<string>79545F18102D70EB001D5F29</string>
 											<string>79545F19102D70EB001D5F29</string>
-											<string>79545F1A102D70EB001D5F29</string>
 											<string>79545F1B102D70EB001D5F29</string>
 											<string>79545F1C102D70EB001D5F29</string>
 											<string>79545F1D102D70EB001D5F29</string>
@@ -474,6 +467,20 @@
 											<string>79545F22102D70EB001D5F29</string>
 											<string>79545F23102D70EB001D5F29</string>
 											<string>79545F24102D70EB001D5F29</string>
+											<string>79545F34102D7229001D5F29</string>
+											<string>79545F35102D7229001D5F29</string>
+											<string>79545F36102D7229001D5F29</string>
+											<string>79545F37102D7229001D5F29</string>
+											<string>79545F38102D7229001D5F29</string>
+											<string>79545F39102D7229001D5F29</string>
+											<string>79545F3A102D7229001D5F29</string>
+											<string>79545F3B102D7229001D5F29</string>
+											<string>79545F66102D74A9001D5F29</string>
+											<string>79545F6F102D7691001D5F29</string>
+											<string>79545F77102D7826001D5F29</string>
+											<string>79545F78102D7826001D5F29</string>
+											<string>79545F79102D7826001D5F29</string>
+											<string>79545F85102D7B9F001D5F29</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -692,12 +699,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>Constants.m</string>
+								<string>Cleaner.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -714,8 +723,6 @@
 							<string>143pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

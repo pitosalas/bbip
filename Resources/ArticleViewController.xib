@@ -50,7 +50,7 @@
 						<int key="IBUIDataDetectorTypes">1</int>
 						<bool key="IBUIDetectsPhoneNumbers">YES</bool>
 					</object>
-					<object class="IBUIToolbar" id="88374324">
+					<object class="IBUIToolbar" id="54899714">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{0, 416}, {320, 44}}</string>
@@ -60,27 +60,27 @@
 						<int key="IBUIBarStyle">1</int>
 						<object class="NSMutableArray" key="IBUIItems">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBUIBarButtonItem" id="174097347">
-								<reference key="IBUIToolbar" ref="88374324"/>
+							<object class="IBUIBarButtonItem" id="858808752">
+								<reference key="IBUIToolbar" ref="54899714"/>
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
-							<object class="IBUIBarButtonItem" id="478925584">
+							<object class="IBUIBarButtonItem" id="742877442">
 								<string key="IBUITitle">Smaller</string>
 								<int key="IBUIStyle">1</int>
-								<reference key="IBUIToolbar" ref="88374324"/>
+								<reference key="IBUIToolbar" ref="54899714"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="674529167">
+							<object class="IBUIBarButtonItem" id="143271041">
 								<float key="IBUIWidth">6.000000e+00</float>
-								<reference key="IBUIToolbar" ref="88374324"/>
+								<reference key="IBUIToolbar" ref="54899714"/>
 								<int key="IBUISystemItemIdentifier">6</int>
 							</object>
-							<object class="IBUIBarButtonItem" id="748694866">
+							<object class="IBUIBarButtonItem" id="110116884">
 								<string key="IBUITitle">Larger</string>
 								<int key="IBUIStyle">1</int>
-								<reference key="IBUIToolbar" ref="88374324"/>
+								<reference key="IBUIToolbar" ref="54899714"/>
 							</object>
-							<object class="IBUIBarButtonItem" id="957790174">
-								<reference key="IBUIToolbar" ref="88374324"/>
+							<object class="IBUIBarButtonItem" id="148059203">
+								<reference key="IBUIToolbar" ref="54899714"/>
 								<int key="IBUISystemItemIdentifier">5</int>
 							</object>
 						</object>
@@ -122,7 +122,7 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">largerFont</string>
-						<reference key="source" ref="748694866"/>
+						<reference key="source" ref="110116884"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">19</int>
@@ -130,10 +130,18 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">smallerFont</string>
-						<reference key="source" ref="478925584"/>
+						<reference key="source" ref="742877442"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
 					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">toolbar</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="54899714"/>
+					</object>
+					<int key="connectionID">21</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -153,7 +161,7 @@
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="160894246"/>
-							<reference ref="88374324"/>
+							<reference ref="54899714"/>
 						</object>
 						<reference key="parent" ref="317526666"/>
 					</object>
@@ -175,41 +183,41 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">12</int>
-						<reference key="object" ref="88374324"/>
+						<reference key="object" ref="54899714"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="478925584"/>
-							<reference ref="674529167"/>
-							<reference ref="748694866"/>
-							<reference ref="174097347"/>
-							<reference ref="957790174"/>
+							<reference ref="742877442"/>
+							<reference ref="143271041"/>
+							<reference ref="110116884"/>
+							<reference ref="858808752"/>
+							<reference ref="148059203"/>
 						</object>
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">13</int>
-						<reference key="object" ref="478925584"/>
-						<reference key="parent" ref="88374324"/>
+						<reference key="object" ref="742877442"/>
+						<reference key="parent" ref="54899714"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">14</int>
-						<reference key="object" ref="674529167"/>
-						<reference key="parent" ref="88374324"/>
+						<reference key="object" ref="143271041"/>
+						<reference key="parent" ref="54899714"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
-						<reference key="object" ref="748694866"/>
-						<reference key="parent" ref="88374324"/>
+						<reference key="object" ref="110116884"/>
+						<reference key="parent" ref="54899714"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">16</int>
-						<reference key="object" ref="174097347"/>
-						<reference key="parent" ref="88374324"/>
+						<reference key="object" ref="858808752"/>
+						<reference key="parent" ref="54899714"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">17</int>
-						<reference key="object" ref="957790174"/>
-						<reference key="parent" ref="88374324"/>
+						<reference key="object" ref="148059203"/>
+						<reference key="parent" ref="54899714"/>
 					</object>
 				</object>
 			</object>
@@ -264,7 +272,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">21</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -286,8 +294,17 @@
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">webView</string>
-						<string key="NS.object.0">UIWebView</string>
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSMutableArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>toolbar</string>
+							<string>webView</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>UIToolbar</string>
+							<string>UIWebView</string>
+						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>

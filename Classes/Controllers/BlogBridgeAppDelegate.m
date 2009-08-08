@@ -201,7 +201,8 @@
 								  @"http://blogbridge.com/points/bbip.opml",	BBSettingDefaultOpmlUrl,
 								  [NSNumber numberWithInt:100],					BBSettingCurrentFontBias,
 								  [NSNumber numberWithInt:300],					BBSettingReadArticleAge,
-								  [NSNumber numberWithInt:432000],				BBSettingUnreadArticleAge, nil];
+								  [NSNumber numberWithInt:432000],				BBSettingUnreadArticleAge,
+								  [NSNumber numberWithInt:0],					BBSettingSelectedGuide, nil];
 	
 	[ud registerDefaults:userDefaults];
 }

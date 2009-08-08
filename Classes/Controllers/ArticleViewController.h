@@ -14,9 +14,11 @@
 	UIWebView	*webView;
 	Article		*article;
 	int			currentFontBias;
+	UIToolbar	*toolbar;
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 
 - (id)initWithArticle:(Article *)anArticle;
 

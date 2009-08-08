@@ -12,7 +12,7 @@
 
 @implementation ArticleViewController
 
-@synthesize webView;
+@synthesize webView, toolbar;
 
 - (id)initWithArticle:(Article *)anArticle {
 	if (self = [super initWithNibName:@"ArticleViewController" bundle:nil]) {
@@ -33,13 +33,13 @@
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-    [super viewDidLoad];
-	
 	NSString *metaHTML  = [NSString stringWithFormat:@"<div id='bbip-meta'><div id='bbip-feed-title'>%@</div><div id='bbip-article-title'>%@</div></div>", [article.feed valueForKey:@"name"], article.title];
 	NSString *style		= [NSString stringWithFormat:@"#bbip-meta { margin-bottom: 1em; } #bbip-feed-title { text-transform:uppercase; font-family:Helvetica; font-size: 14px; } #bbip-article-title { font-family: Georgia; font-size: 20px; } body { -webkit-text-size-adjust: %d%% }", currentFontBias];
 	NSString *html		= [NSString stringWithFormat:@"<html><head><style type='text/css'>%@</style></head><body>%@<div id='bbip-article'>%@</div></body></html>", style, metaHTML, article.body];
 
 	[webView loadHTMLString:html baseURL:article.baseURL];
+	
+    [super viewDidLoad];
 }
 
 /*
@@ -85,7 +85,7 @@
 	[[NSUserDefaults standardUserDefaults] setInteger:currentFontBias forKey:BBSettingCurrentFontBias];
 	
 	NSString *javascript = [NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust='%d%%'", currentFontBias];
-	NSLog(@"%@", [webView stringByEvaluatingJavaScriptFromString:javascript]);
+	[webView stringByEvaluatingJavaScriptFromString:javascript];
 }
 
 @end
