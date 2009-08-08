@@ -28,17 +28,6 @@
 	return briefBody;
 }
 
-- (NSString *)fullHTML {
-	if (!fullHTML) {
-		// TODO: Full HTML
-		fullHTML = [NSString stringWithFormat:@"<html><head><style type='text/css'>#bbip-meta { margin-bottom: 1em; } #bbip-feed-title { text-transform:uppercase; font-family:Helvetica; font-size: 14px; } #bbip-article-title { font-family: Georgia; font-size: 20px; } </style></head><body><div id='bbip-meta'><div id='bbip-feed-title'>%@</div><div id='bbip-article-title'>%@</div></div>%@</body></html>", 
-					[self.feed valueForKey:@"name"], self.title, self.body];
-		[fullHTML retain];
-	}
-	
-	return fullHTML;
-}
-
 - (NSURL *)baseURL {
 	return [NSURL URLWithString:self.url];
 }

@@ -12,17 +12,12 @@
 #import "Guide.h"
 #import "OPMLUpdater.h"
 #import "Cleaner.h"
+#import "Constants.h"
+
 
 @implementation BlogBridgeAppDelegate
 
 @synthesize window;
-
-- (id) init {
-	if (self = [super init]) {
-		defaults = [[NSDictionary alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Defaults" ofType:@"plist"]];
-	}
-	return self;
-}
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -30,11 +25,12 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	NSDate *hideSplashScreenAfter = [NSDate dateWithTimeIntervalSinceNow:2];
 	
+	[self initDefaultUserPreferences];
 	[self initDefaultDatabaseIfNeeded];
-	[self updateOPML];
+//	[self updateOPML];
 	
 	// Clean articles
-	Cleaner *cleaner = [[Cleaner alloc] initWithManagedObjectContext:self.managedObjectContext defaults:defaults];
+	Cleaner *cleaner = [[Cleaner alloc] initWithManagedObjectContext:self.managedObjectContext];
 	[cleaner performCleanup];
 	[cleaner release];
 	
@@ -155,7 +151,6 @@
     [managedObjectModel release];
     [persistentStoreCoordinator release];
     
-	[defaults release];
 	[tabBarController release];
 	[window release];
 	[super dealloc];
@@ -185,7 +180,7 @@
 		NSString *opmlURL;
 		
 		// Take default for now
-		opmlURL = [defaults objectForKey:@"opml.url"];
+		opmlURL = [[NSUserDefaults standardUserDefaults] stringForKey:BBSettingDefaultOpmlUrl];
 		
 		OPMLUpdater *updater = [[OPMLUpdater alloc] init];
 		NSURL *url = [NSURL URLWithString:opmlURL];
@@ -197,6 +192,18 @@
 /** Returns YES if connected. */
 - (BOOL)isConnected {
 	return YES;
+}
+
+- (void)initDefaultUserPreferences {
+	NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+	
+	NSDictionary *userDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
+								  @"http://blogbridge.com/points/bbip.opml",	BBSettingDefaultOpmlUrl,
+								  [NSNumber numberWithInt:100],					BBSettingCurrentFontBias,
+								  [NSNumber numberWithInt:300],					BBSettingReadArticleAge,
+								  [NSNumber numberWithInt:432000],				BBSettingUnreadArticleAge, nil];
+	
+	[ud registerDefaults:userDefaults];
 }
 
 @end

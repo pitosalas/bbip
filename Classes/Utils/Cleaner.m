@@ -7,19 +7,18 @@
 //
 
 #import "Cleaner.h"
+#import "Constants.h"
 
 @implementation Cleaner
 
-- (id)initWithManagedObjectContext:(NSManagedObjectContext *)context defaults:(NSDictionary *)aDefaults{
+- (id)initWithManagedObjectContext:(NSManagedObjectContext *)context {
 	if (self = [super init]) {
 		managedObjectContext = [context retain];
-		defaults = [aDefaults retain];
 	}
 	return self;
 }
 
 - (void)dealloc {
-	[defaults release];
 	[managedObjectContext release];
 	[super dealloc];
 }
@@ -48,14 +47,14 @@
 
 /** Border date for read articles. Older articles have to be removed. */
 - (NSDate *)borderReadArticleDate {
-	NSNumber *interval = [defaults objectForKey:KEY_MAX_READ_AGE];
-	return [NSDate dateWithTimeIntervalSinceNow:-[interval intValue]];
+	int interval = [[NSUserDefaults standardUserDefaults] integerForKey:BBSettingReadArticleAge];
+	return [NSDate dateWithTimeIntervalSinceNow:-interval];
 }
 
 /** Border date for unread articles. Older articles have to be removed. */
 - (NSDate *)borderUnreadArticleDate {
-	NSNumber *interval = [defaults objectForKey:KEY_MAX_UNREAD_AGE];
-	return [NSDate dateWithTimeIntervalSinceNow:-[interval intValue]];
+	int interval = [[NSUserDefaults standardUserDefaults] integerForKey:BBSettingUnreadArticleAge];
+	return [NSDate dateWithTimeIntervalSinceNow:-interval];
 }
 
 @end

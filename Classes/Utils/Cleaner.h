@@ -9,15 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-static NSString *KEY_MAX_READ_AGE	= @"max.read.age";
-static NSString *KEY_MAX_UNREAD_AGE	= @"max.unread.age";
-
 @interface Cleaner : NSObject {
 	NSManagedObjectContext *managedObjectContext;
-	NSDictionary *defaults;
 }
 
-- (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext defaults:(NSDictionary *)defaults;
+- (id)initWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 /** Cleans the database. */
 - (void)performCleanup;

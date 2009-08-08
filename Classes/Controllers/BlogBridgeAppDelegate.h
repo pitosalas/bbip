@@ -16,7 +16,6 @@
 
     UIWindow						*window;
 	GuidesTabController				*tabBarController;
-	NSDictionary					*defaults;
 }
 
 - (IBAction)saveAction:sender;
@@ -42,5 +41,8 @@
 
 /** Returns YES if connected. */
 - (BOOL)isConnected;
+
+/** Initializes the default preferences. */
+- (void)initDefaultUserPreferences;
 
 @end

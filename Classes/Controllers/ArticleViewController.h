@@ -13,10 +13,22 @@
 @interface ArticleViewController : UIViewController {
 	UIWebView	*webView;
 	Article		*article;
+	int			currentFontBias;
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 
 - (id)initWithArticle:(Article *)anArticle;
+
+- (IBAction)smallerFont;
+- (IBAction)largerFont;
+
+@end
+
+
+@interface ArticleViewController (private)
+
+/** Changes the font bias by given delta. */
+- (void)changeFontBiasBy:(int)delta;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ArticleViewController.h"
 #import "Article.h"
+#import "Constants.h"
 
 @implementation ArticleViewController
 
@@ -17,6 +18,8 @@
 	if (self = [super initWithNibName:@"ArticleViewController" bundle:nil]) {
 		article = [anArticle retain];
 		self.hidesBottomBarWhenPushed = YES;
+		
+		currentFontBias = [[NSUserDefaults standardUserDefaults] integerForKey:BBSettingCurrentFontBias];
 	}
 	
 	return self;
@@ -32,7 +35,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	[webView loadHTMLString:article.fullHTML baseURL:article.baseURL];
+	NSString *metaHTML  = [NSString stringWithFormat:@"<div id='bbip-meta'><div id='bbip-feed-title'>%@</div><div id='bbip-article-title'>%@</div></div>", [article.feed valueForKey:@"name"], article.title];
+	NSString *style		= [NSString stringWithFormat:@"#bbip-meta { margin-bottom: 1em; } #bbip-feed-title { text-transform:uppercase; font-family:Helvetica; font-size: 14px; } #bbip-article-title { font-family: Georgia; font-size: 20px; } body { -webkit-text-size-adjust: %d%% }", currentFontBias];
+	NSString *html		= [NSString stringWithFormat:@"<html><head><style type='text/css'>%@</style></head><body>%@<div id='bbip-article'>%@</div></body></html>", style, metaHTML, article.body];
+
+	[webView loadHTMLString:html baseURL:article.baseURL];
 }
 
 /*
@@ -55,6 +62,30 @@
 	// e.g. self.myOutlet = nil;
 }
 
+#pragma mark -
+#pragma mark Font size
 
+/** Invoked when the user changes the font size. */
+- (IBAction)smallerFont {
+	[self changeFontBiasBy:-10];
+}
+
+/** Invoked when the user changes the font size. */
+- (IBAction)largerFont {
+	[self changeFontBiasBy:10];
+}
+
+/** Changes the font bias by given delta. */
+- (void)changeFontBiasBy:(int)delta {
+	currentFontBias += delta;
+	if (currentFontBias > 400) currentFontBias = 400;
+	if (currentFontBias < 10) currentFontBias = 10;
+
+	// Save preference
+	[[NSUserDefaults standardUserDefaults] setInteger:currentFontBias forKey:BBSettingCurrentFontBias];
+	
+	NSString *javascript = [NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust='%d%%'", currentFontBias];
+	NSLog(@"%@", [webView stringByEvaluatingJavaScriptFromString:javascript]);
+}
 
 @end
