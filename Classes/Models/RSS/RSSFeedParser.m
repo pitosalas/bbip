@@ -93,7 +93,6 @@
 
 /** Finds a parser for the given root element. */
 - (AbstractParser *)findParserForElement:(NSString *)elementName attributes:(NSDictionary *)attributeDict {
-	NSLog(@"\n-------------------------------\n %@ \n-------------------------------", elementName);
 	if ([@"rss" caseInsensitiveCompare:elementName] == NSOrderedSame) {
 		NSString *version = [attributeDict valueForKey:@"version"];
 		if ([version isEqual:@"0.91"] || [version isEqual:@"0.92"] || [version isEqual:@"0.93"]) {

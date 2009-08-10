@@ -20,5 +20,6 @@
 @property (nonatomic, retain) NSString *body;
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSString *pubDate;
+@property (nonatomic, readonly) NSDate *pubDateObject;
 
 @end
