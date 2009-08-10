@@ -25,23 +25,36 @@ static NSString* DateFormats[] = {
 
 @implementation RSSItem
 
-@synthesize title, body, url, pubDate;
+@synthesize title, body, url, pubDate, pubDateObject;
 
-/** Attempts to convert the string date representation into a real object. */
-- (NSDate *)pubDateObject {
+- (void)setPubDate:(NSString *)date {
+	[pubDate autorelease];
+	pubDate = [date retain];
+	
+	[pubDateObject autorelease];
+	pubDateObject = [[RSSItem dateFromString:date] retain];
+}
+
+- (void)dealloc {
+	title	= nil;
+	body	= nil;
+	url		= nil;
+	pubDate	= nil;
+	[super dealloc];
+}
+
++ (NSDate *)dateFromString:(NSString *)string {
 	NSDate *date = nil;
 	
-	if (self.pubDate == nil) return nil;
+	if (string == nil) return nil;
 	
-	NSString *sdate = self.pubDate;
-	NSRange sixLastChars = NSMakeRange([sdate length] - 6, 6);
-	if ([sdate rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"-+"] options:NSLiteralSearch range:sixLastChars].location != NSNotFound &&
-		[sdate rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@":"]  options:NSLiteralSearch range:sixLastChars].location != NSNotFound) {
-		if (![[sdate substringWithRange:NSMakeRange([sdate length] - 9, 3)] caseInsensitiveCompare:@"gmt"] == NSOrderedSame) {
-			NSMutableString *mdate = [NSMutableString stringWithString:sdate];
+	NSRange sixLastChars = NSMakeRange([string length] - 6, 6);
+	if ([string rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@"-+"] options:NSLiteralSearch range:sixLastChars].location != NSNotFound &&
+		[string rangeOfCharacterFromSet:[NSCharacterSet characterSetWithCharactersInString:@":"]  options:NSLiteralSearch range:sixLastChars].location != NSNotFound) {
+		if (![[string substringWithRange:NSMakeRange([string length] - 9, 3)] caseInsensitiveCompare:@"gmt"] == NSOrderedSame) {
+			NSMutableString *mdate = [NSMutableString stringWithString:string];
 			[mdate replaceOccurrencesOfString:@":" withString:@"" options:NSLiteralSearch range:sixLastChars];
-			NSLog(@"--> %@", mdate);
-			sdate = mdate;
+			string = mdate;
 		}
 	}
 	
@@ -50,7 +63,7 @@ static NSString* DateFormats[] = {
 	NSString **format = DateFormats;
 	while (*format && date == nil) {
 		formatter.dateFormat = *format;
-		date = [formatter dateFromString:sdate];
+		date = [formatter dateFromString:string];
 		if ([date timeIntervalSince1970] == 0) date = nil;
 		format++;
 	}

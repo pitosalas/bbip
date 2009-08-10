@@ -29,9 +29,7 @@
 }
 
 - (NSString *)parseDate:(NSString *)date {
-	item.pubDate = date;
-	NSDate *dateo = item.pubDateObject;
-	return dateo == nil ? nil : [NSString stringWithFormat:@"%@", dateo];
+	return [NSString stringWithFormat:@"%@", [RSSItem dateFromString:date]];
 }
 
 @end

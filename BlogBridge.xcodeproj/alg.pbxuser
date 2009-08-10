@@ -785,6 +785,16 @@
 			7909271F103055C900ECDD50 /* PBXTextBookmark */ = 7909271F103055C900ECDD50 /* PBXTextBookmark */;
 			79092720103055C900ECDD50 /* PBXTextBookmark */ = 79092720103055C900ECDD50 /* PBXTextBookmark */;
 			79092722103055C900ECDD50 /* PBXTextBookmark */ = 79092722103055C900ECDD50 /* PBXTextBookmark */;
+			790927251030576700ECDD50 /* PBXTextBookmark */ = 790927251030576700ECDD50 /* PBXTextBookmark */;
+			790927261030576700ECDD50 /* PBXTextBookmark */ = 790927261030576700ECDD50 /* PBXTextBookmark */;
+			790927271030576700ECDD50 /* PBXTextBookmark */ = 790927271030576700ECDD50 /* PBXTextBookmark */;
+			790927281030576700ECDD50 /* PBXTextBookmark */ = 790927281030576700ECDD50 /* PBXTextBookmark */;
+			790927291030576700ECDD50 /* PBXTextBookmark */ = 790927291030576700ECDD50 /* PBXTextBookmark */;
+			7909272A1030576700ECDD50 /* PBXTextBookmark */ = 7909272A1030576700ECDD50 /* PBXTextBookmark */;
+			7909272B1030576700ECDD50 /* PBXTextBookmark */ = 7909272B1030576700ECDD50 /* PBXTextBookmark */;
+			7909272C1030576700ECDD50 /* PBXTextBookmark */ = 7909272C1030576700ECDD50 /* PBXTextBookmark */;
+			7909272D1030576700ECDD50 /* PBXTextBookmark */ = 7909272D1030576700ECDD50 /* PBXTextBookmark */;
+			7909272E1030576700ECDD50 /* PBXTextBookmark */ = 7909272E1030576700ECDD50 /* PBXTextBookmark */;
 			7914E740102AE04100D559D9 = 7914E740102AE04100D559D9 /* PBXTextBookmark */;
 			7914E741102AE04100D559D9 = 7914E741102AE04100D559D9 /* PBXTextBookmark */;
 			7914E74B102AE04100D559D9 = 7914E74B102AE04100D559D9 /* PBXTextBookmark */;
@@ -2530,7 +2540,7 @@
 		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
 		name = "RSSItem.h: 23";
 		rLen = 0;
-		rLoc = 524;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 475;
 		vrLoc = 0;
@@ -2540,7 +2550,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 15";
 		rLen = 0;
-		rLoc = 1924;
+		rLoc = 2097;
 		rType = 0;
 		vrLen = 232;
 		vrLoc = 0;
@@ -2580,7 +2590,7 @@
 		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
 		name = "RSSItem.h: 23";
 		rLen = 0;
-		rLoc = 524;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 475;
 		vrLoc = 0;
@@ -2590,7 +2600,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 15";
 		rLen = 0;
-		rLoc = 1924;
+		rLoc = 2097;
 		rType = 0;
 		vrLen = 232;
 		vrLoc = 0;
@@ -2769,7 +2779,7 @@
 		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
 		name = "RSSItem.h: 22";
 		rLen = 0;
-		rLoc = 458;
+		rLoc = 484;
 		rType = 0;
 		vrLen = 475;
 		vrLoc = 0;
@@ -2869,7 +2879,7 @@
 		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
 		name = "RSSItem.h: 23";
 		rLen = 0;
-		rLoc = 524;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 475;
 		vrLoc = 0;
@@ -4744,9 +4754,9 @@
 	};
 	7909264F1030413E00ECDD50 /* RSSItemTests.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1134, 608}}";
-			sepNavSelRange = "{301, 0}";
-			sepNavVisRange = "{261, 938}";
+			sepNavIntBoundsRect = "{{0, 0}, {1134, 576}}";
+			sepNavSelRange = "{1139, 0}";
+			sepNavVisRange = "{142, 654}";
 		};
 	};
 	790926561030426800ECDD50 /* PBXTextBookmark */ = {
@@ -4814,7 +4824,7 @@
 		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
 		name = "RSSItem.h: 24";
 		rLen = 0;
-		rLoc = 524;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 386;
 		vrLoc = 139;
@@ -4824,7 +4834,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 16";
 		rLen = 0;
-		rLoc = 747;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 140;
@@ -4843,7 +4853,7 @@
 		isa = PBXTextBookmark;
 		fRef = 7909264F1030413E00ECDD50 /* RSSItemTests.m */;
 		rLen = 0;
-		rLoc = 2147484134;
+		rLoc = 2147484078;
 		rType = 0;
 	};
 	790926601030426800ECDD50 /* PBXTextBookmark */ = {
@@ -4911,7 +4921,7 @@
 		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
 		name = "RSSItem.h: 24";
 		rLen = 0;
-		rLoc = 524;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 386;
 		vrLoc = 139;
@@ -4921,7 +4931,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 16";
 		rLen = 0;
-		rLoc = 747;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 392;
 		vrLoc = 140;
@@ -4971,7 +4981,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 26";
 		rLen = 0;
-		rLoc = 1924;
+		rLoc = 2097;
 		rType = 0;
 		vrLen = 333;
 		vrLoc = 0;
@@ -5001,7 +5011,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 23";
 		rLen = 0;
-		rLoc = 1737;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 380;
 		vrLoc = 162;
@@ -5199,7 +5209,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 30";
 		rLen = 0;
-		rLoc = 1867;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 368;
 		vrLoc = 433;
@@ -5229,7 +5239,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 30";
 		rLen = 0;
-		rLoc = 1867;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 367;
 		vrLoc = 433;
@@ -5304,8 +5314,8 @@
 		isa = PBXTextBookmark;
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 30";
-		rLen = 15;
-		rLoc = 1867;
+		rLen = 0;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 379;
 		vrLoc = 471;
@@ -5315,7 +5325,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 30";
 		rLen = 0;
-		rLoc = 1867;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 367;
 		vrLoc = 433;
@@ -5334,8 +5344,8 @@
 		isa = PBXTextBookmark;
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 30";
-		rLen = 15;
-		rLoc = 1867;
+		rLen = 0;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 379;
 		vrLoc = 471;
@@ -5565,7 +5575,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 42";
 		rLen = 0;
-		rLoc = 1866;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 491;
 		vrLoc = 625;
@@ -5585,7 +5595,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 42";
 		rLen = 0;
-		rLoc = 1866;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 491;
 		vrLoc = 625;
@@ -5934,8 +5944,8 @@
 		isa = PBXTextBookmark;
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 37";
-		rLen = 7;
-		rLoc = 873;
+		rLen = 0;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 799;
@@ -5955,7 +5965,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 45";
 		rLen = 0;
-		rLoc = 1603;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 839;
@@ -5975,7 +5985,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 44";
 		rLen = 0;
-		rLoc = 1603;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 534;
 		vrLoc = 837;
@@ -5994,8 +6004,8 @@
 		isa = PBXTextBookmark;
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 37";
-		rLen = 7;
-		rLoc = 873;
+		rLen = 0;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 733;
 		vrLoc = 837;
@@ -6021,10 +6031,110 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 53";
 		rLen = 0;
-		rLoc = 1811;
+		rLoc = 959;
 		rType = 0;
 		vrLen = 321;
 		vrLoc = 1603;
+	};
+	790927251030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7909264F1030413E00ECDD50 /* RSSItemTests.m */;
+		name = "RSSItemTests.m: 32";
+		rLen = 0;
+		rLoc = 1139;
+		rType = 0;
+		vrLen = 654;
+		vrLoc = 142;
+	};
+	790927261030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
+		name = "RSSItem.h: 24";
+		rLen = 0;
+		rLoc = 527;
+		rType = 0;
+		vrLen = 579;
+		vrLoc = 77;
+	};
+	790927271030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
+		name = "RSSItem.m: 41";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 595;
+	};
+	790927281030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
+		name = "RSSItem.m: 53";
+		rLen = 0;
+		rLoc = 959;
+		rType = 0;
+		vrLen = 819;
+		vrLoc = 629;
+	};
+	790927291030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
+		name = "RSSItem.h: 26";
+		rLen = 45;
+		rLoc = 603;
+		rType = 0;
+		vrLen = 607;
+		vrLoc = 17;
+	};
+	7909272A1030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
+		name = "RSSItem.m: 39";
+		rLen = 0;
+		rLoc = 956;
+		rType = 0;
+		vrLen = 460;
+		vrLoc = 579;
+	};
+	7909272B1030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
+		name = "RSSItem.h: 24";
+		rLen = 0;
+		rLoc = 527;
+		rType = 0;
+		vrLen = 579;
+		vrLoc = 77;
+	};
+	7909272C1030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
+		name = "RSSItem.m: 41";
+		rLen = 0;
+		rLoc = 922;
+		rType = 0;
+		vrLen = 417;
+		vrLoc = 595;
+	};
+	7909272D1030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
+		name = "RSSItem.h: 24";
+		rLen = 0;
+		rLoc = 527;
+		rType = 0;
+		vrLen = 579;
+		vrLoc = 77;
+	};
+	7909272E1030576700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
+		name = "RSSItem.m: 43";
+		rLen = 0;
+		rLoc = 956;
+		rType = 0;
+		vrLen = 1083;
+		vrLoc = 957;
 	};
 	7914E720102ACF5300D559D9 /* OPMLGuide.h */ = {
 		uiCtxt = {
@@ -6436,16 +6546,16 @@
 	};
 	7953DB57102C71AF00E87B72 /* RSSItem.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1134, 416}}";
-			sepNavSelRange = "{524, 0}";
-			sepNavVisRange = "{139, 386}";
+			sepNavIntBoundsRect = "{{0, 0}, {1134, 480}}";
+			sepNavSelRange = "{527, 0}";
+			sepNavVisRange = "{77, 579}";
 		};
 	};
 	7953DB58102C71AF00E87B72 /* RSSItem.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1174, 1024}}";
-			sepNavSelRange = "{1811, 0}";
-			sepNavVisRange = "{1603, 321}";
+			sepNavIntBoundsRect = "{{0, 0}, {1181, 1168}}";
+			sepNavSelRange = "{956, 0}";
+			sepNavVisRange = "{957, 1083}";
 		};
 	};
 	7953DB5A102C724D00E87B72 /* RSSFeedParser.h */ = {
@@ -6473,7 +6583,7 @@
 		fRef = 7953DB57102C71AF00E87B72 /* RSSItem.h */;
 		name = "RSSItem.h: 23";
 		rLen = 0;
-		rLoc = 524;
+		rLoc = 650;
 		rType = 0;
 		vrLen = 475;
 		vrLoc = 0;
@@ -6483,7 +6593,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 15";
 		rLen = 0;
-		rLoc = 1924;
+		rLoc = 2097;
 		rType = 0;
 		vrLen = 232;
 		vrLoc = 0;
@@ -6503,7 +6613,7 @@
 		fRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */;
 		name = "RSSItem.m: 15";
 		rLen = 0;
-		rLoc = 1924;
+		rLoc = 2097;
 		rType = 0;
 		vrLen = 232;
 		vrLoc = 0;
