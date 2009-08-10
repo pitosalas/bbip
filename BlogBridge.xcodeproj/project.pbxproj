@@ -16,6 +16,29 @@
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* GuideViewController.m */; };
+		790923FE102FF42C00ECDD50 /* AbstractParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790923FD102FF42C00ECDD50 /* AbstractParser.m */; };
+		790923FF102FF42C00ECDD50 /* AbstractParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790923FD102FF42C00ECDD50 /* AbstractParser.m */; };
+		79092404102FFC0000ECDD50 /* RSSFeedParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79092403102FFC0000ECDD50 /* RSSFeedParserTests.m */; };
+		79092406102FFC8B00ECDD50 /* rss-0.91.xml in Resources */ = {isa = PBXBuildFile; fileRef = 79092405102FFC8B00ECDD50 /* rss-0.91.xml */; };
+		79092409102FFD6400ECDD50 /* RSSFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953DB5B102C724D00E87B72 /* RSSFeedParser.m */; };
+		7909240A102FFD6500ECDD50 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */; };
+		79092426102FFEB000ECDD50 /* RSS091Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 79092425102FFEB000ECDD50 /* RSS091Parser.m */; };
+		79092427102FFEC300ECDD50 /* RSS091Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 79092425102FFEB000ECDD50 /* RSS091Parser.m */; };
+		7909247C103000C700ECDD50 /* RSS10Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909247B103000C700ECDD50 /* RSS10Parser.m */; };
+		7909247D103000C700ECDD50 /* RSS10Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909247B103000C700ECDD50 /* RSS10Parser.m */; };
+		790924841030012800ECDD50 /* Atom10Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790924831030012800ECDD50 /* Atom10Parser.m */; };
+		790924851030012800ECDD50 /* Atom10Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790924831030012800ECDD50 /* Atom10Parser.m */; };
+		790924A4103001DE00ECDD50 /* Atom03Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790924A3103001DE00ECDD50 /* Atom03Parser.m */; };
+		790924A5103001DE00ECDD50 /* Atom03Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790924A3103001DE00ECDD50 /* Atom03Parser.m */; };
+		790924A81030020400ECDD50 /* RSS20Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790924A71030020400ECDD50 /* RSS20Parser.m */; };
+		790924A91030020400ECDD50 /* RSS20Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 790924A71030020400ECDD50 /* RSS20Parser.m */; };
+		790924F410300B2800ECDD50 /* AbstractParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 790924F310300B2800ECDD50 /* AbstractParserTests.m */; };
+		790925B010302E6300ECDD50 /* rss-0.92.xml in Resources */ = {isa = PBXBuildFile; fileRef = 790925AF10302E6300ECDD50 /* rss-0.92.xml */; };
+		790925BB10302F1C00ECDD50 /* rss-1.0.xml in Resources */ = {isa = PBXBuildFile; fileRef = 790925BA10302F1C00ECDD50 /* rss-1.0.xml */; };
+		790925E71030351100ECDD50 /* rss-2.0-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = 790925E61030351100ECDD50 /* rss-2.0-1.xml */; };
+		7909261A1030379900ECDD50 /* rss-2.0-2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 790926191030379900ECDD50 /* rss-2.0-2.xml */; };
+		7909262110303AB100ECDD50 /* atom-0.3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7909262010303AB100ECDD50 /* atom-0.3.xml */; };
+		7909262910303C4800ECDD50 /* atom-1.0.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7909262810303C4800ECDD50 /* atom-1.0.xml */; };
 		790D4BDC102AEABF0091EA1B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 790D4BDB102AEABF0091EA1B /* Default.png */; };
 		7914E722102ACF5300D559D9 /* OPMLGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E721102ACF5300D559D9 /* OPMLGuide.m */; };
 		7914E725102AD0C700D559D9 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
@@ -77,6 +100,29 @@
 		28C286DF0D94DF7D0034E888 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		28C286E00D94DF7D0034E888 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Classes/main.m; sourceTree = "<group>"; };
+		790923FC102FF42C00ECDD50 /* AbstractParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractParser.h; sourceTree = "<group>"; };
+		790923FD102FF42C00ECDD50 /* AbstractParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractParser.m; sourceTree = "<group>"; };
+		79092402102FFC0000ECDD50 /* RSSFeedParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSFeedParserTests.h; sourceTree = "<group>"; };
+		79092403102FFC0000ECDD50 /* RSSFeedParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSFeedParserTests.m; sourceTree = "<group>"; };
+		79092405102FFC8B00ECDD50 /* rss-0.91.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "rss-0.91.xml"; sourceTree = "<group>"; };
+		79092424102FFEB000ECDD50 /* RSS091Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSS091Parser.h; sourceTree = "<group>"; };
+		79092425102FFEB000ECDD50 /* RSS091Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSS091Parser.m; sourceTree = "<group>"; };
+		7909247A103000C700ECDD50 /* RSS10Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSS10Parser.h; sourceTree = "<group>"; };
+		7909247B103000C700ECDD50 /* RSS10Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSS10Parser.m; sourceTree = "<group>"; };
+		790924821030012800ECDD50 /* Atom10Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atom10Parser.h; sourceTree = "<group>"; };
+		790924831030012800ECDD50 /* Atom10Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atom10Parser.m; sourceTree = "<group>"; };
+		790924A2103001DE00ECDD50 /* Atom03Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Atom03Parser.h; sourceTree = "<group>"; };
+		790924A3103001DE00ECDD50 /* Atom03Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Atom03Parser.m; sourceTree = "<group>"; };
+		790924A61030020400ECDD50 /* RSS20Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSS20Parser.h; sourceTree = "<group>"; };
+		790924A71030020400ECDD50 /* RSS20Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSS20Parser.m; sourceTree = "<group>"; };
+		790924F210300B2800ECDD50 /* AbstractParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractParserTests.h; sourceTree = "<group>"; };
+		790924F310300B2800ECDD50 /* AbstractParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractParserTests.m; sourceTree = "<group>"; };
+		790925AF10302E6300ECDD50 /* rss-0.92.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "rss-0.92.xml"; sourceTree = "<group>"; };
+		790925BA10302F1C00ECDD50 /* rss-1.0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "rss-1.0.xml"; sourceTree = "<group>"; };
+		790925E61030351100ECDD50 /* rss-2.0-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "rss-2.0-1.xml"; sourceTree = "<group>"; };
+		790926191030379900ECDD50 /* rss-2.0-2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "rss-2.0-2.xml"; sourceTree = "<group>"; };
+		7909262010303AB100ECDD50 /* atom-0.3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "atom-0.3.xml"; sourceTree = "<group>"; };
+		7909262810303C4800ECDD50 /* atom-1.0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "atom-1.0.xml"; sourceTree = "<group>"; };
 		790D4BDB102AEABF0091EA1B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		7914E720102ACF5300D559D9 /* OPMLGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OPMLGuide.h; path = OPML/OPMLGuide.h; sourceTree = "<group>"; };
 		7914E721102ACF5300D559D9 /* OPMLGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OPMLGuide.m; path = OPML/OPMLGuide.m; sourceTree = "<group>"; };
@@ -215,6 +261,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		790923F3102FF29D00ECDD50 /* parsers */ = {
+			isa = PBXGroup;
+			children = (
+				790923FC102FF42C00ECDD50 /* AbstractParser.h */,
+				790923FD102FF42C00ECDD50 /* AbstractParser.m */,
+				790924A2103001DE00ECDD50 /* Atom03Parser.h */,
+				790924A3103001DE00ECDD50 /* Atom03Parser.m */,
+				790924821030012800ECDD50 /* Atom10Parser.h */,
+				790924831030012800ECDD50 /* Atom10Parser.m */,
+				79092424102FFEB000ECDD50 /* RSS091Parser.h */,
+				79092425102FFEB000ECDD50 /* RSS091Parser.m */,
+				7909247A103000C700ECDD50 /* RSS10Parser.h */,
+				7909247B103000C700ECDD50 /* RSS10Parser.m */,
+				790924A61030020400ECDD50 /* RSS20Parser.h */,
+				790924A71030020400ECDD50 /* RSS20Parser.m */,
+			);
+			name = parsers;
+			sourceTree = "<group>";
+		};
+		7909256C103029CF00ECDD50 /* RSS */ = {
+			isa = PBXGroup;
+			children = (
+				79092402102FFC0000ECDD50 /* RSSFeedParserTests.h */,
+				79092403102FFC0000ECDD50 /* RSSFeedParserTests.m */,
+				790924F210300B2800ECDD50 /* AbstractParserTests.h */,
+				790924F310300B2800ECDD50 /* AbstractParserTests.m */,
+			);
+			name = RSS;
+			sourceTree = "<group>";
+		};
 		7914E71F102ACF3300D559D9 /* OPML */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +309,7 @@
 		7953DB45102C6C7700E87B72 /* RSS */ = {
 			isa = PBXGroup;
 			children = (
+				790923F3102FF29D00ECDD50 /* parsers */,
 				7953DB57102C71AF00E87B72 /* RSSItem.h */,
 				7953DB58102C71AF00E87B72 /* RSSItem.m */,
 				7953DB5A102C724D00E87B72 /* RSSFeedParser.h */,
@@ -290,6 +367,7 @@
 		79FDB86B102AF5A000AF94A2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				7909256C103029CF00ECDD50 /* RSS */,
 				79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */,
 				79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */,
 				7953D916102C371000E87B72 /* OPMLUpdaterTests.h */,
@@ -303,6 +381,13 @@
 			children = (
 				79FDBAF8102B235700AF94A2 /* sample.opml */,
 				79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */,
+				79092405102FFC8B00ECDD50 /* rss-0.91.xml */,
+				790925AF10302E6300ECDD50 /* rss-0.92.xml */,
+				790925BA10302F1C00ECDD50 /* rss-1.0.xml */,
+				790925E61030351100ECDD50 /* rss-2.0-1.xml */,
+				790926191030379900ECDD50 /* rss-2.0-2.xml */,
+				7909262010303AB100ECDD50 /* atom-0.3.xml */,
+				7909262810303C4800ECDD50 /* atom-1.0.xml */,
 			);
 			path = "Test Resources";
 			sourceTree = "<group>";
@@ -392,6 +477,13 @@
 				79FDBAF9102B235700AF94A2 /* sample.opml in Resources */,
 				7953D9ED102C432000E87B72 /* LogicTests-Info.plist in Resources */,
 				7953DA07102C440500E87B72 /* MainWindow.xib in Resources */,
+				79092406102FFC8B00ECDD50 /* rss-0.91.xml in Resources */,
+				790925B010302E6300ECDD50 /* rss-0.92.xml in Resources */,
+				790925BB10302F1C00ECDD50 /* rss-1.0.xml in Resources */,
+				790925E71030351100ECDD50 /* rss-2.0-1.xml in Resources */,
+				7909261A1030379900ECDD50 /* rss-2.0-2.xml in Resources */,
+				7909262110303AB100ECDD50 /* atom-0.3.xml in Resources */,
+				7909262910303C4800ECDD50 /* atom-1.0.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +527,12 @@
 				7953DB5C102C724D00E87B72 /* RSSFeedParser.m in Sources */,
 				79CE5D84102C981600D3E652 /* Cleaner.m in Sources */,
 				79545ECC102D6E33001D5F29 /* Constants.m in Sources */,
+				790923FE102FF42C00ECDD50 /* AbstractParser.m in Sources */,
+				79092427102FFEC300ECDD50 /* RSS091Parser.m in Sources */,
+				7909247D103000C700ECDD50 /* RSS10Parser.m in Sources */,
+				790924851030012800ECDD50 /* Atom10Parser.m in Sources */,
+				790924A5103001DE00ECDD50 /* Atom03Parser.m in Sources */,
+				790924A91030020400ECDD50 /* RSS20Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +550,16 @@
 				7953DA5D102C587300E87B72 /* Guide.m in Sources */,
 				79CE5D88102CBA5300D3E652 /* Cleaner.m in Sources */,
 				79545ECD102D6E33001D5F29 /* Constants.m in Sources */,
+				790923FF102FF42C00ECDD50 /* AbstractParser.m in Sources */,
+				79092404102FFC0000ECDD50 /* RSSFeedParserTests.m in Sources */,
+				79092409102FFD6400ECDD50 /* RSSFeedParser.m in Sources */,
+				7909240A102FFD6500ECDD50 /* RSSItem.m in Sources */,
+				79092426102FFEB000ECDD50 /* RSS091Parser.m in Sources */,
+				7909247C103000C700ECDD50 /* RSS10Parser.m in Sources */,
+				790924841030012800ECDD50 /* Atom10Parser.m in Sources */,
+				790924A4103001DE00ECDD50 /* Atom03Parser.m in Sources */,
+				790924A81030020400ECDD50 /* RSS20Parser.m in Sources */,
+				790924F410300B2800ECDD50 /* AbstractParserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

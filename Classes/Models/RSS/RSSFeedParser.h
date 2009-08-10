@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class AbstractParser;
 
 @interface RSSFeedParser : NSObject {
+	AbstractParser *delegate;
 }
+
+@property (nonatomic, retain) AbstractParser *delegate;
 
 /** Parses the feed from the given URL and returns the array of items. */
 - (NSArray *)parseFeedFromURL:(NSURL *)url;
@@ -27,5 +31,8 @@
 
 /** Parses the feed from a pre-initialized parser and returns the array of items. */
 - (NSArray *)parseFeedWithParser:(NSXMLParser *)parser;
+
+/** Finds a parser for the given root element. */
+- (AbstractParser *)findParserForElement:(NSString *)elementName attributes:(NSDictionary *)attributeDict;
 
 @end

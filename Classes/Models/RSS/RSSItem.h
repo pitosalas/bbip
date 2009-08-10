@@ -13,12 +13,12 @@
 	NSString *title;
 	NSString *url;
 	NSString *body;
-	NSDate   *pubDate;
+	NSString *pubDate;
 }
 
 @property (nonatomic, retain) NSString *title;
 @property (nonatomic, retain) NSString *body;
 @property (nonatomic, retain) NSString *url;
-@property (nonatomic, retain) NSDate   *pubDate;
+@property (nonatomic, retain) NSString *pubDate;
 
 @end
