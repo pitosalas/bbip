@@ -11,7 +11,6 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		28860B770F44E54D00985440 /* BlogBridge.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28860B760F44E54D00985440 /* BlogBridge.xcdatamodel */; };
 		28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28860BE40F44EE6400985440 /* CoreData.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
@@ -40,6 +39,9 @@
 		7909262110303AB100ECDD50 /* atom-0.3.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7909262010303AB100ECDD50 /* atom-0.3.xml */; };
 		7909262910303C4800ECDD50 /* atom-1.0.xml in Resources */ = {isa = PBXBuildFile; fileRef = 7909262810303C4800ECDD50 /* atom-1.0.xml */; };
 		790926501030413E00ECDD50 /* RSSItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909264F1030413E00ECDD50 /* RSSItemTests.m */; };
+		7909273510305AA800ECDD50 /* RSSUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909273410305AA800ECDD50 /* RSSUpdater.m */; };
+		7909273610305AA800ECDD50 /* RSSUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909273410305AA800ECDD50 /* RSSUpdater.m */; };
+		790927B0103078E700ECDD50 /* BlogBridge.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 790927AF103078E700ECDD50 /* BlogBridge.xcdatamodel */; };
 		790D4BDC102AEABF0091EA1B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 790D4BDB102AEABF0091EA1B /* Default.png */; };
 		7914E722102ACF5300D559D9 /* OPMLGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E721102ACF5300D559D9 /* OPMLGuide.m */; };
 		7914E725102AD0C700D559D9 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
@@ -53,7 +55,6 @@
 		7953D999102C3F8C00E87B72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		7953D9ED102C432000E87B72 /* LogicTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 79FDB8F0102AFF5400AF94A2 /* LogicTests-Info.plist */; };
 		7953DA07102C440500E87B72 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
-		7953DA0C102C442400E87B72 /* BlogBridge.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28860B760F44E54D00985440 /* BlogBridge.xcdatamodel */; };
 		7953DA5D102C587300E87B72 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E28E1029733C00A3D584 /* Guide.m */; };
 		7953DB59102C71AF00E87B72 /* RSSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953DB58102C71AF00E87B72 /* RSSItem.m */; };
 		7953DB5C102C724D00E87B72 /* RSSFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7953DB5B102C724D00E87B72 /* RSSFeedParser.m */; };
@@ -93,7 +94,6 @@
 		1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlogBridgeAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* BlogBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlogBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		28860B760F44E54D00985440 /* BlogBridge.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = BlogBridge.xcdatamodel; path = Resources/BlogBridge.xcdatamodel; sourceTree = "<group>"; };
 		28860BE40F44EE6400985440 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		28A0AAE50D9B0CCF005BE974 /* BlogBridge_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlogBridge_Prefix.pch; sourceTree = "<group>"; };
@@ -126,6 +126,9 @@
 		7909262810303C4800ECDD50 /* atom-1.0.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "atom-1.0.xml"; sourceTree = "<group>"; };
 		7909264E1030413E00ECDD50 /* RSSItemTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSItemTests.h; sourceTree = "<group>"; };
 		7909264F1030413E00ECDD50 /* RSSItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSItemTests.m; sourceTree = "<group>"; };
+		7909273310305AA800ECDD50 /* RSSUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSSUpdater.h; sourceTree = "<group>"; };
+		7909273410305AA800ECDD50 /* RSSUpdater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSSUpdater.m; sourceTree = "<group>"; };
+		790927AF103078E700ECDD50 /* BlogBridge.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; name = BlogBridge.xcdatamodel; path = Resources/BlogBridge.xcdatamodel; sourceTree = "<group>"; };
 		790D4BDB102AEABF0091EA1B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		7914E720102ACF5300D559D9 /* OPMLGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OPMLGuide.h; path = OPML/OPMLGuide.h; sourceTree = "<group>"; };
 		7914E721102ACF5300D559D9 /* OPMLGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OPMLGuide.m; path = OPML/OPMLGuide.m; sourceTree = "<group>"; };
@@ -243,7 +246,7 @@
 			children = (
 				79C0E2761029718F00A3D584 /* images */,
 				790D4BDB102AEABF0091EA1B /* Default.png */,
-				28860B760F44E54D00985440 /* BlogBridge.xcdatamodel */,
+				790927AF103078E700ECDD50 /* BlogBridge.xcdatamodel */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
 				79C0E4F81029ADD200A3D584 /* ArticleViewController.xib */,
 				8D1107310486CEB800E47090 /* BlogBridge-Info.plist */,
@@ -319,6 +322,8 @@
 				7953DB58102C71AF00E87B72 /* RSSItem.m */,
 				7953DB5A102C724D00E87B72 /* RSSFeedParser.h */,
 				7953DB5B102C724D00E87B72 /* RSSFeedParser.m */,
+				7909273310305AA800ECDD50 /* RSSUpdater.h */,
+				7909273410305AA800ECDD50 /* RSSUpdater.m */,
 			);
 			path = RSS;
 			sourceTree = "<group>";
@@ -518,7 +523,6 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* BlogBridgeAppDelegate.m in Sources */,
 				28C286E10D94DF7D0034E888 /* GuideViewController.m in Sources */,
-				28860B770F44E54D00985440 /* BlogBridge.xcdatamodel in Sources */,
 				79C0E28F1029733C00A3D584 /* Guide.m in Sources */,
 				79C0E31E1029911C00A3D584 /* Article.m in Sources */,
 				79C0E3CD10299D1900A3D584 /* ArticleCell.m in Sources */,
@@ -538,6 +542,8 @@
 				790924851030012800ECDD50 /* Atom10Parser.m in Sources */,
 				790924A5103001DE00ECDD50 /* Atom03Parser.m in Sources */,
 				790924A91030020400ECDD50 /* RSS20Parser.m in Sources */,
+				7909273610305AA800ECDD50 /* RSSUpdater.m in Sources */,
+				790927B0103078E700ECDD50 /* BlogBridge.xcdatamodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +557,6 @@
 				79FDBA79102B12FE00AF94A2 /* OPMLGuide.m in Sources */,
 				7953D918102C371000E87B72 /* OPMLUpdaterTests.m in Sources */,
 				7953D919102C38BC00E87B72 /* OPMLUpdater.m in Sources */,
-				7953DA0C102C442400E87B72 /* BlogBridge.xcdatamodel in Sources */,
 				7953DA5D102C587300E87B72 /* Guide.m in Sources */,
 				79CE5D88102CBA5300D3E652 /* Cleaner.m in Sources */,
 				79545ECD102D6E33001D5F29 /* Constants.m in Sources */,
@@ -566,6 +571,7 @@
 				790924A81030020400ECDD50 /* RSS20Parser.m in Sources */,
 				790924F410300B2800ECDD50 /* AbstractParserTests.m in Sources */,
 				790926501030413E00ECDD50 /* RSSItemTests.m in Sources */,
+				7909273510305AA800ECDD50 /* RSSUpdater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

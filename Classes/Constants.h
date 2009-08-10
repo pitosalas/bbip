@@ -13,3 +13,4 @@ extern NSString * const BBSettingReadArticleAge;
 extern NSString * const BBSettingUnreadArticleAge;
 extern NSString * const BBSettingDefaultOpmlUrl;
 extern NSString * const BBSettingSelectedGuide;
+extern NSString * const BBSettingUpdatePeriod;

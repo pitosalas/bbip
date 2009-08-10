@@ -26,7 +26,7 @@
 	NSDate *hideSplashScreenAfter = [NSDate dateWithTimeIntervalSinceNow:2];
 	
 	[self initDefaultUserPreferences];
-	[self initDefaultDatabaseIfNeeded];
+//	[self initDefaultDatabaseIfNeeded];
 //	[self updateOPML];
 	
 	// Clean articles
@@ -202,6 +202,7 @@
 								  [NSNumber numberWithInt:100],					BBSettingCurrentFontBias,
 								  [NSNumber numberWithInt:300],					BBSettingReadArticleAge,
 								  [NSNumber numberWithInt:432000],				BBSettingUnreadArticleAge,
+								  [NSNumber numberWithInt:1800],				BBSettingUpdatePeriod,
 								  [NSNumber numberWithInt:0],					BBSettingSelectedGuide, nil];
 	
 	[ud registerDefaults:userDefaults];
