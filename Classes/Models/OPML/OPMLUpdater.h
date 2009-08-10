@@ -32,4 +32,7 @@
 /** Returns all entities of a given kind. */
 - (NSArray *)requestAll:(NSString *)entityName inManagedObjectContext:(NSManagedObjectContext *)context;
 
+/** Removes unlinked feeds with their articles. */
+- (void)removeUnlinkedFeedsInManagedObjectContext:(NSManagedObjectContext *)context;
+
 @end

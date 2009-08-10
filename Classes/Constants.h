@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+/** Settings */
 extern NSString * const BBSettingCurrentFontBias;
 extern NSString * const BBSettingReadArticleAge;
 extern NSString * const BBSettingUnreadArticleAge;
 extern NSString * const BBSettingDefaultOpmlUrl;
 extern NSString * const BBSettingSelectedGuide;
 extern NSString * const BBSettingUpdatePeriod;
+
+/** Notifications */
+extern NSString * const BBNotificationArticlesAdded;

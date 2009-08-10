@@ -22,7 +22,6 @@
 @property (nonatomic, retain) NSManagedObject	*feed;
 
 @property (nonatomic, readonly) NSString		*briefBody;
-@property (nonatomic, readonly) NSString		*fullHTML;
 @property (nonatomic, readonly) NSURL			*baseURL;
 
 

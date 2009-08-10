@@ -30,7 +30,12 @@
 		// Update feeds
 		[self syncFeeds:[self collectFeedsFromGuides:guides] inManagedObjectContext:managedObjectContext];
 		[self syncGuides:guides inManagedObjectContext:managedObjectContext];
-		[managedObjectContext save:nil];
+		[self removeUnlinkedFeedsInManagedObjectContext:managedObjectContext];
+
+		NSError *error;
+		if (![managedObjectContext save:&error]) {
+			NSLog(@"Failed to save OPML updates: %@", error);
+		}
 	}
 }
 
@@ -66,6 +71,7 @@
 	}
 	
 	// See what feeds to add
+	int added = 0;
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Feed" inManagedObjectContext:context];
 
 	NSMutableSet *newURLs = [NSMutableSet new];
@@ -80,16 +86,13 @@
 			[feed setValue:opmlFeed.xmlURL forKey:@"url"];
 			[context insertObject:feed];
 			[feed release];
+			
+			added++;
 		}
 	}
 	
-	// See what to remove
-	for (NSManagedObject *feed in presentFeeds) {
-		NSString *url = [feed valueForKey:@"url"];
-		if (![newURLs containsObject:url]) {
-			[context deleteObject:feed];
-		}
-	}
+	
+	NSLog(@"OPML Update: Added %d feed(s)", added);
 	
 	[newURLs release];
 }
@@ -126,6 +129,28 @@
 	}
 	
 	[urlsToFeeds release];
+}
+
+/** Removes unlinked feeds with their articles. */
+- (void)removeUnlinkedFeedsInManagedObjectContext:(NSManagedObjectContext *)context {
+	NSFetchRequest *req = [NSFetchRequest new];
+
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Feed" inManagedObjectContext:context];
+	[req setEntity:entity];
+	
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"guides.@count = 0"];
+	[req setPredicate:predicate];
+	
+	NSError *error;
+	NSArray *unlinkedFeeds = [context executeFetchRequest:req error:&error];
+	
+	for (NSManagedObject *feed in unlinkedFeeds) {
+		[context deleteObject:feed];
+	}
+
+	NSLog(@"Removed %d unlinked feed(s)", [unlinkedFeeds count]);
+	
+	[req release];
 }
 
 /** Returns all entities of a given kind. */

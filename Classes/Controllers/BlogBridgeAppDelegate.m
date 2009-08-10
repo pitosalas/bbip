@@ -13,6 +13,7 @@
 #import "OPMLUpdater.h"
 #import "Cleaner.h"
 #import "Constants.h"
+#import "RSSUpdater.h"
 
 
 @implementation BlogBridgeAppDelegate
@@ -27,12 +28,16 @@
 	
 	[self initDefaultUserPreferences];
 //	[self initDefaultDatabaseIfNeeded];
-//	[self updateOPML];
+	[self updateOPML];
 	
 	// Clean articles
 	Cleaner *cleaner = [[Cleaner alloc] initWithManagedObjectContext:self.managedObjectContext];
 	[cleaner performCleanup];
 	[cleaner release];
+
+	// Start polling for new articles
+	updater = [[RSSUpdater alloc] initWithManagedObjectContext:self.managedObjectContext];
+	[updater update];
 	
 	// Create tab bar controller
 	tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
@@ -122,6 +127,8 @@
 	
 	NSError *error;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
+	
+	//NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:NSMigratePersistentStoresAutomaticallyOption];
     if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
         // Handle error
 		NSLog(@"%@", error);
@@ -150,6 +157,7 @@
     [managedObjectContext release];
     [managedObjectModel release];
     [persistentStoreCoordinator release];
+	[updater release];
     
 	[tabBarController release];
 	[window release];
@@ -182,10 +190,10 @@
 		// Take default for now
 		opmlURL = [[NSUserDefaults standardUserDefaults] stringForKey:BBSettingDefaultOpmlUrl];
 		
-		OPMLUpdater *updater = [[OPMLUpdater alloc] init];
+		OPMLUpdater *opmlUpdater = [[OPMLUpdater alloc] init];
 		NSURL *url = [NSURL URLWithString:opmlURL];
-		[updater updateFromOPMLURL:url managedObjectContext:[self managedObjectContext]];
-		[updater release];
+		[opmlUpdater updateFromOPMLURL:url managedObjectContext:[self managedObjectContext]];
+		[opmlUpdater release];
 	}
 }
 

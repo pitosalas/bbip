@@ -10,9 +10,11 @@
 
 #pragma mark Application Settings
 
-NSString * const BBSettingCurrentFontBias	= @"currentFontBias";
-NSString * const BBSettingReadArticleAge	= @"readArticleAge";
-NSString * const BBSettingUnreadArticleAge	= @"unreadArticleAge";
-NSString * const BBSettingDefaultOpmlUrl	= @"defaultOpmlUrl";
-NSString * const BBSettingSelectedGuide		= @"selectedGuide";
-NSString * const BBSettingUpdatePeriod		= @"updatePeriod";
+NSString * const BBSettingCurrentFontBias		= @"currentFontBias";
+NSString * const BBSettingReadArticleAge		= @"readArticleAge";
+NSString * const BBSettingUnreadArticleAge		= @"unreadArticleAge";
+NSString * const BBSettingDefaultOpmlUrl		= @"defaultOpmlUrl";
+NSString * const BBSettingSelectedGuide			= @"selectedGuide";
+NSString * const BBSettingUpdatePeriod			= @"updatePeriod";
+
+NSString * const BBNotificationArticlesAdded	= @"Articles Added";

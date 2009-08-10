@@ -17,11 +17,12 @@
 	NSDate   *pubDateObject;
 }
 
-@property (nonatomic, retain) NSString *title;
-@property (nonatomic, retain) NSString *body;
-@property (nonatomic, retain) NSString *url;
-@property (nonatomic, retain) NSString *pubDate;
-@property (nonatomic, readonly) NSDate *pubDateObject;
+@property (nonatomic, retain) NSString		*title;
+@property (nonatomic, retain) NSString		*body;
+@property (nonatomic, retain) NSString		*url;
+@property (nonatomic, retain) NSString		*pubDate;
+@property (nonatomic, readonly) NSDate		*pubDateObject;
+@property (nonatomic, readonly) NSString	*key;
 
 /** Converts the date string into a date object. */
 + (NSDate *)dateFromString:(NSString *)string;

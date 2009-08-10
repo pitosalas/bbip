@@ -35,7 +35,9 @@
 		for (NSManagedObject *article in articles) {
 			[managedObjectContext deleteObject:article];
 		}
-		[managedObjectContext save];
+		
+		NSError *error;
+		[managedObjectContext save:&error];
 	}
 	
 	[req release];

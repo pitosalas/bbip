@@ -26,6 +26,9 @@
 /** Returns the list of feeds that are ready for update now. */
 - (NSArray *)findFeedsToUpdate;
 
+/** Creates a dictionary of ObjectID's -> feed.url. */
+- (NSDictionary *)mapFeedIDsToURLs:(NSArray *)feeds;
+
 /** Updates a feed. */
 - (void)updateFeed:(NSManagedObject *)feed;
 

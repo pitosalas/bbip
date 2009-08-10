@@ -6,7 +6,7 @@
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
-@class GuidesTabController;
+@class GuidesTabController, RSSUpdater;
 
 @interface BlogBridgeAppDelegate : NSObject <UIApplicationDelegate> {
     
@@ -16,6 +16,7 @@
 
     UIWindow						*window;
 	GuidesTabController				*tabBarController;
+	RSSUpdater						*updater;
 }
 
 - (IBAction)saveAction:sender;
