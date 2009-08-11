@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1265, 4096}}";
-			sepNavSelRange = "{7595, 0}";
-			sepNavVisRange = "{6061, 1596}";
+			sepNavIntBoundsRect = "{{0, 0}, {1321, 4128}}";
+			sepNavSelRange = "{7428, 0}";
+			sepNavVisRange = "{6061, 1604}";
 			sepNavWindowFrame = "{{70, 179}, {750, 558}}";
 		};
 	};
@@ -550,6 +550,12 @@
 			79092ABE1031A6E700ECDD50 /* PBXTextBookmark */ = 79092ABE1031A6E700ECDD50 /* PBXTextBookmark */;
 			79092AC11031A71100ECDD50 /* PBXTextBookmark */ = 79092AC11031A71100ECDD50 /* PBXTextBookmark */;
 			79092AC51031A72500ECDD50 /* PBXTextBookmark */ = 79092AC51031A72500ECDD50 /* PBXTextBookmark */;
+			79092AC61031ABA800ECDD50 /* PBXTextBookmark */ = 79092AC61031ABA800ECDD50 /* PBXTextBookmark */;
+			79092AC81031ACF000ECDD50 /* PBXTextBookmark */ = 79092AC81031ACF000ECDD50 /* PBXTextBookmark */;
+			79092ACA1031ACFE00ECDD50 /* PBXTextBookmark */ = 79092ACA1031ACFE00ECDD50 /* PBXTextBookmark */;
+			79092ACD1031AF0A00ECDD50 /* PBXTextBookmark */ = 79092ACD1031AF0A00ECDD50 /* PBXTextBookmark */;
+			79092ACF1031AF1900ECDD50 /* PBXTextBookmark */ = 79092ACF1031AF1900ECDD50 /* PBXTextBookmark */;
+			79092AD11031AFB100ECDD50 /* PBXTextBookmark */ = 79092AD11031AFB100ECDD50 /* PBXTextBookmark */;
 			7914E740102AE04100D559D9 = 7914E740102AE04100D559D9 /* PBXTextBookmark */;
 			7914E741102AE04100D559D9 = 7914E741102AE04100D559D9 /* PBXTextBookmark */;
 			7914E74B102AE04100D559D9 = 7914E74B102AE04100D559D9 /* PBXTextBookmark */;
@@ -1754,7 +1760,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 205";
 		rLen = 0;
-		rLoc = 8225;
+		rLoc = 8233;
 		rType = 0;
 		vrLen = 1584;
 		vrLoc = 5142;
@@ -4591,7 +4597,7 @@
 		ignoreCount = 0;
 		lineNumber = 68;
 		location = BlogBridge;
-		modificationTime = 271689491.398228;
+		modificationTime = 271691591.601019;
 		state = 2;
 	};
 	79092A7C10319EC500ECDD50 /* PBXTextBookmark */ = {
@@ -5014,11 +5020,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		functionName = "-opmlURL";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 225;
 		location = BlogBridge;
-		modificationTime = 271689493.306225;
+		modificationTime = 271691591.6011;
 		state = 2;
 	};
 	79092ABA1031A6AB00ECDD50 /* PBXTextBookmark */ = {
@@ -5056,7 +5062,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 229";
 		rLen = 0;
-		rLoc = 7595;
+		rLoc = 7603;
 		rType = 0;
 		vrLen = 1596;
 		vrLoc = 6061;
@@ -5071,11 +5077,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		functionName = "-opmlURL";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 233;
 		location = BlogBridge;
-		modificationTime = 271689506.543784;
+		modificationTime = 271691591.601209;
 		state = 2;
 	};
 	79092AC51031A72500ECDD50 /* PBXTextBookmark */ = {
@@ -5083,9 +5089,69 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 229";
 		rLen = 0;
-		rLoc = 7595;
+		rLoc = 7603;
 		rType = 0;
 		vrLen = 1596;
+		vrLoc = 6061;
+	};
+	79092AC61031ABA800ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 229";
+		rLen = 0;
+		rLoc = 7428;
+		rType = 0;
+		vrLen = 1631;
+		vrLoc = 6061;
+	};
+	79092AC81031ACF000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 229";
+		rLen = 0;
+		rLoc = 7428;
+		rType = 0;
+		vrLen = 1585;
+		vrLoc = 6061;
+	};
+	79092ACA1031ACFE00ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 229";
+		rLen = 0;
+		rLoc = 7428;
+		rType = 0;
+		vrLen = 1640;
+		vrLoc = 6061;
+	};
+	79092ACD1031AF0A00ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 230";
+		rLen = 0;
+		rLoc = 7507;
+		rType = 0;
+		vrLen = 1593;
+		vrLoc = 6061;
+	};
+	79092ACF1031AF1900ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 230";
+		rLen = 0;
+		rLoc = 7507;
+		rType = 0;
+		vrLen = 1593;
+		vrLoc = 6061;
+	};
+	79092AD11031AFB100ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 229";
+		rLen = 0;
+		rLoc = 7428;
+		rType = 0;
+		vrLen = 1604;
 		vrLoc = 6061;
 	};
 	7914E720102ACF5300D559D9 /* OPMLGuide.h */ = {
@@ -5385,7 +5451,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = BlogBridge;
-		modificationTime = 271689491.398202;
+		modificationTime = 271691591.600987;
 		state = 2;
 	};
 	7953DAB7102C5BFE00E87B72 /* OPMLUpdater.m:117 */ = {
@@ -5402,7 +5468,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = BlogBridge;
-		modificationTime = 271689491.398208;
+		modificationTime = 271691591.600994;
 		state = 2;
 	};
 	7953DB3C102C5E0000E87B72 /* malloc_error_break */ = {
@@ -5416,7 +5482,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libSystem.B.dylib;
-		modificationTime = 271689492.412599;
+		modificationTime = 271691592.261232;
 		state = 1;
 		symbolName = malloc_error_break;
 	};
@@ -5533,7 +5599,7 @@
 		ignoreCount = 0;
 		lineNumber = 80;
 		location = BlogBridge;
-		modificationTime = 271689491.398215;
+		modificationTime = 271691591.601006;
 		state = 2;
 	};
 	79545ECA102D6E33001D5F29 /* Constants.h */ = {
@@ -5834,7 +5900,7 @@
 		ignoreCount = 0;
 		lineNumber = 41;
 		location = BlogBridge;
-		modificationTime = 271689491.397964;
+		modificationTime = 271691591.600774;
 		state = 2;
 	};
 	79C0E4981029A7AF00A3D584 /* BlogBridgeAppDelegate.m:187 */ = {
@@ -5851,7 +5917,7 @@
 		ignoreCount = 0;
 		lineNumber = 187;
 		location = BlogBridge;
-		modificationTime = 271689491.398059;
+		modificationTime = 271691591.600859;
 		state = 2;
 	};
 	79C0E4B41029A95900A3D584 /* PlistBookmark */ = {
@@ -5947,7 +6013,7 @@
 		ignoreCount = 0;
 		lineNumber = 72;
 		location = BlogBridge;
-		modificationTime = 271689491.398174;
+		modificationTime = 271691591.600958;
 		state = 2;
 	};
 	79C0E60D1029CDB500A3D584 /* GuidesTabController.m:117 */ = {
@@ -5963,7 +6029,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 117;
-		modificationTime = 271689491.398183;
+		modificationTime = 271691591.600967;
 		state = 2;
 	};
 	79C0E60F1029CDB700A3D584 /* GuidesTabController.m:117 */ = {
@@ -5980,7 +6046,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = BlogBridge;
-		modificationTime = 271689491.398189;
+		modificationTime = 271691591.600974;
 		state = 2;
 	};
 	79C0E6111029CDC000A3D584 /* GuideViewController.m:105 */ = {
@@ -5997,7 +6063,7 @@
 		ignoreCount = 0;
 		lineNumber = 105;
 		location = BlogBridge;
-		modificationTime = 271689491.398196;
+		modificationTime = 271691591.600981;
 		state = 2;
 	};
 	79CE5D82102C981600D3E652 /* Cleaner.h */ = {

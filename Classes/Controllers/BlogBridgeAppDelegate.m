@@ -226,7 +226,7 @@ NSString* md5(NSString *str) {
 		email = [email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 		if ([email length] > 0) {
 			NSString *key = password ? md5(password) : @"";
-			url = [NSString stringWithFormat:@"http://blogbridge.com/mobile.opml?key=%@&email=%@", key, [email stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+			url = [NSString stringWithFormat:@"http://blogbridge.com/rl/getrl_mobile.php?key=%@&email=%@", key, [email stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 		}
 	}
 	
