@@ -129,6 +129,8 @@
 			article.feed    = feed;
 			
 			[addedArticles addObject:article];
+			
+			[article release];
 		} else break;
 	}
 
@@ -139,7 +141,7 @@
 		[feed setValue:((RSSItem *)[items objectAtIndex:0]).key forKey:@"latestArticleKey"];
 		
 		// Update guides' unread counters
-		NSArray *guides = [feed valueForKey:@"guides"];
+		NSSet *guides = [feed valueForKeyPath:@"guides"];
 		for (Guide *guide in guides) {
 			guide.unreadCount = [NSNumber numberWithInt:([guide.unreadCount intValue] + [addedArticles count])];
 		}

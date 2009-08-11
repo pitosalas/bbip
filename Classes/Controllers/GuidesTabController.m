@@ -73,6 +73,15 @@
 	[[NSUserDefaults standardUserDefaults] setInteger:self.selectedIndex forKey:BBSettingSelectedGuide];
 }
 
+// Override to allow orientations other than the default portrait orientation.
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+	// Note: This one is important to let the app rotate the article view
+	UINavigationController *controller = self.selectedViewController;
+	BOOL articleView = controller != nil && [controller.topViewController isKindOfClass:[ArticleViewController class]];
+	
+    return articleView || (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
 /**
  * Loads the list of guides and creates the controllers for them.
  * Controllers don't load their data before they are actually shown, so it's cheap.

@@ -26,6 +26,7 @@
 							initWithTitle:guide.name 
 							image:[UIImage imageNamed:[NSString stringWithFormat:@"images/%@.png", guide.iconName]] 
 							tag:0] autorelease];
+		[self updateBadge];
 
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onArticlesAdded:) name:BBNotificationArticlesAdded object:nil]; 
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onArticleRead:) name:BBNotificationArticleRead object:nil]; 
@@ -40,9 +41,6 @@
 	NSError *error;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		// TODO: Handle the error...
-	} else {
-		// Count read / unread
-		[self updateBadge];
 	}
 }
 
@@ -63,7 +61,6 @@
 	// Release anything that can be recreated in viewDidLoad or on demand.
 	// e.g. self.myOutlet = nil;
 }
-
 
 #pragma mark Table view methods
 

@@ -48,7 +48,7 @@ static int customCodes[] = { 34, 39, 38, 60, 62 };
 	
 	// Update all feeds and guides
 	if (![wasRead boolValue] && [read boolValue]) {
-		NSArray *guides = [self.feed valueForKey:@"guides"];
+		NSSet *guides = [self.feed valueForKeyPath:@"guides"];
 		for (Guide *guide in guides) {
 			guide.unreadCount = [NSNumber numberWithInt:([guide.unreadCount intValue] - 1)];
 		}

@@ -13,6 +13,7 @@
 #import "OPMLGuide.h"
 #import "OPMLFeed.h"
 #import "Guide.h"
+#import "Article.h"
 
 @implementation OPMLUpdater
 
@@ -91,7 +92,6 @@
 		}
 	}
 	
-	
 	NSLog(@"OPML Update: Added %d feed(s)", added);
 	
 	[newURLs release];
@@ -120,10 +120,20 @@
 		guide.iconName = opmlGuide.iconName;
 		[context insertObject:guide];
 		
+		int unread = 0;
+		
 		for (OPMLFeed *opmlFeed in opmlGuide.feeds) {
 			NSManagedObject *feed = [urlsToFeeds valueForKey:opmlFeed.xmlURL];
-			if (feed != nil) [guide addFeedsObject:feed];
+			if (feed != nil) {
+				[guide addFeedsObject:feed];
+				for (Article *article in [feed valueForKey:@"articles"]) {
+					if (!article.read) unread++;
+				}
+			}
 		}
+		
+		// Set the number of unread articles in this guide
+		guide.unreadCount = [NSNumber numberWithInt:unread];
 		
 		[guide release];
 	}
