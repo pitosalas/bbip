@@ -6,6 +6,7 @@
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
+#import <CommonCrypto/CommonDigest.h>
 #import "BlogBridgeAppDelegate.h"
 #import "GuideViewController.h"
 #import "GuidesTabController.h"
@@ -14,6 +15,19 @@
 #import "Cleaner.h"
 #import "Constants.h"
 #import "RSSUpdater.h"
+
+/** Simple MD5 key creation. */
+NSString* md5(NSString *str) {
+	const char *cStr = [str UTF8String];
+	unsigned char result[CC_MD5_DIGEST_LENGTH];
+	
+	CC_MD5(cStr, strlen(cStr), result);
+	
+	return [NSString stringWithFormat: @"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",
+			result[0], result[1], result[2],  result[3],  result[4],  result[5],  result[6],  result[7],
+			result[8], result[9], result[10], result[11], result[12], result[13], result[14], result[15]];
+}
+
 
 
 @implementation BlogBridgeAppDelegate
@@ -191,13 +205,32 @@
 		NSString *opmlURL;
 		
 		// Take default for now
-		opmlURL = [[NSUserDefaults standardUserDefaults] stringForKey:BBSettingDefaultOpmlUrl];
+		opmlURL = [self opmlURL];
 		
 		OPMLUpdater *opmlUpdater = [[OPMLUpdater alloc] init];
 		NSURL *url = [NSURL URLWithString:opmlURL];
 		[opmlUpdater updateFromOPMLURL:url managedObjectContext:[self managedObjectContext]];
 		[opmlUpdater release];
 	}
+}
+
+/** Returns the OPML URL to take data from. */
+- (NSString *)opmlURL {
+	NSUserDefaults *prefs	= [NSUserDefaults standardUserDefaults];
+	NSString *url			= [prefs stringForKey:BBSettingDefaultOpmlUrl];
+
+	// User email and password
+	NSString *email			= [prefs stringForKey:BBSettingAccountEmail];
+	NSString *password		= [prefs stringForKey:BBSettingAccountPassword];
+	if (email != nil) {
+		email = [email stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+		if ([email length] > 0) {
+			NSString *key = password ? md5(password) : @"";
+			url = [NSString stringWithFormat:@"http://blogbridge.com/mobile.opml?key=%@&email=%@", key, [email stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+		}
+	}
+	
+	return url;
 }
 
 /** Returns YES if connected. */

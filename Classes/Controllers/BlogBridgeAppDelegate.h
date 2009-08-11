@@ -40,6 +40,9 @@
 /** Takes OPML from the server if possible and updates the list of guides. */
 - (void)updateOPML;
 
+/** Returns current OPML URL. */
+- (NSString *)opmlURL;
+
 /** Returns YES if connected. */
 - (BOOL)isConnected;
 

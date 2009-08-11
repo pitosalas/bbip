@@ -2,16 +2,16 @@
 {
 	1D3623240D0F684500981E51 /* BlogBridgeAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1098, 784}}";
-			sepNavSelRange = "{534, 0}";
-			sepNavVisRange = "{31, 943}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 848}}";
+			sepNavSelRange = "{1250, 0}";
+			sepNavVisRange = "{91, 1351}";
 		};
 	};
 	1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1098, 3792}}";
-			sepNavSelRange = "{681, 0}";
-			sepNavVisRange = "{545, 1392}";
+			sepNavIntBoundsRect = "{{0, 0}, {1265, 4096}}";
+			sepNavSelRange = "{7595, 0}";
+			sepNavVisRange = "{6061, 1596}";
 			sepNavWindowFrame = "{{70, 179}, {750, 558}}";
 		};
 	};
@@ -62,7 +62,7 @@
 		);
 		breakpoints = (
 			79C0E3EE10299EBB00A3D584 /* ArticleCell.m:41 */,
-			79C0E4981029A7AF00A3D584 /* BlogBridgeAppDelegate.m:173 */,
+			79C0E4981029A7AF00A3D584 /* BlogBridgeAppDelegate.m:187 */,
 			79C0E5FE1029CD0800A3D584 /* GuidesTabController.m:72 */,
 			79C0E60D1029CDB500A3D584 /* GuidesTabController.m:117 */,
 			79C0E60F1029CDB700A3D584 /* GuidesTabController.m:117 */,
@@ -71,7 +71,9 @@
 			7953DAB7102C5BFE00E87B72 /* OPMLUpdater.m:117 */,
 			7953DB3C102C5E0000E87B72 /* malloc_error_break */,
 			79545E59102D6432001D5F29 /* ArticleViewController.m:80 */,
-			79092A7B10319EC300ECDD50 /* BlogBridgeAppDelegate.m:54 */,
+			79092A7B10319EC300ECDD50 /* BlogBridgeAppDelegate.m:68 */,
+			79092AB91031A6A600ECDD50 /* BlogBridgeAppDelegate.m:225 */,
+			79092AC41031A71400ECDD50 /* BlogBridgeAppDelegate.m:233 */,
 		);
 		codeSenseManager = 79C0E1F610295B7D00A3D584 /* Code sense */;
 		executables = (
@@ -506,6 +508,48 @@
 			79092A7810319EA100ECDD50 /* PBXTextBookmark */ = 79092A7810319EA100ECDD50 /* PBXTextBookmark */;
 			79092A7C10319EC500ECDD50 /* PBXTextBookmark */ = 79092A7C10319EC500ECDD50 /* PBXTextBookmark */;
 			79092A7E10319EE500ECDD50 /* PBXTextBookmark */ = 79092A7E10319EE500ECDD50 /* PBXTextBookmark */;
+			79092A811031A5E500ECDD50 /* PBXTextBookmark */ = 79092A811031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A821031A5E500ECDD50 /* PlistBookmark */ = 79092A821031A5E500ECDD50 /* PlistBookmark */;
+			79092A841031A5E500ECDD50 /* PBXTextBookmark */ = 79092A841031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A851031A5E500ECDD50 /* PBXTextBookmark */ = 79092A851031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A861031A5E500ECDD50 /* PBXTextBookmark */ = 79092A861031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A871031A5E500ECDD50 /* PBXTextBookmark */ = 79092A871031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A881031A5E500ECDD50 /* PBXTextBookmark */ = 79092A881031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A891031A5E500ECDD50 /* PBXTextBookmark */ = 79092A891031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A8A1031A5E500ECDD50 /* PlistBookmark */ = 79092A8A1031A5E500ECDD50 /* PlistBookmark */;
+			79092A8C1031A5E500ECDD50 /* PBXTextBookmark */ = 79092A8C1031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A8D1031A5E500ECDD50 /* PBXTextBookmark */ = 79092A8D1031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A8E1031A5E500ECDD50 /* PBXTextBookmark */ = 79092A8E1031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A8F1031A5E500ECDD50 /* PBXTextBookmark */ = 79092A8F1031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A901031A5E500ECDD50 /* PBXTextBookmark */ = 79092A901031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A911031A5E500ECDD50 /* PBXTextBookmark */ = 79092A911031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A921031A5E500ECDD50 /* PBXTextBookmark */ = 79092A921031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A931031A5E500ECDD50 /* PBXTextBookmark */ = 79092A931031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A941031A5E500ECDD50 /* PBXTextBookmark */ = 79092A941031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A951031A5E500ECDD50 /* PBXTextBookmark */ = 79092A951031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A961031A5E500ECDD50 /* PBXTextBookmark */ = 79092A961031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A971031A5E500ECDD50 /* PBXTextBookmark */ = 79092A971031A5E500ECDD50 /* PBXTextBookmark */;
+			79092A9C1031A64000ECDD50 /* PBXTextBookmark */ = 79092A9C1031A64000ECDD50 /* PBXTextBookmark */;
+			79092A9D1031A64000ECDD50 /* PBXTextBookmark */ = 79092A9D1031A64000ECDD50 /* PBXTextBookmark */;
+			79092A9E1031A64000ECDD50 /* PBXTextBookmark */ = 79092A9E1031A64000ECDD50 /* PBXTextBookmark */;
+			79092A9F1031A64000ECDD50 /* PBXTextBookmark */ = 79092A9F1031A64000ECDD50 /* PBXTextBookmark */;
+			79092AA01031A64000ECDD50 /* PlistBookmark */ = 79092AA01031A64000ECDD50 /* PlistBookmark */;
+			79092AA11031A64000ECDD50 /* PBXTextBookmark */ = 79092AA11031A64000ECDD50 /* PBXTextBookmark */;
+			79092AA21031A64000ECDD50 /* PBXTextBookmark */ = 79092AA21031A64000ECDD50 /* PBXTextBookmark */;
+			79092AA31031A64000ECDD50 /* PBXTextBookmark */ = 79092AA31031A64000ECDD50 /* PBXTextBookmark */;
+			79092AA41031A64000ECDD50 /* PBXTextBookmark */ = 79092AA41031A64000ECDD50 /* PBXTextBookmark */;
+			79092AA51031A64000ECDD50 /* PBXTextBookmark */ = 79092AA51031A64000ECDD50 /* PBXTextBookmark */;
+			79092AA61031A64000ECDD50 /* PlistBookmark */ = 79092AA61031A64000ECDD50 /* PlistBookmark */;
+			79092AA81031A64600ECDD50 /* PlistBookmark */ = 79092AA81031A64600ECDD50 /* PlistBookmark */;
+			79092AAD1031A68000ECDD50 /* PlistBookmark */ = 79092AAD1031A68000ECDD50 /* PlistBookmark */;
+			79092AAE1031A68000ECDD50 /* PBXTextBookmark */ = 79092AAE1031A68000ECDD50 /* PBXTextBookmark */;
+			79092AAF1031A68000ECDD50 /* PlistBookmark */ = 79092AAF1031A68000ECDD50 /* PlistBookmark */;
+			79092AB01031A68000ECDD50 /* PBXTextBookmark */ = 79092AB01031A68000ECDD50 /* PBXTextBookmark */;
+			79092ABA1031A6AB00ECDD50 /* PBXTextBookmark */ = 79092ABA1031A6AB00ECDD50 /* PBXTextBookmark */;
+			79092ABC1031A6B700ECDD50 /* PBXTextBookmark */ = 79092ABC1031A6B700ECDD50 /* PBXTextBookmark */;
+			79092ABE1031A6E700ECDD50 /* PBXTextBookmark */ = 79092ABE1031A6E700ECDD50 /* PBXTextBookmark */;
+			79092AC11031A71100ECDD50 /* PBXTextBookmark */ = 79092AC11031A71100ECDD50 /* PBXTextBookmark */;
+			79092AC51031A72500ECDD50 /* PBXTextBookmark */ = 79092AC51031A72500ECDD50 /* PBXTextBookmark */;
 			7914E740102AE04100D559D9 = 7914E740102AE04100D559D9 /* PBXTextBookmark */;
 			7914E741102AE04100D559D9 = 7914E741102AE04100D559D9 /* PBXTextBookmark */;
 			7914E74B102AE04100D559D9 = 7914E74B102AE04100D559D9 /* PBXTextBookmark */;
@@ -1680,7 +1724,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 41";
 		rLen = 0;
-		rLoc = 1173;
+		rLoc = 1701;
 		rType = 0;
 		vrLen = 1253;
 		vrLoc = 857;
@@ -1700,7 +1744,7 @@
 		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
 		name = "Constants.m: 18";
 		rLen = 0;
-		rLoc = 746;
+		rLoc = 871;
 		rType = 0;
 		vrLen = 573;
 		vrLoc = 0;
@@ -1710,7 +1754,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 205";
 		rLen = 0;
-		rLoc = 7008;
+		rLoc = 8225;
 		rType = 0;
 		vrLen = 1584;
 		vrLoc = 5142;
@@ -1730,7 +1774,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 29";
 		rLen = 0;
-		rLoc = 659;
+		rLoc = 1187;
 		rType = 0;
 		vrLen = 1378;
 		vrLoc = 338;
@@ -2107,7 +2151,7 @@
 		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
 		name = "Constants.h: 20";
 		rLen = 52;
-		rLoc = 509;
+		rLoc = 606;
 		rType = 0;
 		vrLen = 561;
 		vrLoc = 0;
@@ -2147,7 +2191,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 127";
 		rLen = 0;
-		rLoc = 4259;
+		rLoc = 4787;
 		rType = 0;
 		vrLen = 1646;
 		vrLoc = 2645;
@@ -2261,7 +2305,7 @@
 		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
 		name = "Constants.h: 20";
 		rLen = 52;
-		rLoc = 509;
+		rLoc = 606;
 		rType = 0;
 		vrLen = 561;
 		vrLoc = 0;
@@ -2291,7 +2335,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 990;
+		rLoc = 1518;
 		rType = 0;
 		vrLen = 1259;
 		vrLoc = 150;
@@ -2341,7 +2385,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 160";
 		rLen = 0;
-		rLoc = 4922;
+		rLoc = 5450;
 		rType = 0;
 		vrLen = 1462;
 		vrLoc = 4246;
@@ -2453,7 +2497,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 119";
 		rLen = 0;
-		rLoc = 3392;
+		rLoc = 3920;
 		rType = 0;
 		vrLen = 1609;
 		vrLoc = 2904;
@@ -2494,7 +2538,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 132";
 		rLen = 0;
-		rLoc = 4259;
+		rLoc = 4787;
 		rType = 0;
 		vrLen = 1819;
 		vrLoc = 2512;
@@ -2513,7 +2557,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 193";
 		rLen = 0;
-		rLoc = 6185;
+		rLoc = 6651;
 		rType = 0;
 		vrLen = 1941;
 		vrLoc = 5021;
@@ -2618,7 +2662,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 39";
 		rLen = 88;
-		rLoc = 902;
+		rLoc = 1430;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 0;
@@ -2633,7 +2677,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 39";
 		rLen = 88;
-		rLoc = 902;
+		rLoc = 1430;
 		rType = 0;
 		vrLen = 1204;
 		vrLoc = 0;
@@ -3305,7 +3349,7 @@
 		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
 		name = "Constants.h: 22";
 		rLen = 0;
-		rLoc = 582;
+		rLoc = 679;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 0;
@@ -3315,7 +3359,7 @@
 		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
 		name = "Constants.m: 23";
 		rLen = 0;
-		rLoc = 745;
+		rLoc = 870;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 0;
@@ -3385,7 +3429,7 @@
 		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
 		name = "Constants.h: 22";
 		rLen = 0;
-		rLoc = 582;
+		rLoc = 679;
 		rType = 0;
 		vrLen = 677;
 		vrLoc = 0;
@@ -3395,7 +3439,7 @@
 		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
 		name = "Constants.m: 23";
 		rLen = 0;
-		rLoc = 745;
+		rLoc = 870;
 		rType = 0;
 		vrLen = 746;
 		vrLoc = 0;
@@ -4338,7 +4382,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1468;
+		rLoc = 1996;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 545;
@@ -4358,7 +4402,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1468;
+		rLoc = 1996;
 		rType = 0;
 		vrLen = 1495;
 		vrLoc = 472;
@@ -4418,7 +4462,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 990;
+		rLoc = 1518;
 		rType = 0;
 		vrLen = 1433;
 		vrLoc = 545;
@@ -4428,7 +4472,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 990;
+		rLoc = 1518;
 		rType = 0;
 		vrLen = 1439;
 		vrLoc = 545;
@@ -4448,7 +4492,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 990;
+		rLoc = 1518;
 		rType = 0;
 		vrLen = 1439;
 		vrLoc = 545;
@@ -4478,7 +4522,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 42";
 		rLen = 0;
-		rLoc = 990;
+		rLoc = 1518;
 		rType = 0;
 		vrLen = 1439;
 		vrLoc = 545;
@@ -4498,7 +4542,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 40";
 		rLen = 0;
-		rLoc = 990;
+		rLoc = 1518;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 545;
@@ -4508,7 +4552,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 55";
 		rLen = 0;
-		rLoc = 1449;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 545;
@@ -4518,7 +4562,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 56";
 		rLen = 0;
-		rLoc = 1449;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 1440;
 		vrLoc = 545;
@@ -4528,12 +4572,12 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 56";
 		rLen = 0;
-		rLoc = 1449;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 545;
 	};
-	79092A7B10319EC300ECDD50 /* BlogBridgeAppDelegate.m:54 */ = {
+	79092A7B10319EC300ECDD50 /* BlogBridgeAppDelegate.m:68 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -4543,11 +4587,11 @@
 		delayBeforeContinue = 0;
 		fileReference = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		functionName = "-applicationDidBecomeActive:";
-		hitCount = 1;
+		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 54;
+		lineNumber = 68;
 		location = BlogBridge;
-		modificationTime = 271687376.187861;
+		modificationTime = 271689491.398228;
 		state = 2;
 	};
 	79092A7C10319EC500ECDD50 /* PBXTextBookmark */ = {
@@ -4555,7 +4599,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 56";
 		rLen = 0;
-		rLoc = 1449;
+		rLoc = 1977;
 		rType = 0;
 		vrLen = 1438;
 		vrLoc = 545;
@@ -4565,10 +4609,484 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 30";
 		rLen = 0;
-		rLoc = 681;
+		rLoc = 1209;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 545;
+	};
+	79092A811031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* BlogBridgeAppDelegate.h */;
+		name = "BlogBridgeAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 534;
+		rType = 0;
+		vrLen = 1305;
+		vrLoc = 0;
+	};
+	79092A821031A5E500ECDD50 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 79092A831031A5E500ECDD50 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	79092A831031A5E500ECDD50 /* Root.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.plist.xml;
+		name = Root.plist;
+		path = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		sourceTree = "<absolute>";
+	};
+	79092A841031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
+		name = "Constants.m: 17";
+		rLen = 0;
+		rLoc = 458;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 0;
+	};
+	79092A851031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 16";
+		rLen = 0;
+		rLoc = 392;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	79092A861031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 214";
+		rLen = 0;
+		rLoc = 6867;
+		rType = 0;
+		vrLen = 1754;
+		vrLoc = 5504;
+	};
+	79092A871031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 206";
+		rLen = 0;
+		rLoc = 7236;
+		rType = 0;
+		vrLen = 1543;
+		vrLoc = 5533;
+	};
+	79092A881031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* BlogBridgeAppDelegate.h */;
+		name = "BlogBridgeAppDelegate.h: 19";
+		rLen = 0;
+		rLoc = 534;
+		rType = 0;
+		vrLen = 1305;
+		vrLoc = 0;
+	};
+	79092A891031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 206";
+		rLen = 0;
+		rLoc = 7236;
+		rType = 0;
+		vrLen = 1543;
+		vrLoc = 5533;
+	};
+	79092A8A1031A5E500ECDD50 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 79092A8B1031A5E500ECDD50 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	79092A8B1031A5E500ECDD50 /* Root.plist */ = {
+		isa = PBXFileReference;
+		name = Root.plist;
+		path = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		sourceTree = "<absolute>";
+	};
+	79092A8C1031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 206";
+		rLen = 0;
+		rLoc = 7236;
+		rType = 0;
+		vrLen = 1543;
+		vrLoc = 5533;
+	};
+	79092A8D1031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 18";
+		rLen = 97;
+		rLoc = 487;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	79092A8E1031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
+		name = "Constants.m: 20";
+		rLen = 0;
+		rLoc = 703;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 0;
+	};
+	79092A8F1031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 215";
+		rLen = 0;
+		rLoc = 6867;
+		rType = 0;
+		vrLen = 1771;
+		vrLoc = 5485;
+	};
+	79092A901031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 16";
+		rLen = 0;
+		rLoc = 392;
+		rType = 0;
+		vrLen = 819;
+		vrLoc = 0;
+	};
+	79092A911031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
+		name = "Constants.m: 17";
+		rLen = 0;
+		rLoc = 458;
+		rType = 0;
+		vrLen = 913;
+		vrLoc = 0;
+	};
+	79092A921031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 21";
+		rLen = 0;
+		rLoc = 584;
+		rType = 0;
+		vrLen = 819;
+		vrLoc = 0;
+	};
+	79092A931031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 214";
+		rLen = 0;
+		rLoc = 6867;
+		rType = 0;
+		vrLen = 1754;
+		vrLoc = 5504;
+	};
+	79092A941031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 16";
+		rLen = 0;
+		rLoc = 392;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	79092A951031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
+		name = "Constants.m: 17";
+		rLen = 0;
+		rLoc = 458;
+		rType = 0;
+		vrLen = 855;
+		vrLoc = 0;
+	};
+	79092A961031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 16";
+		rLen = 0;
+		rLoc = 392;
+		rType = 0;
+		vrLen = 773;
+		vrLoc = 0;
+	};
+	79092A971031A5E500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 214";
+		rLen = 0;
+		rLoc = 6867;
+		rType = 0;
+		vrLen = 1473;
+		vrLoc = 6153;
+	};
+	79092A9C1031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* BlogBridgeAppDelegate.h */;
+		name = "BlogBridgeAppDelegate.h: 43";
+		rLen = 0;
+		rLoc = 1250;
+		rType = 0;
+		vrLen = 1351;
+		vrLoc = 91;
+	};
+	79092A9D1031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1550;
+		vrLoc = 6061;
+	};
+	79092A9E1031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 18";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 774;
+		vrLoc = 0;
+	};
+	79092A9F1031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
+		name = "Constants.m: 20";
+		rLen = 0;
+		rLoc = 695;
+		rType = 0;
+		vrLen = 871;
+		vrLoc = 0;
+	};
+	79092AA01031A64000ECDD50 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 79092A831031A5E500ECDD50 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	79092AA11031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1403;
+		vrLoc = 6153;
+	};
+	79092AA21031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* BlogBridgeAppDelegate.h */;
+		name = "BlogBridgeAppDelegate.h: 43";
+		rLen = 0;
+		rLoc = 1250;
+		rType = 0;
+		vrLen = 1351;
+		vrLoc = 91;
+	};
+	79092AA31031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1550;
+		vrLoc = 6061;
+	};
+	79092AA41031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECA102D6E33001D5F29 /* Constants.h */;
+		name = "Constants.h: 18";
+		rLen = 0;
+		rLoc = 532;
+		rType = 0;
+		vrLen = 774;
+		vrLoc = 0;
+	};
+	79092AA51031A64000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
+		name = "Constants.m: 20";
+		rLen = 0;
+		rLoc = 695;
+		rType = 0;
+		vrLen = 871;
+		vrLoc = 0;
+	};
+	79092AA61031A64000ECDD50 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 79092A831031A5E500ECDD50 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	79092AA81031A64600ECDD50 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 79092A831031A5E500ECDD50 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	79092AAD1031A68000ECDD50 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 79092A831031A5E500ECDD50 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	79092AAE1031A68000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1550;
+		vrLoc = 6061;
+	};
+	79092AAF1031A68000ECDD50 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 79092A831031A5E500ECDD50 /* Root.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = /Users/alg/Work/Pito/iPhone/BlogBridge/Resources/Settings.bundle/Root.plist;
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	79092AB01031A68000ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1528;
+		vrLoc = 6061;
+	};
+	79092AB91031A6A600ECDD50 /* BlogBridgeAppDelegate.m:225 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		functionName = "-opmlURL";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 225;
+		location = BlogBridge;
+		modificationTime = 271689493.306225;
+		state = 2;
+	};
+	79092ABA1031A6AB00ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1528;
+		vrLoc = 6061;
+	};
+	79092ABC1031A6B700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1528;
+		vrLoc = 6061;
+	};
+	79092ABE1031A6E700ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 218";
+		rLen = 21;
+		rLoc = 6920;
+		rType = 0;
+		vrLen = 1528;
+		vrLoc = 6061;
+	};
+	79092AC11031A71100ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 229";
+		rLen = 0;
+		rLoc = 7595;
+		rType = 0;
+		vrLen = 1596;
+		vrLoc = 6061;
+	};
+	79092AC41031A71400ECDD50 /* BlogBridgeAppDelegate.m:233 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		functionName = "-opmlURL";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 233;
+		location = BlogBridge;
+		modificationTime = 271689506.543784;
+		state = 2;
+	};
+	79092AC51031A72500ECDD50 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
+		name = "BlogBridgeAppDelegate.m: 229";
+		rLen = 0;
+		rLoc = 7595;
+		rType = 0;
+		vrLen = 1596;
+		vrLoc = 6061;
 	};
 	7914E720102ACF5300D559D9 /* OPMLGuide.h */ = {
 		uiCtxt = {
@@ -4867,7 +5385,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = BlogBridge;
-		modificationTime = 271687364.239668;
+		modificationTime = 271689491.398202;
 		state = 2;
 	};
 	7953DAB7102C5BFE00E87B72 /* OPMLUpdater.m:117 */ = {
@@ -4884,7 +5402,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = BlogBridge;
-		modificationTime = 271687364.239704;
+		modificationTime = 271689491.398208;
 		state = 2;
 	};
 	7953DB3C102C5E0000E87B72 /* malloc_error_break */ = {
@@ -4898,7 +5416,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		location = libSystem.B.dylib;
-		modificationTime = 271687365.231597;
+		modificationTime = 271689492.412599;
 		state = 1;
 		symbolName = malloc_error_break;
 	};
@@ -5015,21 +5533,21 @@
 		ignoreCount = 0;
 		lineNumber = 80;
 		location = BlogBridge;
-		modificationTime = 271687364.239711;
+		modificationTime = 271689491.398215;
 		state = 2;
 	};
 	79545ECA102D6E33001D5F29 /* Constants.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1098, 696}}";
-			sepNavSelRange = "{582, 0}";
-			sepNavVisRange = "{0, 677}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 719}}";
+			sepNavSelRange = "{532, 0}";
+			sepNavVisRange = "{0, 774}";
 		};
 	};
 	79545ECB102D6E33001D5F29 /* Constants.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1098, 696}}";
-			sepNavSelRange = "{745, 0}";
-			sepNavVisRange = "{0, 746}";
+			sepNavIntBoundsRect = "{{0, 0}, {1098, 719}}";
+			sepNavSelRange = "{695, 0}";
+			sepNavVisRange = "{0, 871}";
 		};
 	};
 	79545EEF102D70EB001D5F29 /* PBXTextBookmark */ = {
@@ -5057,7 +5575,7 @@
 		fRef = 1D3623250D0F684500981E51 /* BlogBridgeAppDelegate.m */;
 		name = "BlogBridgeAppDelegate.m: 35";
 		rLen = 36;
-		rLoc = 621;
+		rLoc = 1149;
 		rType = 0;
 		vrLen = 1166;
 		vrLoc = 294;
@@ -5087,7 +5605,7 @@
 		fRef = 79545ECB102D6E33001D5F29 /* Constants.m */;
 		name = "Constants.m: 15";
 		rLen = 0;
-		rLoc = 746;
+		rLoc = 871;
 		rType = 0;
 		vrLen = 419;
 		vrLoc = 0;
@@ -5278,7 +5796,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {720, 816}}";
 			sepNavSelRange = "{190, 0}";
-			sepNavVisRange = "{363, 296}";
+			sepNavVisRange = "{363, 291}";
 			sepNavWindowFrame = "{{153, 189}, {750, 558}}";
 		};
 	};
@@ -5316,10 +5834,10 @@
 		ignoreCount = 0;
 		lineNumber = 41;
 		location = BlogBridge;
-		modificationTime = 271687364.239437;
+		modificationTime = 271689491.397964;
 		state = 2;
 	};
-	79C0E4981029A7AF00A3D584 /* BlogBridgeAppDelegate.m:173 */ = {
+	79C0E4981029A7AF00A3D584 /* BlogBridgeAppDelegate.m:187 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -5331,9 +5849,9 @@
 		functionName = "-initDefaultDatabaseIfNeeded";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 173;
+		lineNumber = 187;
 		location = BlogBridge;
-		modificationTime = 271687364.23955;
+		modificationTime = 271689491.398059;
 		state = 2;
 	};
 	79C0E4B41029A95900A3D584 /* PlistBookmark */ = {
@@ -5429,7 +5947,7 @@
 		ignoreCount = 0;
 		lineNumber = 72;
 		location = BlogBridge;
-		modificationTime = 271687364.239615;
+		modificationTime = 271689491.398174;
 		state = 2;
 	};
 	79C0E60D1029CDB500A3D584 /* GuidesTabController.m:117 */ = {
@@ -5445,7 +5963,7 @@
 		hitCount = 0;
 		ignoreCount = 0;
 		lineNumber = 117;
-		modificationTime = 271687364.239623;
+		modificationTime = 271689491.398183;
 		state = 2;
 	};
 	79C0E60F1029CDB700A3D584 /* GuidesTabController.m:117 */ = {
@@ -5462,7 +5980,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = BlogBridge;
-		modificationTime = 271687364.239637;
+		modificationTime = 271689491.398189;
 		state = 2;
 	};
 	79C0E6111029CDC000A3D584 /* GuideViewController.m:105 */ = {
@@ -5479,7 +5997,7 @@
 		ignoreCount = 0;
 		lineNumber = 105;
 		location = BlogBridge;
-		modificationTime = 271687364.239644;
+		modificationTime = 271689491.398196;
 		state = 2;
 	};
 	79CE5D82102C981600D3E652 /* Cleaner.h */ = {

@@ -16,6 +16,8 @@ NSString * const BBSettingUnreadArticleAge		= @"unreadArticleAge";
 NSString * const BBSettingDefaultOpmlUrl		= @"defaultOpmlUrl";
 NSString * const BBSettingSelectedGuide			= @"selectedGuide";
 NSString * const BBSettingUpdatePeriod			= @"updatePeriod";
+NSString * const BBSettingAccountEmail			= @"accountEmail";
+NSString * const BBSettingAccountPassword		= @"accountPassword";
 
 NSString * const BBNotificationArticlesAdded	= @"Articles Added";
 
