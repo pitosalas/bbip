@@ -55,12 +55,11 @@ NSString* md5(NSString *str) {
 	// Create tab bar controller
 	tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
 
-	[window addSubview:tabBarController.view];
-
 	// Wait a couple of seconds for the splash screen
 	[NSThread sleepUntilDate:hideSplashScreenAfter];
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES]; 
+	[window addSubview:tabBarController.view];
 	[window makeKeyAndVisible];
 }
 

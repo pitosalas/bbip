@@ -26,6 +26,8 @@
 							initWithTitle:guide.name 
 							image:[UIImage imageNamed:[NSString stringWithFormat:@"images/%@.png", guide.iconName]] 
 							tag:0] autorelease];
+
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onArticlesAdded:) name:BBNotificationArticlesAdded object:nil]; 
 	}
 	
 	return self;
@@ -158,6 +160,17 @@
     [super dealloc];
 }
 
+#pragma mark -
+#pragma mark Notifications
+
+/** Invoked when new articles are added to a feed. */
+- (void)onArticlesAdded:(NSNotification *)notification {
+	NSDictionary *userInfo = [notification userInfo];
+	NSManagedObject *feed = [userInfo objectForKey:@"feed"];
+	if ([guide.feeds containsObject:feed]) {
+		[self.tableView reloadData]; 
+	}
+}
 
 @end
 

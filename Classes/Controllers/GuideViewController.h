@@ -20,4 +20,10 @@
 
 - (id)initWithGuide:(Guide *)aGuide;
 
+#pragma mark -
+#pragma mark Notifications
+
+/** Invoked when new articles are added to a feed. */
+- (void)onArticlesAdded:(NSNotification *)notification;
+
 @end

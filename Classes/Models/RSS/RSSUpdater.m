@@ -130,10 +130,17 @@
 			[addedArticles addObject:article];
 		} else break;
 	}
-	
+
+	// Set last update date, last seen article key and save changes
+	NSError *error;
+	[feed setValue:[NSDate date] forKey:@"updatedOn"];
+	if (addedNewArticles) [feed setValue:((RSSItem *)[items objectAtIndex:0]).key forKey:@"latestArticleKey"];
+	if (![context save:&error]) {
+		NSLog(@"Failed to update: %@", error);
+	}
+
+	// Send notifications if any articles were added
 	if (addedNewArticles) {
-		[feed setValue:((RSSItem *)[items objectAtIndex:0]).key forKey:@"latestArticleKey"];
-		
 		NSLog(@"Added: %d articles, lastSeen: %@", [addedArticles count], ((RSSItem *)[items objectAtIndex:0]).key);
 		
 		// List a feed and all added articles
@@ -145,14 +152,6 @@
 		NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 		[nc postNotificationName:BBNotificationArticlesAdded object:self userInfo:info];
 	}
-
-	// Set last update date and save changes
-	NSError *error;
-	[feed setValue:[NSDate date] forKey:@"updatedOn"];
-	if (![context save:&error]) {
-		NSLog(@"Failed to update: %@", error);
-	}
-	
 }
 
 @end
