@@ -17,23 +17,27 @@
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)aContext {
 	if (self = [super init]) {
 		context = [aContext retain];
+		lock = [NSLock new];
 	}
 	return self;
 }
 
 - (void)dealloc {
+	[lock release];
 	[context release];
 	[super dealloc];
 }
 
 /** Updates all feeds that are ready to be updated. */
 - (void)update {
-	NSArray *feedsToUpdate = [self findFeedsToUpdate];
-	NSLog(@"Updater: Feeds to update %d", [feedsToUpdate count]);
+	if ([lock tryLock]) {
+		NSArray *feedsToUpdate = [self findFeedsToUpdate];
+		NSLog(@"Updater: Feeds to update %d", [feedsToUpdate count]);
 
-	if ([feedsToUpdate count] > 0) {
-		NSDictionary *feedIDToURL = [self mapFeedIDsToURLs:feedsToUpdate];
-		[self performSelectorInBackground:@selector(updateFeeds:) withObject:feedIDToURL];
+		if ([feedsToUpdate count] > 0) {
+			NSDictionary *feedIDToURL = [self mapFeedIDsToURLs:feedsToUpdate];
+			[self performSelectorInBackground:@selector(updateFeeds:) withObject:feedIDToURL];
+		}
 	}
 }
 

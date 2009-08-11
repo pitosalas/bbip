@@ -10,7 +10,8 @@
 #import <CoreData/CoreData.h>
 
 @interface RSSUpdater : NSObject {
-	NSManagedObjectContext *context;
+	NSManagedObjectContext	*context;
+	NSLock					*lock;
 }
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)context;

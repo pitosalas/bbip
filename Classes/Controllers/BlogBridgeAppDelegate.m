@@ -35,9 +35,8 @@
 	[cleaner performCleanup];
 	[cleaner release];
 
-	// Start polling for new articles
+	// Create the updater
 	updater = [[RSSUpdater alloc] initWithManagedObjectContext:self.managedObjectContext];
-	[updater update];
 	
 	// Create tab bar controller
 	tabBarController = [[GuidesTabController alloc] initWithManagedObjectContext:self.managedObjectContext];
@@ -49,6 +48,10 @@
 	
 	[[UIApplication sharedApplication] setStatusBarHidden:NO animated:YES]; 
 	[window makeKeyAndVisible];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+	[updater update];
 }
 
 /**
