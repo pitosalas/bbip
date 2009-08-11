@@ -18,3 +18,6 @@ NSString * const BBSettingSelectedGuide			= @"selectedGuide";
 NSString * const BBSettingUpdatePeriod			= @"updatePeriod";
 
 NSString * const BBNotificationArticlesAdded	= @"Articles Added";
+
+float const BBArticleCellTextFontSize			= 16.0;
+float const BBArticleCellDetailFontSize			= 12.0;

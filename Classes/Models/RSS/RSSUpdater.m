@@ -116,7 +116,7 @@
 			
 			// Item is new
 			Article *article = [[NSManagedObject alloc] initWithEntity:articleEntity insertIntoManagedObjectContext:context];
-			article.title   = item.title;
+			article.title   = [item.title stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 			article.body	= item.body;
 			article.url		= item.url;
 			article.pubDate	= item.pubDateObject ? item.pubDateObject : [NSDate dateWithTimeIntervalSinceNow:-(timeOffset++)];

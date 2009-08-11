@@ -18,3 +18,7 @@ extern NSString * const BBSettingUpdatePeriod;
 
 /** Notifications */
 extern NSString * const BBNotificationArticlesAdded;
+
+/** Article cell */
+extern float const BBArticleCellTextFontSize;
+extern float const BBArticleCellDetailFontSize;

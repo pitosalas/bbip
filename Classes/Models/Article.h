@@ -6,6 +6,7 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
 
@@ -24,6 +25,14 @@
 @property (nonatomic, readonly) NSString		*briefBody;
 @property (nonatomic, readonly) NSURL			*baseURL;
 
+/** Creates a plain text string from the HTML. */
++ (NSString *)plainTextFromHTML:(NSString *)html;
+
+/** Returns up to given number of sentences from the string. */
++ (NSString *)sentencesFromText:(NSString *)plainText sentences:(int)sentences;
+
+/** Decodes entities into real characters. */
++ (NSString *)decodeCharacterEntities:(NSString *)source;
 
 @end
 

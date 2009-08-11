@@ -11,6 +11,7 @@
 #import "Article.h"
 #import "ArticleCell.h"
 #import "ArticleViewController.h"
+#import "Constants.h"
 
 @implementation GuideViewController
 
@@ -91,11 +92,11 @@
 
 	// The width subtracted from the tableView frame depends on:
 	// 40.0 for detail accessory
-	CGSize constraintSize = CGSizeMake(tableView.frame.size.width - 40.0, CGFLOAT_MAX);
-	CGSize labelSize      = [cellText       sizeWithFont: [UIFont boldSystemFontOfSize:ARTICLE_CELL_TEXTLABEL_FONT_SIZE] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
-	CGSize detailSize     = [cellDetailText sizeWithFont: [UIFont systemFontOfSize:ARTICLE_CELL_DETAILTEXTLABEL_FONT_SIZE] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	CGSize constraintSize = CGSizeMake(tableView.frame.size.width - 20.0, CGFLOAT_MAX);
+	CGSize labelSize      = [cellText       sizeWithFont:[UIFont boldSystemFontOfSize:BBArticleCellTextFontSize] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
+	CGSize detailSize     = [cellDetailText sizeWithFont:[UIFont systemFontOfSize:BBArticleCellDetailFontSize] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
 	
-	return labelSize.height + detailSize.height;
+	return labelSize.height + detailSize.height + 12;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

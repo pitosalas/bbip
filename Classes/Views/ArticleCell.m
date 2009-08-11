@@ -7,19 +7,18 @@
 //
 
 #import "ArticleCell.h"
-
-float const ARTICLE_CELL_TEXTLABEL_FONT_SIZE		= 16.0;
-float const ARTICLE_CELL_DETAILTEXTLABEL_FONT_SIZE	= 12.0;
+#import "Constants.h"
 
 @implementation ArticleCell
 
 - (id)initWithIdentifier:(NSString *)identifier {
 	if (self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier]) {
+		self.textLabel.numberOfLines = 0;
 		self.detailTextLabel.numberOfLines = 0;
 		
 		// Configure fonts
-		self.textLabel.font			= [UIFont boldSystemFontOfSize:16.0];
-		self.detailTextLabel.font	= [UIFont systemFontOfSize:12.0];
+		self.textLabel.font			= [UIFont boldSystemFontOfSize:BBArticleCellTextFontSize];
+		self.detailTextLabel.font	= [UIFont systemFontOfSize:BBArticleCellDetailFontSize];
 	}
 	
 	return self;

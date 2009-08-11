@@ -43,6 +43,8 @@
 		7909273610305AA800ECDD50 /* RSSUpdater.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909273410305AA800ECDD50 /* RSSUpdater.m */; };
 		790927C210307B7700ECDD50 /* BlogBridge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 790927C110307B7700ECDD50 /* BlogBridge.xcdatamodeld */; };
 		790927C810307BEA00ECDD50 /* BlogBridge1-2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 790927C710307BEA00ECDD50 /* BlogBridge1-2.xcmappingmodel */; };
+		7909291F10317CBA00ECDD50 /* ArticleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7909291D10317CBA00ECDD50 /* ArticleTests.m */; };
+		7909292110317D1A00ECDD50 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E31D1029911C00A3D584 /* Article.m */; };
 		790D4BDC102AEABF0091EA1B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 790D4BDB102AEABF0091EA1B /* Default.png */; };
 		7914E722102ACF5300D559D9 /* OPMLGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E721102ACF5300D559D9 /* OPMLGuide.m */; };
 		7914E725102AD0C700D559D9 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
@@ -132,6 +134,8 @@
 		790927AF103078E700ECDD50 /* BlogBridge.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = BlogBridge.xcdatamodel; sourceTree = "<group>"; };
 		790927C310307B7700ECDD50 /* BlogBridge 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BlogBridge 2.xcdatamodel"; sourceTree = "<group>"; };
 		790927C710307BEA00ECDD50 /* BlogBridge1-2.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; name = "BlogBridge1-2.xcmappingmodel"; path = "Resources/BlogBridge1-2.xcmappingmodel"; sourceTree = "<group>"; };
+		7909291C10317CBA00ECDD50 /* ArticleTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTests.h; sourceTree = "<group>"; };
+		7909291D10317CBA00ECDD50 /* ArticleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTests.m; sourceTree = "<group>"; };
 		790D4BDB102AEABF0091EA1B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		7914E720102ACF5300D559D9 /* OPMLGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OPMLGuide.h; path = OPML/OPMLGuide.h; sourceTree = "<group>"; };
 		7914E721102ACF5300D559D9 /* OPMLGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OPMLGuide.m; path = OPML/OPMLGuide.m; sourceTree = "<group>"; };
@@ -303,6 +307,28 @@
 			name = RSS;
 			sourceTree = "<group>";
 		};
+		7909291A10317C9700ECDD50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7909291B10317CA600ECDD50 /* OPML */,
+				7909256C103029CF00ECDD50 /* RSS */,
+				7909291C10317CBA00ECDD50 /* ArticleTests.h */,
+				7909291D10317CBA00ECDD50 /* ArticleTests.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7909291B10317CA600ECDD50 /* OPML */ = {
+			isa = PBXGroup;
+			children = (
+				79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */,
+				79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */,
+				7953D916102C371000E87B72 /* OPMLUpdaterTests.h */,
+				7953D917102C371000E87B72 /* OPMLUpdaterTests.m */,
+			);
+			name = OPML;
+			sourceTree = "<group>";
+		};
 		7914E71F102ACF3300D559D9 /* OPML */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,11 +407,7 @@
 		79FDB86B102AF5A000AF94A2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7909256C103029CF00ECDD50 /* RSS */,
-				79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */,
-				79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */,
-				7953D916102C371000E87B72 /* OPMLUpdaterTests.h */,
-				7953D917102C371000E87B72 /* OPMLUpdaterTests.m */,
+				7909291A10317C9700ECDD50 /* Models */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -577,6 +599,8 @@
 				790924F410300B2800ECDD50 /* AbstractParserTests.m in Sources */,
 				790926501030413E00ECDD50 /* RSSItemTests.m in Sources */,
 				7909273510305AA800ECDD50 /* RSSUpdater.m in Sources */,
+				7909291F10317CBA00ECDD50 /* ArticleTests.m in Sources */,
+				7909292110317D1A00ECDD50 /* Article.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
