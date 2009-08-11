@@ -26,11 +26,11 @@
 
 /** Parses the feed from the given URL and returns the array of items. */
 - (NSArray *)parseFeedFromURL:(NSURL *)url {
-	NSXMLParser *parser = [[NSXMLParser alloc] initWithContentsOfURL:url];
-	NSArray *items = [self parseFeedWithParser:parser];
-	[parser release];
-	
-	return items;
+	NSURLRequest* request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:10];
+	NSError* error;
+	NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
+
+	return [self parseFeedFromData:data];
 }
 
 /** Parses the feed from the given data and returns the array of items. */

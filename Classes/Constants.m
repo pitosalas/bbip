@@ -20,6 +20,7 @@ NSString * const BBSettingAccountEmail			= @"accountEmail";
 NSString * const BBSettingAccountPassword		= @"accountPassword";
 
 NSString * const BBNotificationArticlesAdded	= @"Articles Added";
+NSString * const BBNotificationArticleRead		= @"Article Read";
 
 float const BBArticleCellTextFontSize			= 16.0;
 float const BBArticleCellDetailFontSize			= 12.0;

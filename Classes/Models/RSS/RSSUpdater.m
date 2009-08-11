@@ -11,6 +11,7 @@
 #import "RSSFeedParser.h"
 #import "RSSItem.h"
 #import "Article.h"
+#import "Guide.h"
 
 @implementation RSSUpdater
 
@@ -134,7 +135,16 @@
 	// Set last update date, last seen article key and save changes
 	NSError *error;
 	[feed setValue:[NSDate date] forKey:@"updatedOn"];
-	if (addedNewArticles) [feed setValue:((RSSItem *)[items objectAtIndex:0]).key forKey:@"latestArticleKey"];
+	if (addedNewArticles) {
+		[feed setValue:((RSSItem *)[items objectAtIndex:0]).key forKey:@"latestArticleKey"];
+		
+		// Update guides' unread counters
+		NSArray *guides = [feed valueForKey:@"guides"];
+		for (Guide *guide in guides) {
+			guide.unreadCount = [NSNumber numberWithInt:([guide.unreadCount intValue] + [addedArticles count])];
+		}
+	}
+
 	if (![context save:&error]) {
 		NSLog(@"Failed to update: %@", error);
 	}

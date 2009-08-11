@@ -14,5 +14,6 @@
 @dynamic name;
 @dynamic iconName;
 @dynamic feeds;
+@dynamic unreadCount;
 
 @end

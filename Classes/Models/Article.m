@@ -7,6 +7,7 @@
 //
 
 #import "Article.h"
+#import "Guide.h"
 
 static NSString *codes[] = {
 	@"&nbsp;",   @"&iexcl;",  @"&cent;",   @"&pound;",  @"&curren;", @"&yen;",    @"&brvbar;",
@@ -35,16 +36,36 @@ static int customCodes[] = { 34, 39, 38, 60, 62 };
 @dynamic pubDate;
 @dynamic body;
 @dynamic feed;
+@dynamic brief;
 
-- (NSString *)briefBody {
-	if (!briefBody && self.body != nil) {
-		// Get plain text
-		NSString *plainText = [Article plainTextFromHTML:self.body];
-		briefBody = [[Article decodeCharacterEntities:[Article sentencesFromText:plainText sentences:3]] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-		[briefBody retain];
-	}
+/** Sets read status and updates underlying guides. */
+- (void)setRead:(NSNumber *)read {
+	NSNumber *wasRead = self.read;
 	
-	return briefBody;
+	[self willChangeValueForKey:@"read"];
+	[self setPrimitiveValue:read forKey:@"read"];
+	[self didChangeValueForKey:@"read"];
+	
+	// Update all feeds and guides
+	if (![wasRead boolValue] && [read boolValue]) {
+		NSArray *guides = [self.feed valueForKey:@"guides"];
+		for (Guide *guide in guides) {
+			guide.unreadCount = [NSNumber numberWithInt:([guide.unreadCount intValue] - 1)];
+		}
+	}
+}
+
+/** Makes a brief version automatically. */
+- (void)setBody:(NSString *)body {
+	[self willChangeValueForKey:@"body"];
+	[self setPrimitiveValue:body forKey:@"body"];
+	[self didChangeValueForKey:@"body"];
+	
+	[self willChangeValueForKey:@"brief"];
+	NSString *plainText = [Article plainTextFromHTML:self.body];
+	NSString *value     = [[Article decodeCharacterEntities:[Article sentencesFromText:plainText sentences:3]] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+	[self setPrimitiveValue:value forKey:@"brief"];
+	[self didChangeValueForKey:@"brief"];
 }
 
 - (NSURL *)baseURL {
@@ -52,8 +73,6 @@ static int customCodes[] = { 34, 39, 38, 60, 62 };
 }
 
 - (void)dealloc {
-	[briefBody release];
-	[fullHTML release];
 	[super dealloc];
 }
 

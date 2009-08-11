@@ -28,6 +28,7 @@
 							tag:0] autorelease];
 
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onArticlesAdded:) name:BBNotificationArticlesAdded object:nil]; 
+		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onArticleRead:) name:BBNotificationArticleRead object:nil]; 
 	}
 	
 	return self;
@@ -39,7 +40,16 @@
 	NSError *error;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		// TODO: Handle the error...
+	} else {
+		// Count read / unread
+		[self updateBadge];
 	}
+}
+
+/** Updates the badge. */
+- (void)updateBadge {
+	int unread = [guide.unreadCount intValue];
+	self.tabBarItem.badgeValue = unread > 0 ? [NSString stringWithFormat:@"%i", unread] : nil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -82,7 +92,7 @@
 
 	// Configure the cell
 	cell.textLabel.text			= article.title;
-	cell.detailTextLabel.text	= article.briefBody;
+	cell.detailTextLabel.text	= article.brief;
 	
 	cell.textLabel.textColor 	= article.read ? [UIColor darkGrayColor] : [UIColor blackColor];
 	
@@ -91,7 +101,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
-	NSString *cellDetailText = article.briefBody;
+	NSString *cellDetailText = article.brief;
 	NSString *cellText = article.title;
 
 	// The width subtracted from the tableView frame depends on:
@@ -112,10 +122,15 @@
 	[articleViewController release];
 
 	// Mark article as read and update the row
-	NSError *error;
-	article.read = [NSNumber numberWithBool:TRUE];
-	[managedObjectContext save:&error];
-	[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:NO];
+	if (!article.read) {
+		NSError *error;
+		article.read = [NSNumber numberWithBool:TRUE];
+		[managedObjectContext save:&error];
+		
+		// Notify everyone and let them update themselves
+		NSDictionary *info = [NSDictionary dictionaryWithObject:article forKey:@"article"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationArticleRead object:self userInfo:info];
+	}		
 }
 
 
@@ -177,7 +192,26 @@
 	NSDictionary *userInfo = [notification userInfo];
 	NSManagedObject *feed = [userInfo objectForKey:@"feed"];
 	if ([guide.feeds containsObject:feed]) {
-		[self.tableView reloadData]; 
+		[self.tableView reloadData];
+		[self updateBadge];
+	}
+}
+
+- (void)onArticleRead:(NSNotification *)notification {
+	NSDictionary *userInfo = [notification userInfo];
+	Article *article = [userInfo objectForKey:@"article"];
+	NSManagedObject *feed = article.feed;
+	if ([guide.feeds containsObject:feed]) {
+		// Update row
+		@try {
+			NSIndexPath *path = [[self fetchedResultsController] indexPathForObject:article];
+			[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:path] withRowAnimation:UITableViewRowAnimationNone];
+		} @catch (NSException *ex) {
+			NSLog(@"Failed to update read article: %@", ex);
+		}
+		
+		// Update badge
+		[self updateBadge];
 	}
 }
 

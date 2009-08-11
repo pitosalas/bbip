@@ -144,8 +144,8 @@ NSString* md5(NSString *str) {
 	NSError *error;
     persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self managedObjectModel]];
 	
-	//NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:NSMigratePersistentStoresAutomaticallyOption];
-    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:nil error:&error]) {
+	NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:NSMigratePersistentStoresAutomaticallyOption];
+    if (![persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeUrl options:options error:&error]) {
         // Handle error
 		NSLog(@"%@", error);
     }    
@@ -208,7 +208,7 @@ NSString* md5(NSString *str) {
 		
 		OPMLUpdater *opmlUpdater = [[OPMLUpdater alloc] init];
 		NSURL *url = [NSURL URLWithString:opmlURL];
-		[opmlUpdater updateFromOPMLURL:url managedObjectContext:[self managedObjectContext]];
+		[opmlUpdater updateFromOPMLURL:url managedObjectContext:self.managedObjectContext];
 		[opmlUpdater release];
 	}
 }
@@ -243,7 +243,7 @@ NSString* md5(NSString *str) {
 	NSDictionary *userDefaults = [NSDictionary dictionaryWithObjectsAndKeys:
 								  @"http://blogbridge.com/points/bbip.opml",	BBSettingDefaultOpmlUrl,
 								  [NSNumber numberWithInt:100],					BBSettingCurrentFontBias,
-								  [NSNumber numberWithInt:300],					BBSettingReadArticleAge,
+								  [NSNumber numberWithInt:86400],				BBSettingReadArticleAge,
 								  [NSNumber numberWithInt:432000],				BBSettingUnreadArticleAge,
 								  [NSNumber numberWithInt:1800],				BBSettingUpdatePeriod,
 								  [NSNumber numberWithInt:0],					BBSettingSelectedGuide, nil];

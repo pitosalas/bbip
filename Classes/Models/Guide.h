@@ -13,9 +13,10 @@
 {
 }
 
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * iconName;
-@property (nonatomic, retain) NSSet* feeds;
+@property (nonatomic, retain) NSString	*name;
+@property (nonatomic, retain) NSString	*iconName;
+@property (nonatomic, retain) NSSet		*feeds;
+@property (nonatomic, retain) NSNumber  *unreadCount;
 
 @end
 

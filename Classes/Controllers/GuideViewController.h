@@ -20,6 +20,9 @@
 
 - (id)initWithGuide:(Guide *)aGuide;
 
+/** Updates the badge. */
+- (void)updateBadge;
+
 #pragma mark -
 #pragma mark Notifications
 
