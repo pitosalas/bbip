@@ -84,6 +84,8 @@
 	cell.textLabel.text			= article.title;
 	cell.detailTextLabel.text	= article.briefBody;
 	
+	cell.textLabel.textColor 	= article.read ? [UIColor darkGrayColor] : [UIColor blackColor];
+	
     return cell;
 }
 
@@ -103,10 +105,17 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
-
+	
+	// Show article panel
 	ArticleViewController *articleViewController = [[ArticleViewController alloc] initWithArticle:article];	
 	[self.navigationController pushViewController:articleViewController animated:YES];
 	[articleViewController release];
+
+	// Mark article as read and update the row
+	NSError *error;
+	article.read = [NSNumber numberWithBool:TRUE];
+	[managedObjectContext save:&error];
+	[self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:NO];
 }
 
 

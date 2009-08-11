@@ -274,18 +274,14 @@
 								<string>79C0E3C710299CF200A3D584</string>
 								<string>79C0E2851029724B00A3D584</string>
 								<string>7953DB45102C6C7700E87B72</string>
-								<string>29B97317FDCFA39411CA2CEA</string>
-								<string>79C722A9102AC8E900F863AA</string>
-								<string>790923E2102FF16000ECDD50</string>
 								<string>79FDB86B102AF5A000AF94A2</string>
 								<string>7909291A10317C9700ECDD50</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>22</integer>
-									<integer>15</integer>
-									<integer>14</integer>
+									<integer>6</integer>
+									<integer>2</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -330,7 +326,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RSSUpdater.m</string>
+								<string>GuideViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -338,11 +334,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RSSUpdater.m</string>
+										<string>GuideViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>79092AFE1031B3B800ECDD50</string>
+										<string>79092B1D1031B68600ECDD50</string>
 										<key>history</key>
 										<array>
 											<string>79C0E2E810297A6900A3D584</string>
@@ -401,7 +397,6 @@
 											<string>790929331031809500ECDD50</string>
 											<string>790929341031809500ECDD50</string>
 											<string>790929351031809500ECDD50</string>
-											<string>790929D7103190F300ECDD50</string>
 											<string>790929F7103193D500ECDD50</string>
 											<string>79092A0F103194D000ECDD50</string>
 											<string>79092A1C1031956900ECDD50</string>
@@ -412,9 +407,10 @@
 											<string>79092AAD1031A68000ECDD50</string>
 											<string>79092AD61031B0DB00ECDD50</string>
 											<string>79092AEC1031B21A00ECDD50</string>
-											<string>79092AF11031B26E00ECDD50</string>
-											<string>79092AFB1031B3B800ECDD50</string>
-											<string>79092AFC1031B3B800ECDD50</string>
+											<string>79092B021031B53B00ECDD50</string>
+											<string>79092B141031B5D100ECDD50</string>
+											<string>79092B151031B5D100ECDD50</string>
+											<string>79092B161031B5D100ECDD50</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -443,7 +439,6 @@
 											<string>7953D943102C3BDC00E87B72</string>
 											<string>7953D9A9102C3FB300E87B72</string>
 											<string>7953D9DE102C42EB00E87B72</string>
-											<string>7953D9DF102C42EB00E87B72</string>
 											<string>7953DB6B102C7ADC00E87B72</string>
 											<string>7953DB6F102C7ADC00E87B72</string>
 											<string>79CE5DAB102CC11B00D3E652</string>
@@ -484,14 +479,11 @@
 											<string>7909285810308B7400ECDD50</string>
 											<string>7909293F1031809500ECDD50</string>
 											<string>790929401031809500ECDD50</string>
-											<string>79092A071031948800ECDD50</string>
 											<string>79092A11103194D000ECDD50</string>
 											<string>79092A12103194D000ECDD50</string>
-											<string>79092A1E1031956900ECDD50</string>
 											<string>79092A1F1031956900ECDD50</string>
 											<string>79092A3C103197FE00ECDD50</string>
 											<string>79092A4C1031985100ECDD50</string>
-											<string>79092A6210319DDF00ECDD50</string>
 											<string>79092A6310319DDF00ECDD50</string>
 											<string>79092A6410319DDF00ECDD50</string>
 											<string>79092A6510319DDF00ECDD50</string>
@@ -523,19 +515,18 @@
 											<string>79092AAF1031A68000ECDD50</string>
 											<string>79092AD91031B0DB00ECDD50</string>
 											<string>79092ADA1031B0DB00ECDD50</string>
-											<string>79092ADB1031B0DB00ECDD50</string>
 											<string>79092ADC1031B0DB00ECDD50</string>
-											<string>79092ADD1031B0DB00ECDD50</string>
 											<string>79092ADE1031B0DB00ECDD50</string>
-											<string>79092AE41031B12700ECDD50</string>
 											<string>79092AE51031B12700ECDD50</string>
-											<string>79092AE61031B12700ECDD50</string>
 											<string>79092AEE1031B21A00ECDD50</string>
-											<string>79092AF31031B26E00ECDD50</string>
 											<string>79092AF41031B26E00ECDD50</string>
-											<string>79092AF51031B26E00ECDD50</string>
 											<string>79092AF61031B26E00ECDD50</string>
-											<string>79092AFD1031B3B800ECDD50</string>
+											<string>79092B051031B53B00ECDD50</string>
+											<string>79092B071031B53B00ECDD50</string>
+											<string>79092B091031B53B00ECDD50</string>
+											<string>79092B0B1031B53B00ECDD50</string>
+											<string>79092B171031B5D100ECDD50</string>
+											<string>79092B181031B5D100ECDD50</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -733,8 +724,8 @@
 		<string>790929AB10318DAC00ECDD50</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>79C0E2081029664D00A3D584</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/alg/Work/Pito/iPhone/BlogBridge/BlogBridge.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
