@@ -282,14 +282,13 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>6</integer>
-									<integer>2</integer>
-									<integer>1</integer>
+									<integer>47</integer>
+									<integer>42</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 0}, {260, 738}}</string>
+							<string>{{0, 412}, {260, 738}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -328,7 +327,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GuideViewController.h</string>
+								<string>ArticleViewController.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -336,11 +335,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>GuideViewController.h</string>
+										<string>ArticleViewController.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>79DD636610335B5600AC9EBD</string>
+										<string>79DD63A910335E4E00AC9EBD</string>
 										<key>history</key>
 										<array>
 											<string>79C0E2E810297A6900A3D584</string>
@@ -411,12 +410,12 @@
 											<string>79DD62F0103353E900AC9EBD</string>
 											<string>79DD63221033569500AC9EBD</string>
 											<string>79DD63231033569500AC9EBD</string>
-											<string>79DD633C1033598900AC9EBD</string>
-											<string>79DD634B103359B600AC9EBD</string>
-											<string>79DD634C103359B600AC9EBD</string>
-											<string>79DD635D10335B5600AC9EBD</string>
 											<string>79DD635E10335B5600AC9EBD</string>
-											<string>79DD635F10335B5600AC9EBD</string>
+											<string>79DD636810335C0000AC9EBD</string>
+											<string>79DD639E10335DAC00AC9EBD</string>
+											<string>79DD639F10335DAC00AC9EBD</string>
+											<string>79DD63A010335DAC00AC9EBD</string>
+											<string>79DD638D10335D5D00AC9EBD</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -488,85 +487,17 @@
 											<string>79092B671031BE8200ECDD50</string>
 											<string>79092BA01031C1FD00ECDD50</string>
 											<string>79092C4F1031D10A00ECDD50</string>
-											<string>79DD62971033330400AC9EBD</string>
 											<string>79DD62981033330400AC9EBD</string>
 											<string>79DD62991033330400AC9EBD</string>
-											<string>79DD629A1033330400AC9EBD</string>
-											<string>79DD62AD1033341300AC9EBD</string>
-											<string>79DD62AE1033341300AC9EBD</string>
-											<string>79DD62B51033342400AC9EBD</string>
-											<string>79DD62B61033342400AC9EBD</string>
-											<string>79DD62C01033348A00AC9EBD</string>
-											<string>79DD62C61033355900AC9EBD</string>
-											<string>79DD62E110333C0A00AC9EBD</string>
-											<string>79DD62E210333C0A00AC9EBD</string>
-											<string>79DD62F3103353E900AC9EBD</string>
-											<string>79DD62F4103353E900AC9EBD</string>
-											<string>79DD62F5103353E900AC9EBD</string>
-											<string>79DD62F6103353E900AC9EBD</string>
-											<string>79DD62F7103353E900AC9EBD</string>
-											<string>79DD62F8103353E900AC9EBD</string>
-											<string>79DD62F9103353E900AC9EBD</string>
-											<string>79DD62FA103353E900AC9EBD</string>
-											<string>79DD62FB103353E900AC9EBD</string>
-											<string>79DD62FC103353E900AC9EBD</string>
-											<string>79DD62FD103353E900AC9EBD</string>
-											<string>79DD62FE103353E900AC9EBD</string>
-											<string>79DD62FF103353E900AC9EBD</string>
-											<string>79DD6300103353E900AC9EBD</string>
-											<string>79DD6301103353E900AC9EBD</string>
-											<string>79DD6302103353E900AC9EBD</string>
-											<string>79DD6303103353E900AC9EBD</string>
-											<string>79DD6304103353E900AC9EBD</string>
-											<string>79DD6305103353E900AC9EBD</string>
-											<string>79DD6306103353E900AC9EBD</string>
-											<string>79DD6307103353E900AC9EBD</string>
-											<string>79DD6308103353E900AC9EBD</string>
-											<string>79DD6309103353E900AC9EBD</string>
-											<string>79DD630A103353E900AC9EBD</string>
-											<string>79DD630B103353E900AC9EBD</string>
-											<string>79DD630C103353E900AC9EBD</string>
-											<string>79DD63131033550700AC9EBD</string>
-											<string>79DD63141033550700AC9EBD</string>
-											<string>79DD63151033550700AC9EBD</string>
-											<string>79DD63161033550700AC9EBD</string>
-											<string>79DD63171033550700AC9EBD</string>
-											<string>79DD63181033550700AC9EBD</string>
-											<string>79DD63191033550700AC9EBD</string>
-											<string>79DD631A1033550700AC9EBD</string>
-											<string>79DD631B1033550700AC9EBD</string>
-											<string>79DD631C1033550700AC9EBD</string>
-											<string>79DD631D1033550700AC9EBD</string>
-											<string>79DD631E1033550700AC9EBD</string>
-											<string>79DD63271033569500AC9EBD</string>
-											<string>79DD63281033569500AC9EBD</string>
-											<string>79DD63291033569500AC9EBD</string>
-											<string>79DD632A1033569500AC9EBD</string>
-											<string>79DD632B1033569500AC9EBD</string>
-											<string>79DD632C1033569500AC9EBD</string>
-											<string>79DD632D1033569500AC9EBD</string>
-											<string>79DD632E1033569500AC9EBD</string>
-											<string>79DD632F1033569500AC9EBD</string>
-											<string>79DD63301033569500AC9EBD</string>
-											<string>79DD63311033569500AC9EBD</string>
-											<string>79DD633F1033598900AC9EBD</string>
-											<string>79DD63401033598900AC9EBD</string>
-											<string>79DD63411033598900AC9EBD</string>
-											<string>79DD63421033598900AC9EBD</string>
-											<string>79DD63431033598900AC9EBD</string>
-											<string>79DD63441033598900AC9EBD</string>
-											<string>79DD63451033598900AC9EBD</string>
-											<string>79DD63461033598900AC9EBD</string>
-											<string>79DD63471033598900AC9EBD</string>
-											<string>79DD63481033598900AC9EBD</string>
-											<string>79DD634D103359B600AC9EBD</string>
-											<string>79DD634E103359B600AC9EBD</string>
-											<string>79DD636010335B5600AC9EBD</string>
-											<string>79DD636110335B5600AC9EBD</string>
-											<string>79DD636210335B5600AC9EBD</string>
-											<string>79DD636310335B5600AC9EBD</string>
-											<string>79DD636410335B5600AC9EBD</string>
-											<string>79DD636510335B5600AC9EBD</string>
+											<string>79DD638E10335D5D00AC9EBD</string>
+											<string>79DD638F10335D5D00AC9EBD</string>
+											<string>79DD639010335D5D00AC9EBD</string>
+											<string>79DD639110335D5D00AC9EBD</string>
+											<string>79DD639210335D5D00AC9EBD</string>
+											<string>79DD63A110335DAC00AC9EBD</string>
+											<string>79DD63A210335DAC00AC9EBD</string>
+											<string>79DD63A310335DAC00AC9EBD</string>
+											<string>79DD63A410335DAC00AC9EBD</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -624,9 +555,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>79DD629C1033330400AC9EBD</string>
+				<string>79DD639410335D5D00AC9EBD</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>79DD629D1033330400AC9EBD</string>
+				<string>79DD639510335D5D00AC9EBD</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -760,12 +691,10 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>79DD629E1033330400AC9EBD</string>
-		<string>79DD629F1033330400AC9EBD</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>79C0E2081029664D00A3D584</string>
-		<string>/Users/alg/Work/Pito/iPhone/BlogBridge/BlogBridge.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/alg/Work/Pito/iPhone/BlogBridge/BlogBridge.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 80 1441 797 0 0 1440 878 </string>
@@ -791,7 +720,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>GuideViewController.h</string>
+								<string>BBWebView.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -849,7 +778,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>79C0E2081029664D00A3D584</string>
-				<string>79DD62871033310E00AC9EBD</string>
+				<string>79DD638910335D4D00AC9EBD</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
@@ -969,13 +898,13 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1CD10A99069EF8BA00B06720</string>
-				<string>79DD62881033310E00AC9EBD</string>
+				<string>79DD639610335D5D00AC9EBD</string>
 				<string>1C162984064C10D400B95A72</string>
-				<string>79DD62891033310E00AC9EBD</string>
-				<string>79DD628A1033310E00AC9EBD</string>
-				<string>79DD628B1033310E00AC9EBD</string>
-				<string>79DD628C1033310E00AC9EBD</string>
-				<string>79DD628D1033310E00AC9EBD</string>
+				<string>79DD639710335D5D00AC9EBD</string>
+				<string>79DD639810335D5D00AC9EBD</string>
+				<string>79DD639910335D5D00AC9EBD</string>
+				<string>79DD639A10335D5D00AC9EBD</string>
+				<string>79DD639B10335D5D00AC9EBD</string>
 			</array>
 			<key>ToolbarConfiguration</key>
 			<string>xcode.toolbar.config.debugV3</string>
@@ -1131,7 +1060,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>1C78EAAD065D492600B07095</string>
-				<string>79DD628E1033310E00AC9EBD</string>
+				<string>79DD638A10335D4D00AC9EBD</string>
 				<string>1C78EAAC065D492600B07095</string>
 			</array>
 			<key>ToolbarConfiguration</key>
@@ -1141,7 +1070,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

@@ -9,8 +9,9 @@
 #import "BBWebView.h"
 #import "Constants.h"
 
-const float kMinimumGestureLength = 25;
-const float kMaximumVariance = 5;
+const float kMinimumGestureLength	= 25;
+const float kMaximumVariance		= 5;
+const float kMaximumTouchDistance	= 5;
 
 @implementation BBWebView
 
@@ -48,7 +49,7 @@ const float kMaximumVariance = 5;
 				action = @selector(onNextArticle);
 			}
 			
-			[navDelegate performSelector:action];
+			if ([navDelegate respondsToSelector:action]) [navDelegate performSelector:action];
 			
 			tracking = NO;
 		} else if (deltaY >= kMinimumGestureLength && deltaX <= kMaximumVariance) {
@@ -61,6 +62,20 @@ const float kMaximumVariance = 5;
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	// See if we still tracking -- not processed a swipe yet
+	if (tracking) {
+		UITouch *touch = [touches anyObject];
+		CGPoint currentPosition = [touch locationInView:self];
+		
+		CGFloat deltaX = fabsf(gestureStart.x - currentPosition.x);
+		CGFloat deltaY = fabsf(gestureStart.y - currentPosition.y);
+
+		if (deltaX < kMaximumTouchDistance && deltaY < kMaximumTouchDistance) {
+			SEL action = @selector(onTouch);
+			if ([navDelegate respondsToSelector:action]) [navDelegate performSelector:action];
+		}
+	}
+	
 	tracking = NO;
 
 	[touchesDelegate					touchesEnded:touches withEvent:event];

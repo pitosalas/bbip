@@ -34,6 +34,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	webView.navDelegate = self;
+	toolbar.hidden = YES;
 	
 	[self setArticle:article];
     [super viewDidLoad];
@@ -111,6 +112,10 @@
 	if ([navDelegate respondsToSelector:action]) {
 		[navDelegate performSelector:action withObject:self];
 	}
+}
+
+- (void)onTouch {
+	[toolbar setHidden:!toolbar.hidden];
 }
 
 @end

@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface BBWebView : UIWebView {
-	CGPoint		gestureStart;
-	UIView		*touchesDelegate;
-	BOOL		tracking;
+	CGPoint			gestureStart;
+	UIView			*touchesDelegate;
+	BOOL			tracking;
 	
-	id			navDelegate;
+	id				navDelegate;
 }
 
 @property (nonatomic, assign) id navDelegate;
