@@ -75,9 +75,13 @@
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-	// Note: This one is important to let the app rotate the article view
-	UINavigationController *controller = self.selectedViewController;
-	BOOL articleView = controller != nil && [controller.topViewController isKindOfClass:[ArticleViewController class]];
+	BOOL articleView = NO;
+	
+	UIViewController *viewController = self.selectedViewController;
+	if ([viewController isKindOfClass:[UINavigationController class]]) {
+		UINavigationController *controller = (UINavigationController *)viewController;
+		articleView = controller != nil && [controller.topViewController isKindOfClass:[ArticleViewController class]];
+	}
 	
     return articleView || (interfaceOrientation == UIInterfaceOrientationPortrait);
 }

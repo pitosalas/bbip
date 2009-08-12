@@ -21,6 +21,8 @@ extern NSString * const BBSettingAccountPassword;
 /** Notifications */
 extern NSString * const BBNotificationArticlesAdded;
 extern NSString * const BBNotificationArticleRead;
+extern NSString * const BBNotificationNextArticle;
+extern NSString * const BBNotificationPreviousArticle;
 
 /** Article cell */
 extern float const BBArticleCellTextFontSize;

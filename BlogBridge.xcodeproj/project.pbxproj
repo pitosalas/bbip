@@ -76,6 +76,7 @@
 		79C722AA102AC8E900F863AA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79C722A9102AC8E900F863AA /* Settings.bundle */; };
 		79CE5D84102C981600D3E652 /* Cleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CE5D83102C981600D3E652 /* Cleaner.m */; };
 		79CE5D88102CBA5300D3E652 /* Cleaner.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CE5D83102C981600D3E652 /* Cleaner.m */; };
+		79DD627D10332EC800AC9EBD /* BBWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 79DD627C10332EC800AC9EBD /* BBWebView.m */; };
 		79FDB8F6102AFF8300AF94A2 /* OPMLParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */; };
 		79FDBA75102B12E800AF94A2 /* OPMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E72D102AD23500D559D9 /* OPMLParser.m */; };
 		79FDBA77102B12FC00AF94A2 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
@@ -173,6 +174,8 @@
 		79C722A9102AC8E900F863AA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 		79CE5D82102C981600D3E652 /* Cleaner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cleaner.h; sourceTree = "<group>"; };
 		79CE5D83102C981600D3E652 /* Cleaner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cleaner.m; sourceTree = "<group>"; };
+		79DD627B10332EC800AC9EBD /* BBWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBWebView.h; sourceTree = "<group>"; };
+		79DD627C10332EC800AC9EBD /* BBWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBWebView.m; sourceTree = "<group>"; };
 		79FDB86C102AF5C400AF94A2 /* OPMLParserTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPMLParserTests.h; sourceTree = "<group>"; };
 		79FDB86D102AF5C400AF94A2 /* OPMLParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMLParserTests.m; sourceTree = "<group>"; };
 		79FDB8EC102AFF5400AF94A2 /* LogicTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,6 +384,8 @@
 			children = (
 				79C0E3CB10299D1900A3D584 /* ArticleCell.h */,
 				79C0E3CC10299D1900A3D584 /* ArticleCell.m */,
+				79DD627B10332EC800AC9EBD /* BBWebView.h */,
+				79DD627C10332EC800AC9EBD /* BBWebView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				790927C210307B7700ECDD50 /* BlogBridge.xcdatamodeld in Sources */,
 				790927C810307BEA00ECDD50 /* BlogBridge1-2.xcmappingmodel in Sources */,
 				79092B5C1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel in Sources */,
+				79DD627D10332EC800AC9EBD /* BBWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
