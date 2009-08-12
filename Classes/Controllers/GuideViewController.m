@@ -114,11 +114,17 @@
 	Article *article = (Article *)[fetchedResultsController objectAtIndexPath:indexPath];
 	
 	// Show article panel
-	ArticleViewController *articleViewController = [[ArticleViewController alloc] initWithArticle:article];	
+	ArticleViewController *articleViewController = [[ArticleViewController alloc] initWithArticle:article];
+	articleViewController.navDelegate = self;
 	[self.navigationController pushViewController:articleViewController animated:YES];
 	[articleViewController release];
 
 	// Mark article as read and update the row
+	[self markArticleAsReadAndNotify:article];
+}
+
+/** Marks an article as read and notifies everyone. */
+- (void)markArticleAsReadAndNotify:(Article *)article {
 	if (!article.read) {
 		NSError *error;
 		article.read = [NSNumber numberWithBool:TRUE];
@@ -129,7 +135,6 @@
 		[[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationArticleRead object:self userInfo:info];
 	}		
 }
-
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // The table view should not be re-orderable.
@@ -194,6 +199,7 @@
 	}
 }
 
+/** Invoked when an article is read. */
 - (void)onArticleRead:(NSNotification *)notification {
 	NSDictionary *userInfo = [notification userInfo];
 	Article *article = [userInfo objectForKey:@"article"];
@@ -209,6 +215,39 @@
 		
 		// Update badge
 		[self updateBadge];
+	}
+}
+
+#pragma mark -
+#pragma mark Navigation
+
+/** Invoked to move on to the next article. */
+- (void)onNextArticle:(ArticleViewController *)articleViewController {
+	[self onNextArticle:articleViewController withDelta:1];
+}
+
+/** Invoked to move on to the previous article. */
+- (void)onPreviousArticle:(ArticleViewController *)articleViewController {
+	[self onNextArticle:articleViewController withDelta:-1];
+}
+
+- (void)onNextArticle:(ArticleViewController *)articleViewController withDelta:(int)delta {
+	Article *articleToSelect = nil;
+	NSArray *articles = [fetchedResultsController fetchedObjects];
+	
+	int nextIndex = -1;
+	Article *currentArticle  = articleViewController.article;
+	if (currentArticle == nil) {
+		// Try first
+		nextIndex = delta == 1 ? 0 : [articles count] - 1;
+	} else {
+		nextIndex = [articles indexOfObject:currentArticle] + delta;
+	}
+	
+	if (nextIndex >= 0 && [articles count] > nextIndex) articleToSelect = [articles objectAtIndex:nextIndex];
+	if (articleToSelect != nil) {
+		articleViewController.article = articleToSelect;
+		[self markArticleAsReadAndNotify:articleToSelect];
 	}
 }
 

@@ -9,10 +9,11 @@
 #import "ArticleViewController.h"
 #import "Article.h"
 #import "Constants.h"
+#import "BBWebView.h"
 
 @implementation ArticleViewController
 
-@synthesize webView, toolbar;
+@synthesize webView, toolbar, article, navDelegate;
 
 - (id)initWithArticle:(Article *)anArticle {
 	if (self = [super initWithNibName:@"ArticleViewController" bundle:nil]) {
@@ -26,20 +27,31 @@
 }
 
 - (void)dealloc {
-	[article release];
+	self.article = nil;
     [super dealloc];
 }
 
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
-	NSString *metaHTML  = [NSString stringWithFormat:@"<div id='bbip-meta'><div id='bbip-feed-title'>%@</div><div id='bbip-article-title'>%@</div></div>", [article.feed valueForKey:@"name"], article.title];
-	NSString *style		= [NSString stringWithFormat:@"#bbip-meta { margin-bottom: 1em; } #bbip-feed-title { text-transform:uppercase; font-family:Helvetica; font-size: 14px; } #bbip-article-title { font-family: Georgia; font-size: 20px; } body { -webkit-text-size-adjust: %d%% }", currentFontBias];
-	NSString *html		= [NSString stringWithFormat:@"<html><head><style type='text/css'>%@</style></head><body>%@<div id='bbip-article'>%@</div></body></html>", style, metaHTML, article.body];
-
-	[webView loadHTMLString:html baseURL:article.baseURL];
+	webView.navDelegate = self;
 	
+	[self setArticle:article];
     [super viewDidLoad];
+}
+
+- (void)setArticle:(Article *)anArticle {
+	[article autorelease];
+	article = [anArticle retain];
+	
+	if (article != nil) {
+		NSString *metaHTML  = [NSString stringWithFormat:@"<div id='bbip-meta'><div id='bbip-feed-title'>%@</div><div id='bbip-article-title'>%@</div></div>", [article.feed valueForKey:@"name"], article.title];
+		NSString *style		= [NSString stringWithFormat:@"#bbip-meta { margin-bottom: 1em; } #bbip-feed-title { text-transform:uppercase; font-family:Helvetica; font-size: 14px; } #bbip-article-title { font-family: Georgia; font-size: 20px; } body { -webkit-text-size-adjust: %d%% }", currentFontBias];
+		NSString *html		= [NSString stringWithFormat:@"<html><head><style type='text/css'>%@</style></head><body>%@<div id='bbip-article'>%@</div></body></html>", style, metaHTML, article.body];
+		
+		[webView loadHTMLString:html baseURL:article.baseURL];
+	} else {
+		[webView loadHTMLString:@"" baseURL:nil];
+	}
 }
 
 - (void)didReceiveMemoryWarning {
@@ -78,6 +90,27 @@
 	
 	NSString *javascript = [NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust='%d%%'", currentFontBias];
 	[webView stringByEvaluatingJavaScriptFromString:javascript];
+}
+
+#pragma mark -
+#pragma mark Navigation
+
+/** Invoked when someone moves to the next article. */
+- (void)onNextArticle {
+	SEL action = @selector(onNextArticle:);
+	
+	if ([navDelegate respondsToSelector:action]) {
+		[navDelegate performSelector:action withObject:self];
+	}
+}
+
+/** Invoked when someone moves to the previous article. */
+- (void)onPreviousArticle {
+	SEL action = @selector(onPreviousArticle:);
+	
+	if ([navDelegate respondsToSelector:action]) {
+		[navDelegate performSelector:action withObject:self];
+	}
 }
 
 @end

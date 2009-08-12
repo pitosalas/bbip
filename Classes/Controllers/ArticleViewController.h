@@ -8,17 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@class Article;
+@class BBWebView, Article;
 
 @interface ArticleViewController : UIViewController {
-	UIWebView	*webView;
+	BBWebView	*webView;
 	Article		*article;
 	int			currentFontBias;
 	UIToolbar	*toolbar;
+	id			navDelegate;
 }
 
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
+@property (nonatomic, retain) Article *article;
+@property (nonatomic, assign) id navDelegate;
 
 - (id)initWithArticle:(Article *)anArticle;
 

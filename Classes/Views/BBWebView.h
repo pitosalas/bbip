@@ -8,18 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol BBNavigationDelegate
-
-- (void)nextArticle;
-- (void)previousArticle;
-
-@end
-
-
 @interface BBWebView : UIWebView {
 	CGPoint		gestureStart;
 	UIView		*touchesDelegate;
 	BOOL		tracking;
+	
+	id			navDelegate;
 }
+
+@property (nonatomic, assign) id navDelegate;
 
 @end

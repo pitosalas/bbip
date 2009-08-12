@@ -14,6 +14,8 @@ const float kMaximumVariance = 5;
 
 @implementation BBWebView
 
+@synthesize navDelegate;
+
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
 	touchesDelegate = [super hitTest:point withEvent:event];
 	return self;
@@ -29,7 +31,7 @@ const float kMaximumVariance = 5;
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	if (tracking) {
+	if (tracking && navDelegate != nil) {
 		UITouch *touch = [touches anyObject];
 		CGPoint currentPosition = [touch locationInView:self];
 		
@@ -39,13 +41,14 @@ const float kMaximumVariance = 5;
 		if (deltaX >= kMinimumGestureLength && deltaY <= kMaximumVariance) {
 			// handle horizontal swipe
 			
-			NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-			
+			SEL action;
 			if (gestureStart.x < currentPosition.x) {
-				[nc postNotificationName:BBNotificationNextArticle object:self userInfo:nil];
+				action = @selector(onPreviousArticle);
 			} else {
-				[nc postNotificationName:BBNotificationPreviousArticle object:self userInfo:nil];
+				action = @selector(onNextArticle);
 			}
+			
+			[navDelegate performSelector:action];
 			
 			tracking = NO;
 		} else if (deltaY >= kMinimumGestureLength && deltaX <= kMaximumVariance) {
