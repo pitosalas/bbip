@@ -21,6 +21,7 @@ NSString * const BBSettingAccountPassword		= @"accountPassword";
 
 NSString * const BBNotificationArticlesAdded	= @"Articles Added";
 NSString * const BBNotificationArticleRead		= @"Article Read";
+NSString * const BBNotificationReachability		= @"kNetworkReachabilityChangedNotification";
 
 float const BBArticleCellTextFontSize			= 16.0;
 float const BBArticleCellDetailFontSize			= 12.0;

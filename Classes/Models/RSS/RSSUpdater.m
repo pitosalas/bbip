@@ -12,6 +12,7 @@
 #import "RSSItem.h"
 #import "Article.h"
 #import "Guide.h"
+#import "Reachability.h"
 
 @implementation RSSUpdater
 
@@ -84,20 +85,32 @@
 - (void)updateFeeds:(NSDictionary *)feedIDsToURLs {
 	NSAutoreleasePool *pool = [NSAutoreleasePool new];
 	
-	RSSFeedParser *parser = [RSSFeedParser new];
-	
-	for (NSManagedObjectID *feedID in feedIDsToURLs) {
-		NSString *url  = [feedIDsToURLs objectForKey:feedID];
-		NSLog(@"Updating %@", url);
-		NSArray *items = [[parser parseFeedFromURL:[NSURL URLWithString:url]] retain];
-		NSLog(@"Fetched %d articles", [items count]);
+	@try {
+		RSSFeedParser *parser = [RSSFeedParser new];
 		
-		// Send updates
-		NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:feedID, @"feedID", items, @"items", nil];
-		[self performSelectorOnMainThread:@selector(fetchedUpdatesForFeed:) withObject:args waitUntilDone:NO];
+		for (NSManagedObjectID *feedID in feedIDsToURLs) {
+			// Stop scanning if unreachable
+			if ([[Reachability sharedReachability] internetConnectionStatus] == NotReachable) break;
+			
+			NSString *url  = [feedIDsToURLs objectForKey:feedID];
+			NSLog(@"Updating %@", url);
+			NSArray *items = [[parser parseFeedFromURL:[NSURL URLWithString:url]] retain];
+
+			// See if we managed to get anything
+			if (items != nil) { 
+				NSLog(@"Fetched %d articles", [items count]);
+				
+				// Send updates
+				NSDictionary *args = [NSDictionary dictionaryWithObjectsAndKeys:feedID, @"feedID", items, @"items", nil];
+				[self performSelectorOnMainThread:@selector(fetchedUpdatesForFeed:) withObject:args waitUntilDone:NO];
+			}
+		}
+		
+		[parser release];
+	} @finally {
+		[lock performSelectorOnMainThread:@selector(unlock) withObject:nil waitUntilDone:NO];
 	}
 	
-	[parser release];
 	[pool release];
 }
 

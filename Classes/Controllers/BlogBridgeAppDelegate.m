@@ -15,6 +15,7 @@
 #import "Cleaner.h"
 #import "Constants.h"
 #import "RSSUpdater.h"
+#import "Reachability.h"
 
 /** Simple MD5 key creation. */
 NSString* md5(NSString *str) {
@@ -40,6 +41,10 @@ NSString* md5(NSString *str) {
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	NSDate *hideSplashScreenAfter = [NSDate dateWithTimeIntervalSinceNow:2];
 	
+	// Enable reachability notifications
+	[Reachability sharedReachability].networkStatusNotificationsEnabled = YES;
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onReachabilityChange) name:BBNotificationReachability object:nil];
+	
 	[self initDefaultUserPreferences];
 //	[self initDefaultDatabaseIfNeeded];
 	[self updateOPML];
@@ -63,8 +68,31 @@ NSString* md5(NSString *str) {
 	[window makeKeyAndVisible];
 }
 
+#pragma mark -
+#pragma mark Memory management
+
+- (void)dealloc {
+    [managedObjectContext release];
+    [managedObjectModel release];
+    [persistentStoreCoordinator release];
+	[updater release];
+    
+	[tabBarController release];
+	[window release];
+	[super dealloc];
+}
+
+/** Invoked when the app wakes up from being locked. */
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-	[updater update];
+	if ([self isConnected]) [updater update];
+}
+
+/** Invoked when the reachability changes. (Notification observer) */
+- (void)onReachabilityChange {
+	if ([self isConnected]) {
+		// Give 5 seconds for network to connect and start updating feeds
+		[updater performSelector:@selector(update) withObject:nil afterDelay:5];
+	}
 }
 
 /**
@@ -91,7 +119,6 @@ NSString* md5(NSString *str) {
  message to the application's managed object context.
  */
 - (IBAction)saveAction:(id)sender {
-	
     NSError *error;
     if (![[self managedObjectContext] save:&error]) {
 		// Handle error
@@ -166,20 +193,6 @@ NSString* md5(NSString *str) {
 }
 
 
-#pragma mark -
-#pragma mark Memory management
-
-- (void)dealloc {
-    [managedObjectContext release];
-    [managedObjectModel release];
-    [persistentStoreCoordinator release];
-	[updater release];
-    
-	[tabBarController release];
-	[window release];
-	[super dealloc];
-}
-
 /** Makes sure the database file is there and loaded with defaults. */
 - (void)initDefaultDatabaseIfNeeded {
     // Check if the database exists
@@ -234,7 +247,7 @@ NSString* md5(NSString *str) {
 
 /** Returns YES if connected. */
 - (BOOL)isConnected {
-	return YES;
+	return [[Reachability sharedReachability] internetConnectionStatus] != NotReachable;
 }
 
 - (void)initDefaultUserPreferences {

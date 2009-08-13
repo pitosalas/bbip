@@ -35,9 +35,13 @@
 
 /** Parses the feed from the given data and returns the array of items. */
 - (NSArray *)parseFeedFromData:(NSData *)data {
-	NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
-	NSArray *items = [self parseFeedWithParser:parser];
-	[parser release];
+	NSArray *items = nil;
+	
+	if (data != nil) {
+		NSXMLParser *parser = [[NSXMLParser alloc] initWithData:data];
+		items = [self parseFeedWithParser:parser];
+		[parser release];
+	}
 	
 	return items;
 }
