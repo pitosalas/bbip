@@ -24,9 +24,16 @@ static NSString *codes[] = {
     @"&iacute;", @"&icirc;",  @"&iuml;",   @"&eth;",    @"&ntilde;", @"&ograve;", @"&oacute;",
     @"&ocirc;",  @"&otilde;", @"&ouml;",   @"&divide;", @"&oslash;", @"&ugrave;", @"&uacute;",
 	@"&ucirc;",  @"&uuml;",   @"&yacute;", @"&thorn;",  @"&yuml;",
-	@"&quot;",   @"&apos;",   @"&amp;",    @"&lt;",     @"&gt;" };
+	@"&quot;",   @"&apos;",   @"&amp;",    @"&lt;",     @"&gt;",
+	@"&ndash;",	 @"&mdash;",  @"&lsquo;",  @"&rsquo;",  @"&sbquo;",  @"&ldquo;",  @"&rdquo;",
+	@"&bdquo;",  @"&dagger;", @"&Dagger;", @"&permil;", @"&lsaquo;", @"&rsaquo;", @"&euro;",
+	@"&hellip;" };
 
-static int customCodes[] = { 34, 39, 38, 60, 62 };
+static int customCodes[] = {
+	34,			 39,		  38,		   60,			62,
+	8211,		 8212,		  8216,		   8217,		8218,		 8220,		  8221,
+	8222,		 8224,		  8225,		   8240,		8249,		 8250,		  8364,
+	8230 };
 
 @implementation Article 
 
