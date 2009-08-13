@@ -27,13 +27,13 @@ static NSString *codes[] = {
 	@"&quot;",   @"&apos;",   @"&amp;",    @"&lt;",     @"&gt;",
 	@"&ndash;",	 @"&mdash;",  @"&lsquo;",  @"&rsquo;",  @"&sbquo;",  @"&ldquo;",  @"&rdquo;",
 	@"&bdquo;",  @"&dagger;", @"&Dagger;", @"&permil;", @"&lsaquo;", @"&rsaquo;", @"&euro;",
-	@"&hellip;" };
+	@"&hellip;", @"&bull;" };
 
 static int customCodes[] = {
 	34,			 39,		  38,		   60,			62,
 	8211,		 8212,		  8216,		   8217,		8218,		 8220,		  8221,
 	8222,		 8224,		  8225,		   8240,		8249,		 8250,		  8364,
-	8230 };
+	8230,		 8226};
 
 @implementation Article 
 
@@ -44,6 +44,12 @@ static int customCodes[] = {
 @dynamic body;
 @dynamic feed;
 @dynamic brief;
+
+- (void)setTitle:(NSString *)title {
+	[self willChangeValueForKey:@"title"];
+	[self setPrimitiveValue:[Article plainTextFromHTML:title] forKey:@"title"];
+	[self didChangeValueForKey:@"title"];
+}
 
 /** Sets read status and updates underlying guides. */
 - (void)setRead:(NSNumber *)read {
@@ -89,14 +95,20 @@ static int customCodes[] = {
 	
 	NSScanner *scanner = [NSScanner scannerWithString:html];
 	NSString  *text;
-
+	NSString  *replacement;
+	
 	while ([scanner isAtEnd] == NO) {
 		[scanner scanUpToString:@"<" intoString:NULL];
 		[scanner scanUpToString:@">" intoString:&text];
-		html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", text] withString:@""];
+
+		if ([text hasPrefix:@"<br"] || [text hasPrefix:@"<p"]) {
+			replacement = @"\n";
+		} else replacement = @"";
+		
+		html = [html stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@>", text] withString:replacement];
 	}
 
-	return html;
+	return [html stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 }
 
 /** Returns up to given number of sentences from the string. */

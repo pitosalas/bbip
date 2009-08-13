@@ -337,7 +337,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>7978AF161034218600B2550B</string>
+										<string>7978AF2B1034269500B2550B</string>
 										<key>history</key>
 										<array>
 											<string>79C0E2E810297A6900A3D584</string>
@@ -394,7 +394,6 @@
 											<string>79092B621031BE8200ECDD50</string>
 											<string>79092B971031C1FD00ECDD50</string>
 											<string>79092B991031C1FD00ECDD50</string>
-											<string>79092BF31031C85A00ECDD50</string>
 											<string>79092C351031CE3A00ECDD50</string>
 											<string>79092C361031CE3A00ECDD50</string>
 											<string>79092C6D1031D5BD00ECDD50</string>
@@ -415,7 +414,8 @@
 											<string>7978AF0C10341EB700B2550B</string>
 											<string>7978AF121034218600B2550B</string>
 											<string>7978AF131034218600B2550B</string>
-											<string>79092C551031D1AC00ECDD50</string>
+											<string>7978AF1A1034239B00B2550B</string>
+											<string>7978AF1B1034239B00B2550B</string>
 										</array>
 										<key>prevStack</key>
 										<array>
@@ -506,6 +506,12 @@
 											<string>7978AF0E10341EB700B2550B</string>
 											<string>7978AF141034218600B2550B</string>
 											<string>7978AF151034218600B2550B</string>
+											<string>7978AF1C1034239B00B2550B</string>
+											<string>7978AF1D1034239B00B2550B</string>
+											<string>7978AF1E1034239B00B2550B</string>
+											<string>7978AF1F1034239B00B2550B</string>
+											<string>7978AF201034239B00B2550B</string>
+											<string>7978AF211034239B00B2550B</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -699,12 +705,11 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>7978AF171034218600B2550B</string>
 		<string>7978AED310341B3A00B2550B</string>
 		<string>7978AED410341B3A00B2550B</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>79C0E2081029664D00A3D584</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>79C0E2081029664D00A3D584</string>
 		<string>/Users/alg/Work/Pito/iPhone/BlogBridge/BlogBridge.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -729,7 +734,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>ArticleTests.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -800,7 +805,7 @@
 			<key>WindowToolGUID</key>
 			<string>79C0E2081029664D00A3D584</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
