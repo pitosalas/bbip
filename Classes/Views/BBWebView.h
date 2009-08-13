@@ -9,13 +9,23 @@
 #import <UIKit/UIKit.h>
 
 @interface BBWebView : UIWebView {
-	CGPoint			gestureStart;
 	UIView			*touchesDelegate;
+	CGPoint			gestureStart;
+	NSTimeInterval	touchStart;
 	BOOL			tracking;
 	
 	id				navDelegate;
 }
 
 @property (nonatomic, assign) id navDelegate;
+
+@end
+
+
+
+@interface BBWebView (private)
+
+/** Calls a delegate to switch articles. */
+- (void)delegateArticleSwitching:(BOOL)previous;
 
 @end

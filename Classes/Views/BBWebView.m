@@ -9,9 +9,10 @@
 #import "BBWebView.h"
 #import "Constants.h"
 
-const float kMinimumGestureLength	= 25;
-const float kMaximumVariance		= 5;
-const float kMaximumTouchDistance	= 5;
+const float		kMinimumGestureLength	= 25;
+const float		kMaximumVariance		= 5;
+const float		kMaximumTouchDistance	= 5;
+const double	kQuickTouchTime			= 0.25;
 
 @implementation BBWebView
 
@@ -23,9 +24,10 @@ const float kMaximumTouchDistance	= 5;
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	UITouch *touch = [touches anyObject];
-	gestureStart = [touch locationInView:self];
-	tracking = YES;
+	UITouch *touch	= [touches anyObject];
+	gestureStart	= [touch locationInView:self];
+	touchStart		= event.timestamp;
+	tracking		= YES;
 	
 	[touchesDelegate					touchesBegan:touches withEvent:event];
 	[[touchesDelegate nextResponder]	touchesBegan:touches withEvent:event];
@@ -42,14 +44,8 @@ const float kMaximumTouchDistance	= 5;
 		if (deltaX >= kMinimumGestureLength && deltaY <= kMaximumVariance) {
 			// handle horizontal swipe
 			
-			SEL action;
-			if (gestureStart.x < currentPosition.x) {
-				action = @selector(onPreviousArticle);
-			} else {
-				action = @selector(onNextArticle);
-			}
-			
-			if ([navDelegate respondsToSelector:action]) [navDelegate performSelector:action];
+			BOOL previous = gestureStart.x < currentPosition.x;
+			[self delegateArticleSwitching:previous];
 			
 			tracking = NO;
 		} else if (deltaY >= kMinimumGestureLength && deltaX <= kMaximumVariance) {
@@ -63,7 +59,7 @@ const float kMaximumTouchDistance	= 5;
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	// See if we still tracking -- not processed a swipe yet
-	if (tracking) {
+	if (tracking && (event.timestamp - touchStart) < kQuickTouchTime) {
 		UITouch *touch = [touches anyObject];
 		CGPoint currentPosition = [touch locationInView:self];
 		
@@ -71,8 +67,14 @@ const float kMaximumTouchDistance	= 5;
 		CGFloat deltaY = fabsf(gestureStart.y - currentPosition.y);
 
 		if (deltaX < kMaximumTouchDistance && deltaY < kMaximumTouchDistance) {
-			SEL action = @selector(onTouch);
-			if ([navDelegate respondsToSelector:action]) [navDelegate performSelector:action];
+			if (currentPosition.x < self.frame.size.width / 3) {
+				[self delegateArticleSwitching:YES];
+			} else if (currentPosition.x > self.frame.size.width * 2 / 3) {
+				[self delegateArticleSwitching:NO];
+			} else {
+				SEL action = @selector(onTouch);
+				if ([navDelegate respondsToSelector:action]) [navDelegate performSelector:action];
+			}
 		}
 	}
 	
@@ -88,5 +90,12 @@ const float kMaximumTouchDistance	= 5;
 	[touchesDelegate					touchesCancelled:touches withEvent:event];
 	[[touchesDelegate nextResponder]	touchesCancelled:touches withEvent:event];
 }
+
+/** Calls a delegate to switch articles. */
+- (void)delegateArticleSwitching:(BOOL)previous {
+	SEL action = previous ? @selector(onPreviousArticle) : @selector(onNextArticle);
+	if ([navDelegate respondsToSelector:action]) [navDelegate performSelector:action];
+}
+
 
 @end

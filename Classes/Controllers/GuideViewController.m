@@ -35,13 +35,18 @@
 	return self;
 }
 
+- (void)dealloc {
+	[guide release];
+	[fetchedResultsController release];
+	[managedObjectContext release];
+    [super dealloc];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
 	NSError *error;
-	if (![[self fetchedResultsController] performFetch:&error]) {
-		// TODO: Handle the error...
-	}
+	[[self fetchedResultsController] performFetch:&error];
 }
 
 /** Updates the badge. */
@@ -50,32 +55,17 @@
 	self.tabBarItem.badgeValue = unread > 0 ? [NSString stringWithFormat:@"%i", unread] : nil;
 }
 
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload {
-	// Release anything that can be recreated in viewDidLoad or on demand.
-	// e.g. self.myOutlet = nil;
-}
-
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [[fetchedResultsController sections] count];
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-
-// Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"ArticleCell";
     
@@ -102,7 +92,7 @@
 	NSString *cellText = article.title;
 
 	// The width subtracted from the tableView frame depends on:
-	// 40.0 for detail accessory
+	// 20.0 for detail accessory
 	CGSize constraintSize = CGSizeMake(tableView.frame.size.width - 20.0, CGFLOAT_MAX);
 	CGSize labelSize      = [cellText       sizeWithFont:[UIFont boldSystemFontOfSize:BBArticleCellTextFontSize] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
 	CGSize detailSize     = [cellDetailText sizeWithFont:[UIFont systemFontOfSize:BBArticleCellDetailFontSize] constrainedToSize:constraintSize lineBreakMode:UILineBreakModeWordWrap];
@@ -123,30 +113,10 @@
 	[self markArticleAsReadAndNotify:article];
 }
 
-/** Marks an article as read and notifies everyone. */
-- (void)markArticleAsReadAndNotify:(Article *)article {
-	if (!article.read) {
-		NSError *error;
-		article.read = [NSNumber numberWithBool:TRUE];
-		[managedObjectContext save:&error];
-		
-		// Notify everyone and let them update themselves
-		NSDictionary *info = [NSDictionary dictionaryWithObject:article forKey:@"article"];
-		[[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationArticleRead object:self userInfo:info];
-	}		
-}
-
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // The table view should not be re-orderable.
     return NO;
 }
-
-/*
-// NSFetchedResultsControllerDelegate method to notify the delegate that all section and object changes have been processed. 
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
-	[self.tableView reloadData];
-}
-*/
 
 - (NSFetchedResultsController *)fetchedResultsController {
     if (fetchedResultsController != nil) return fetchedResultsController;
@@ -179,12 +149,19 @@
 	return fetchedResultsController;
 }    
 
-- (void)dealloc {
-	[guide release];
-	[fetchedResultsController release];
-	[managedObjectContext release];
-    [super dealloc];
+/** Marks an article as read and notifies everyone. */
+- (void)markArticleAsReadAndNotify:(Article *)article {
+	if (!article.read) {
+		NSError *error;
+		article.read = [NSNumber numberWithBool:TRUE];
+		[managedObjectContext save:&error];
+		
+		// Notify everyone and let them update themselves
+		NSDictionary *info = [NSDictionary dictionaryWithObject:article forKey:@"article"];
+		[[NSNotificationCenter defaultCenter] postNotificationName:BBNotificationArticleRead object:self userInfo:info];
+	}		
 }
+
 
 #pragma mark -
 #pragma mark Notifications
@@ -213,7 +190,6 @@
 			NSLog(@"Failed to update read article: %@", ex);
 		}
 		
-		// Update badge
 		[self updateBadge];
 	}
 }

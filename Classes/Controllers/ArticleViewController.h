@@ -18,7 +18,7 @@
 	id			navDelegate;
 }
 
-@property (nonatomic, retain) IBOutlet UIWebView *webView;
+@property (nonatomic, retain) IBOutlet BBWebView *webView;
 @property (nonatomic, retain) IBOutlet UIToolbar *toolbar;
 @property (nonatomic, retain) Article *article;
 @property (nonatomic, assign) id navDelegate;

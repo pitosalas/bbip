@@ -31,20 +31,16 @@
 	return self;
 }
 
-/**
- * Set the style of the tab bar on the "Configure" page (when click Edit on the More... page).
- */
+- (void)dealloc {
+	[managedObjectContext release];
+    [super dealloc];
+}
+
+/** Set the style of the tab bar on the "Configure" page (when click Edit on the More... page). */
 - (void)tabBarController:(UITabBarController *)tabBarController willBeginCustomizingViewControllers:(NSArray *)viewControllers {
     UIView *views = [tabBarController.view.subviews objectAtIndex:1];
     UINavigationBar *navBar = [[views subviews] objectAtIndex:0];
     navBar.barStyle = UIBarStyleBlack;
-}
-
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -58,22 +54,11 @@
 	[super viewWillAppear:animated];
 }
 
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
-}
-
-- (void)dealloc {
-	[managedObjectContext release];
-    [super dealloc];
-}
-
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
 	self.title = viewController.title;
 	[[NSUserDefaults standardUserDefaults] setInteger:self.selectedIndex forKey:BBSettingSelectedGuide];
 }
 
-// Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	BOOL articleView = NO;
 	
