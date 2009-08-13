@@ -81,7 +81,7 @@
 	cell.textLabel.text			= article.title;
 	cell.detailTextLabel.text	= article.brief;
 	
-	cell.textLabel.textColor 	= article.read ? [UIColor darkGrayColor] : [UIColor blackColor];
+	cell.textLabel.textColor 	= article.read ? [UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:0.5f] : [UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:1.0f];
 	
     return cell;
 }

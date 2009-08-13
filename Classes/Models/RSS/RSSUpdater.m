@@ -116,6 +116,8 @@
 
 /** Invoked in the main thread context when the feed is updated. */
 - (void)fetchedUpdatesForFeed:(NSDictionary *)args {
+	[args retain];
+	
 	NSManagedObjectID *feedID	= [args objectForKey:@"feedID"];
 	NSArray *items				= [args objectForKey:@"items"];
 	
@@ -177,6 +179,8 @@
 		NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
 		[nc postNotificationName:BBNotificationArticlesAdded object:self userInfo:info];
 	}
+	
+	[args release];
 }
 
 @end

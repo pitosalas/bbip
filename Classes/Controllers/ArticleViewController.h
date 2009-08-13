@@ -11,11 +11,12 @@
 @class BBWebView, Article;
 
 @interface ArticleViewController : UIViewController {
-	BBWebView	*webView;
-	Article		*article;
-	int			currentFontBias;
-	UIToolbar	*toolbar;
-	id			navDelegate;
+	BBWebView			*webView;
+	Article				*article;
+	int					currentFontBias;
+	UIToolbar			*toolbar;
+	id					navDelegate;
+	UISegmentedControl	*segmentedButtons;
 }
 
 @property (nonatomic, retain) IBOutlet BBWebView *webView;

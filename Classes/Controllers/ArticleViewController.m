@@ -32,6 +32,12 @@
 }
 
 - (void)viewDidLoad {
+	segmentedButtons = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObjects:[UIImage imageNamed:@"left.png"], [UIImage imageNamed:@"right.png"], nil]];
+	segmentedButtons.momentary = YES;
+	segmentedButtons.segmentedControlStyle = UISegmentedControlStyleBar;
+	[segmentedButtons addTarget:self action:@selector(onButtonNavigation) forControlEvents:UIControlEventValueChanged];
+	self.navigationItem.titleView = segmentedButtons;
+	
 	webView.navDelegate = self;
 	toolbar.hidden = YES;
 	
@@ -57,6 +63,8 @@
 - (void)viewDidUnload {
 	self.webView = nil;
 	self.toolbar = nil;
+	[segmentedButtons release];
+	segmentedButtons = nil;
 }
 
 #pragma mark -
@@ -104,6 +112,11 @@
 	if ([navDelegate respondsToSelector:action]) {
 		[navDelegate performSelector:action withObject:self];
 	}
+}
+
+/** Invoked when the user touches segmented navigation buttons in the title bar. */
+- (void)onButtonNavigation {
+	if (segmentedButtons.selectedSegmentIndex == 0) [self onPreviousArticle]; else [self onNextArticle];
 }
 
 /** Invoked when someone touches the middle section. */

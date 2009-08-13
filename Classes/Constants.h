@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 /** Settings */
 extern NSString * const BBSettingCurrentFontBias;
@@ -24,5 +25,5 @@ extern NSString * const BBNotificationArticleRead;
 extern NSString * const BBNotificationReachability;
 
 /** Article cell */
-extern float const BBArticleCellTextFontSize;
-extern float const BBArticleCellDetailFontSize;
+extern float	  const BBArticleCellTextFontSize;
+extern float	  const BBArticleCellDetailFontSize;

@@ -8,7 +8,7 @@
 
 @class GuidesTabController, RSSUpdater;
 
-@interface BlogBridgeAppDelegate : NSObject <UIApplicationDelegate> {
+@interface BlogBridgeAppDelegate : NSObject <UIApplicationDelegate, UIAccelerometerDelegate> {
     
     NSManagedObjectModel			*managedObjectModel;
     NSManagedObjectContext			*managedObjectContext;	    
@@ -17,6 +17,9 @@
     UIWindow						*window;
 	GuidesTabController				*tabBarController;
 	RSSUpdater						*updater;
+	
+	UIAccelerationValue	myAccelerometer[3];
+	CFTimeInterval		lastTime;
 }
 
 - (IBAction)saveAction:sender;
