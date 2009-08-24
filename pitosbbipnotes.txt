@@ -1,0 +1,5 @@
+Notes for BBiP
+
+- spinner on the splash screen while waiting for first poll?
+- when is account checked?
+- need a way to remind people that they are running against a default set of guides
