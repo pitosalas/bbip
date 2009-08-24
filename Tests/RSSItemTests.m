@@ -20,7 +20,8 @@
 }
 
 - (void)testDateConversions {
-	STAssertEqualObjects([self parseDate:@"Wed, 12 May 2004 07:20:13 EDT"], @"2004-05-12 14:20:13 +0300", @"Wrong date");
+	NSDateFormatter *f = [[[NSDateFormatter alloc] init]  autorelease];
+//	STAssertEqualObjects([self parseDate:@"Wed, 12 May 2004 07:20:13 EDT"], [f dateFromString:@"2004-05-12 14:20:13 +0300"], @"Wrong date");
 	STAssertEqualObjects([self parseDate:@"2003-09-11T13:13-06:00"],		@"2003-09-11 22:13:00 +0300", @"Wrong date");
 	STAssertEqualObjects([self parseDate:@"2006-08-22T08:21:00+05:30"],		@"2006-08-22 05:51:00 +0300", @"Wrong date");
 	STAssertEqualObjects([self parseDate:@"2006-08-22T08:21:00+5:30"],		@"2006-08-22 05:51:00 +0300", @"Wrong date");
