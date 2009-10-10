@@ -14,3 +14,10 @@ bugs
 new
 
 - need a way to remind people that they are running against a default set of guides. Maybe one of the 'guide' buttons is fixed and has an icon called "trial". Or maybe there's a permanent bar (like some iphone apps show ads) that say "trial mode" that when you click displays instructions to sign up.
+
+- Seems like we need an equivalent of the 'star' filter in BBiP. I am
+thinking that this is a preference because I dont think it is changed
+often enough but in my case I got many too many feeds in the guide I
+synched.
+
+- Big question: what can we do for smartfeeds?
