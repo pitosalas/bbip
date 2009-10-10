@@ -20,6 +20,6 @@
 	RSSItem *item;
 }
 
-- (NSString *)parseDate:(NSString *)date;
+- (NSTimeInterval)parseDate:(NSString *)date;
 
 @end
