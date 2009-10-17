@@ -20,4 +20,6 @@ thinking that this is a preference because I dont think it is changed
 often enough but in my case I got many too many feeds in the guide I
 synched.
 
-- Big question: what can we do for smartfeeds?
+Decisions:
+- no smartfeeds
+- 'simple' unread sync mechanism, that will break if we ever add a new feed type 
