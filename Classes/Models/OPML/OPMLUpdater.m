@@ -85,6 +85,7 @@
 			NSManagedObject *feed = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
 			[feed setValue:opmlFeed.title  forKey:@"name"];
 			[feed setValue:opmlFeed.xmlURL forKey:@"url"];
+			[feed setValue:opmlFeed.handlingType forKey:@"handlingType"];
 			[context insertObject:feed];
 			[feed release];
 			

@@ -48,6 +48,7 @@
 		79092B5B1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79092B5A1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel */; };
 		79092B5C1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 79092B5A1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel */; };
 		790D4BDC102AEABF0091EA1B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 790D4BDB102AEABF0091EA1B /* Default.png */; };
+		791164C41089B8F20078BBC3 /* BlogBridge3-4.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 791164C31089B8F20078BBC3 /* BlogBridge3-4.xcmappingmodel */; };
 		7914E722102ACF5300D559D9 /* OPMLGuide.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E721102ACF5300D559D9 /* OPMLGuide.m */; };
 		7914E725102AD0C700D559D9 /* OPMLFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E724102AD0C700D559D9 /* OPMLFeed.m */; };
 		7914E72E102AD23500D559D9 /* OPMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7914E72D102AD23500D559D9 /* OPMLParser.m */; };
@@ -149,6 +150,8 @@
 		79092B521031BC9F00ECDD50 /* BlogBridge 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BlogBridge 3.xcdatamodel"; sourceTree = "<group>"; };
 		79092B5A1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; name = "BlogBridge2-3.xcmappingmodel"; path = "Resources/BlogBridge2-3.xcmappingmodel"; sourceTree = "<group>"; };
 		790D4BDB102AEABF0091EA1B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
+		791164B81089B88A0078BBC3 /* BlogBridge 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BlogBridge 4.xcdatamodel"; sourceTree = "<group>"; };
+		791164C31089B8F20078BBC3 /* BlogBridge3-4.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = "BlogBridge3-4.xcmappingmodel"; sourceTree = "<group>"; };
 		7914E720102ACF5300D559D9 /* OPMLGuide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OPMLGuide.h; path = OPML/OPMLGuide.h; sourceTree = "<group>"; };
 		7914E721102ACF5300D559D9 /* OPMLGuide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OPMLGuide.m; path = OPML/OPMLGuide.m; sourceTree = "<group>"; };
 		7914E723102AD0C700D559D9 /* OPMLFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OPMLFeed.h; path = OPML/OPMLFeed.h; sourceTree = "<group>"; };
@@ -286,6 +289,7 @@
 				79C722A9102AC8E900F863AA /* Settings.bundle */,
 				790927C710307BEA00ECDD50 /* BlogBridge1-2.xcmappingmodel */,
 				79092B5A1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel */,
+				791164C31089B8F20078BBC3 /* BlogBridge3-4.xcmappingmodel */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -608,6 +612,7 @@
 				79092B5C1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel in Sources */,
 				79DD627D10332EC800AC9EBD /* BBWebView.m in Sources */,
 				7978AE4D103413B600B2550B /* Reachability.m in Sources */,
+				791164C41089B8F20078BBC3 /* BlogBridge3-4.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,8 +804,9 @@
 				790927AF103078E700ECDD50 /* BlogBridge.xcdatamodel */,
 				790927C310307B7700ECDD50 /* BlogBridge 2.xcdatamodel */,
 				79092B521031BC9F00ECDD50 /* BlogBridge 3.xcdatamodel */,
+				791164B81089B88A0078BBC3 /* BlogBridge 4.xcdatamodel */,
 			);
-			currentVersion = 79092B521031BC9F00ECDD50 /* BlogBridge 3.xcdatamodel */;
+			currentVersion = 791164B81089B88A0078BBC3 /* BlogBridge 4.xcdatamodel */;
 			name = BlogBridge.xcdatamodeld;
 			path = Resources/BlogBridge.xcdatamodeld;
 			sourceTree = "<group>";
