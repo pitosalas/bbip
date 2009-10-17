@@ -94,6 +94,7 @@
 	
 	NSLog(@"OPML Update: Added %d feed(s)", added);
 	
+	[presentURLs release];
 	[newURLs release];
 }
 
