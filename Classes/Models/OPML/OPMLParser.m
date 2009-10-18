@@ -96,9 +96,9 @@ static NSString *ATTR_HANDLING_TYPE = @"bb:handlingType";
 	OPMLFeed *feed = [[OPMLFeed alloc] initWithTitle:title
 											  xmlURL:[attributeDict valueForKey:ATTR_XML_URL]
 											 htmlURL:[attributeDict valueForKey:ATTR_HTML_URL]
-									 readArticleKeys:[self parseReadKeys:attributeDict]
+									 readArticleKeys:[attributeDict valueForKey:ATTR_READ_KEYS]
 										handlingType:[NSNumber numberWithInt:[[attributeDict valueForKey:ATTR_HANDLING_TYPE] intValue]]];
-	NSLog(@"handlingType=%@", feed.handlingType);
+
 	return [feed autorelease];
 }
 
@@ -109,16 +109,6 @@ static NSString *ATTR_HANDLING_TYPE = @"bb:handlingType";
 	OPMLGuide *guide = [[OPMLGuide alloc] initWithName:[attributeDict valueForKey:ATTR_TEXT]
 											  iconName:[attributeDict valueForKey:ATTR_ICON]];
 	return [guide autorelease];
-}
-
-/**
- * Parses read article keys.
- */
-- (NSArray *)parseReadKeys:(NSDictionary *)attributeDict {
-	NSString *keyString = [attributeDict valueForKey:ATTR_READ_KEYS];
-	if (keyString == nil) return nil;
-	
-	return [keyString componentsSeparatedByString:@","];
 }
 
 @end

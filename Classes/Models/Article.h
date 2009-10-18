@@ -20,6 +20,8 @@
 @property (nonatomic, retain) NSString			*body;
 @property (nonatomic, retain) NSString			*brief;
 @property (nonatomic, retain) NSManagedObject	*feed;
+@property (nonatomic, retain) NSString			*matchKey;
+@property (nonatomic, retain) NSDate			*fetchedOn;
 
 @property (nonatomic, readonly) NSURL			*baseURL;
 
@@ -32,7 +34,7 @@
 /** Decodes entities into real characters. */
 + (NSString *)decodeCharacterEntities:(NSString *)source;
 
+/** Initializes the match key with the value for the given feed handling type. */
+- (void) computeMatchKeyForFeedHandlingType:(int)handlingType;
+
 @end
-
-
-

@@ -28,7 +28,7 @@
 	NSEntityDescription *articleEntity = [NSEntityDescription entityForName:@"Article" inManagedObjectContext:managedObjectContext];
 	NSFetchRequest *req = [[NSFetchRequest alloc] init];
 	[req setEntity:articleEntity];
-	[req setPredicate:[NSPredicate predicateWithFormat:@"(read = 1 AND pubDate < %@) OR pubDate < %@", [self borderReadArticleDate], [self borderUnreadArticleDate]]];
+	[req setPredicate:[NSPredicate predicateWithFormat:@"(read = 1 AND fetchedOn < %@) OR fetchedOn < %@", [self borderReadArticleDate], [self borderUnreadArticleDate]]];
 	
 	NSArray *articles = [managedObjectContext executeFetchRequest:req error:nil];
 	if ([articles count] > 0) {

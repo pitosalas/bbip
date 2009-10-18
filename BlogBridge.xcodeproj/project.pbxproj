@@ -79,7 +79,12 @@
 		7985FBB8108B333F006C31DB /* MatchKeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7985FBB7108B333F006C31DB /* MatchKeyCalculator.m */; };
 		7985FBB9108B333F006C31DB /* MatchKeyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7985FBB7108B333F006C31DB /* MatchKeyCalculator.m */; };
 		7985FBBC108B355F006C31DB /* MatchKeyCalculatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7985FBBB108B355F006C31DB /* MatchKeyCalculatorTest.m */; };
-		79C0E27A1029718F00A3D584 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 79C0E2761029718F00A3D584 /* images */; };
+		7985FCBD108B5EBE006C31DB /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7985FCBC108B5EBE006C31DB /* Feed.m */; };
+		7985FCBE108B5EBE006C31DB /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7985FCBC108B5EBE006C31DB /* Feed.m */; };
+		7985FE0D108B7434006C31DB /* images in Resources */ = {isa = PBXBuildFile; fileRef = 7985FDD0108B7434006C31DB /* images */; };
+		7985FE0E108B7434006C31DB /* images in Resources */ = {isa = PBXBuildFile; fileRef = 7985FDD0108B7434006C31DB /* images */; };
+		7985FE2C108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7985FE2B108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel */; };
+		7985FE2D108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 7985FE2B108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel */; };
 		79C0E28F1029733C00A3D584 /* Guide.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E28E1029733C00A3D584 /* Guide.m */; };
 		79C0E31E1029911C00A3D584 /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E31D1029911C00A3D584 /* Article.m */; };
 		79C0E3CD10299D1900A3D584 /* ArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C0E3CC10299D1900A3D584 /* ArticleCell.m */; };
@@ -188,7 +193,11 @@
 		7985FBB7108B333F006C31DB /* MatchKeyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchKeyCalculator.m; sourceTree = "<group>"; };
 		7985FBBA108B355F006C31DB /* MatchKeyCalculatorTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchKeyCalculatorTest.h; sourceTree = "<group>"; };
 		7985FBBB108B355F006C31DB /* MatchKeyCalculatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchKeyCalculatorTest.m; sourceTree = "<group>"; };
-		79C0E2761029718F00A3D584 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
+		7985FBF2108B438B006C31DB /* BlogBridge 5.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "BlogBridge 5.xcdatamodel"; sourceTree = "<group>"; };
+		7985FCBB108B5EBE006C31DB /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
+		7985FCBC108B5EBE006C31DB /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
+		7985FDD0108B7434006C31DB /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = Resources/images; sourceTree = "<group>"; };
+		7985FE2B108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcmappingmodel; path = "BlogBridge4-5.xcmappingmodel"; sourceTree = "<group>"; };
 		79C0E28D1029733C00A3D584 /* Guide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Guide.h; sourceTree = "<group>"; };
 		79C0E28E1029733C00A3D584 /* Guide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Guide.m; sourceTree = "<group>"; };
 		79C0E31C1029911C00A3D584 /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
@@ -290,13 +299,13 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				79C0E2761029718F00A3D584 /* images */,
 				7978AFBA1034369E00B2550B /* right.png */,
 				7978AFBB1034369E00B2550B /* left.png */,
 				7978AE151034104E00B2550B /* Icon.png */,
 				790D4BDB102AEABF0091EA1B /* Default.png */,
 				790927C110307B7700ECDD50 /* BlogBridge.xcdatamodeld */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
+				7985FDD0108B7434006C31DB /* images */,
 				79C0E4F81029ADD200A3D584 /* ArticleViewController.xib */,
 				8D1107310486CEB800E47090 /* BlogBridge-Info.plist */,
 				79C0E4AB1029A91200A3D584 /* BlogBridge.sqlite */,
@@ -304,6 +313,7 @@
 				790927C710307BEA00ECDD50 /* BlogBridge1-2.xcmappingmodel */,
 				79092B5A1031BE0D00ECDD50 /* BlogBridge2-3.xcmappingmodel */,
 				791164C31089B8F20078BBC3 /* BlogBridge3-4.xcmappingmodel */,
+				7985FE2B108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -422,6 +432,8 @@
 				7914E71F102ACF3300D559D9 /* OPML */,
 				79C0E31C1029911C00A3D584 /* Article.h */,
 				79C0E31D1029911C00A3D584 /* Article.m */,
+				7985FCBB108B5EBE006C31DB /* Feed.h */,
+				7985FCBC108B5EBE006C31DB /* Feed.m */,
 				79C0E28D1029733C00A3D584 /* Guide.h */,
 				79C0E28E1029733C00A3D584 /* Guide.m */,
 			);
@@ -563,7 +575,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
-				79C0E27A1029718F00A3D584 /* images in Resources */,
 				79C0E4AC1029A91200A3D584 /* BlogBridge.sqlite in Resources */,
 				79C0E4FA1029ADD200A3D584 /* ArticleViewController.xib in Resources */,
 				79C722AA102AC8E900F863AA /* Settings.bundle in Resources */,
@@ -571,6 +582,7 @@
 				7978AE161034104E00B2550B /* Icon.png in Resources */,
 				7978AFBC1034369E00B2550B /* right.png in Resources */,
 				7978AFBD1034369E00B2550B /* left.png in Resources */,
+				7985FE0E108B7434006C31DB /* images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +600,7 @@
 				7909261A1030379900ECDD50 /* rss-2.0-2.xml in Resources */,
 				7909262110303AB100ECDD50 /* atom-0.3.xml in Resources */,
 				7909262910303C4800ECDD50 /* atom-1.0.xml in Resources */,
+				7985FE0D108B7434006C31DB /* images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,6 +658,8 @@
 				791164C41089B8F20078BBC3 /* BlogBridge3-4.xcmappingmodel in Sources */,
 				7985FB51108B2FD7006C31DB /* NSString+JavaHash.m in Sources */,
 				7985FBB9108B333F006C31DB /* MatchKeyCalculator.m in Sources */,
+				7985FCBE108B5EBE006C31DB /* Feed.m in Sources */,
+				7985FE2D108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +696,8 @@
 				7985FB6C108B31DD006C31DB /* NSString+JavaHash.m in Sources */,
 				7985FBB8108B333F006C31DB /* MatchKeyCalculator.m in Sources */,
 				7985FBBC108B355F006C31DB /* MatchKeyCalculatorTest.m in Sources */,
+				7985FCBD108B5EBE006C31DB /* Feed.m in Sources */,
+				7985FE2C108B76B1006C31DB /* BlogBridge4-5.xcmappingmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,8 +858,9 @@
 				790927C310307B7700ECDD50 /* BlogBridge 2.xcdatamodel */,
 				79092B521031BC9F00ECDD50 /* BlogBridge 3.xcdatamodel */,
 				791164B81089B88A0078BBC3 /* BlogBridge 4.xcdatamodel */,
+				7985FBF2108B438B006C31DB /* BlogBridge 5.xcdatamodel */,
 			);
-			currentVersion = 791164B81089B88A0078BBC3 /* BlogBridge 4.xcdatamodel */;
+			currentVersion = 7985FBF2108B438B006C31DB /* BlogBridge 5.xcdatamodel */;
 			name = BlogBridge.xcdatamodeld;
 			path = Resources/BlogBridge.xcdatamodeld;
 			sourceTree = "<group>";

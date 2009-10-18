@@ -8,6 +8,7 @@
 
 #import "Article.h"
 #import "Guide.h"
+#import "MatchKeyCalculator.h"
 
 static NSString *codes[] = {
 	@"&nbsp;",   @"&iexcl;",  @"&cent;",   @"&pound;",  @"&curren;", @"&yen;",    @"&brvbar;",
@@ -40,10 +41,15 @@ static int customCodes[] = {
 @dynamic read;
 @dynamic title;
 @dynamic url;
-@dynamic pubDate;
+@dynamic pubDate, fetchedOn;
 @dynamic body;
 @dynamic feed;
 @dynamic brief;
+@dynamic matchKey;
+
+- (void)awakeFromInsert {
+	self.fetchedOn = [NSDate date];
+}
 
 - (void)setTitle:(NSString *)title {
 	[self willChangeValueForKey:@"title"];
@@ -179,6 +185,11 @@ static int customCodes[] = {
 	}
 		
 	return escaped;
+}
+
+/** Initializes the match key with the value for the given feed handling type. */
+- (void) computeMatchKeyForFeedHandlingType:(int)handlingType {
+	self.matchKey = [MatchKeyCalculator calculateWithTitle:self.title link:self.url pubDate:self.pubDate handlingType:handlingType];
 }
 
 @end
