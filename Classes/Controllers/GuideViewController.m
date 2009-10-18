@@ -22,9 +22,10 @@
 		guide = [aGuide retain];
 
 		self.title = guide.name;
+		NSString *icon = [[guide.iconName componentsSeparatedByString:@"."] objectAtIndex:1];
 		self.tabBarItem = [[[UITabBarItem alloc] 
 							initWithTitle:guide.name 
-							image:[UIImage imageNamed:[NSString stringWithFormat:@"images/%@.png", guide.iconName]] 
+							image:[UIImage imageNamed:[NSString stringWithFormat:@"images/%@.png", icon]] 
 							tag:0] autorelease];
 		[self updateBadge];
 
@@ -81,7 +82,7 @@
 	cell.textLabel.text			= article.title;
 	cell.detailTextLabel.text	= article.brief;
 	
-	cell.textLabel.textColor 	= article.read ? [UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:0.5f] : [UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:1.0f];
+	cell.textLabel.textColor 	= [article.read boolValue] ? [UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:0.5f] : [UIColor colorWithRed:0.0f green:0.0f blue:0.5f alpha:1.0f];
 	
     return cell;
 }
@@ -151,7 +152,7 @@
 
 /** Marks an article as read and notifies everyone. */
 - (void)markArticleAsReadAndNotify:(Article *)article {
-	if (!article.read) {
+	if (![article.read boolValue]) {
 		NSError *error;
 		article.read = [NSNumber numberWithBool:TRUE];
 		[managedObjectContext save:&error];

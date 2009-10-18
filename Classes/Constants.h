@@ -27,3 +27,7 @@ extern NSString * const BBNotificationReachability;
 /** Article cell */
 extern float	  const BBArticleCellTextFontSize;
 extern float	  const BBArticleCellDetailFontSize;
+
+/** Handling types */
+extern int		  const HTYPE_STANDARD;
+extern int		  const HTYPE_WIKI;

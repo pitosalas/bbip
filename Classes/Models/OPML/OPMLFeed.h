@@ -13,14 +13,16 @@
 	NSString	*title;
 	NSString	*xmlURL;
 	NSString	*htmlURL;
-	NSArray		*readArticleKeys;
+	NSString	*readArticleKeys;
+	NSNumber	*handlingType;
 }
 
-@property (nonatomic, readonly) NSString *title;
-@property (nonatomic, readonly) NSString *xmlURL;
-@property (nonatomic, readonly) NSString *htmlURL;
-@property (nonatomic, readonly) NSArray  *readArticleKeys;
+@property (nonatomic, readonly) NSString	*title;
+@property (nonatomic, readonly) NSString	*xmlURL;
+@property (nonatomic, readonly) NSString	*htmlURL;
+@property (nonatomic, readonly) NSString	*readArticleKeys;
+@property (nonatomic, readonly) NSNumber	*handlingType;
 
-- (id)initWithTitle:(NSString *)aTitle xmlURL:(NSString *)anXmlURL htmlURL:(NSString *)anHtmlURL readArticleKeys:(NSArray *)aReadArticleKeys;
+- (id)initWithTitle:(NSString *)aTitle xmlURL:(NSString *)anXmlURL htmlURL:(NSString *)anHtmlURL readArticleKeys:(NSString *)aReadArticleKeys handlingType:(NSNumber *)aHandlingType;
 
 @end

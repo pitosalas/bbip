@@ -18,6 +18,7 @@ static NSString *ATTR_XML_URL		= @"xmlUrl";
 static NSString *ATTR_HTML_URL		= @"htmlUrl";
 static NSString *ATTR_READ_KEYS		= @"bb:readArticles";
 static NSString *ATTR_ICON			= @"bb:icon";
+static NSString *ATTR_HANDLING_TYPE = @"bb:handlingType";
 
 @implementation OPMLParser
 
@@ -95,7 +96,9 @@ static NSString *ATTR_ICON			= @"bb:icon";
 	OPMLFeed *feed = [[OPMLFeed alloc] initWithTitle:title
 											  xmlURL:[attributeDict valueForKey:ATTR_XML_URL]
 											 htmlURL:[attributeDict valueForKey:ATTR_HTML_URL]
-									 readArticleKeys:[self parseReadKeys:attributeDict]];
+									 readArticleKeys:[attributeDict valueForKey:ATTR_READ_KEYS]
+										handlingType:[NSNumber numberWithInt:[[attributeDict valueForKey:ATTR_HANDLING_TYPE] intValue]]];
+
 	return [feed autorelease];
 }
 
@@ -106,16 +109,6 @@ static NSString *ATTR_ICON			= @"bb:icon";
 	OPMLGuide *guide = [[OPMLGuide alloc] initWithName:[attributeDict valueForKey:ATTR_TEXT]
 											  iconName:[attributeDict valueForKey:ATTR_ICON]];
 	return [guide autorelease];
-}
-
-/**
- * Parses read article keys.
- */
-- (NSArray *)parseReadKeys:(NSDictionary *)attributeDict {
-	NSString *keyString = [attributeDict valueForKey:ATTR_READ_KEYS];
-	if (keyString == nil) return nil;
-	
-	return [keyString componentsSeparatedByString:@","];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "RSSItem.h"
+#import "NSString+JavaHash.h"
 
 static NSString* DateFormats[] = {
 	@"EEE, dd MMM yyyy HH:mm:ss z",
@@ -44,29 +45,12 @@ static NSString* DateFormats[] = {
 }
 
 - (NSString *)key {
-	NSUInteger code = [self.url hash];
-	code = code * 29 + [self.title hash];
-	return [NSString stringWithFormat:@"%x", code];
+	long long code = 0;
+	code = self.url == nil ? 0 : abs([self.url javaHash]);
+	code = code * 29 + (self.title == nil ? 0 : abs([self.title javaHash]));
+	code = code * 29 + (self.pubDateObject == nil ? 0 : [self.pubDateObject timeIntervalSince1970] * 1000L);
+	return [NSString stringWithFormat:@"%qx", code];
 }
-
-//+ (int)stringHashCode:(NSString *)string {
-/*
- public int hashCode() {
-	int h = hash;
-	if (h == 0) {
-		int off = offset;
-		char val[] = value;
-		int len = count;
- 
-		for (int i = 0; i < len; i++) {
-			h = 31*h + val[off++];
-		}
-		hash = h;
-	}
-	return h;
- }
- */
-//}
 
 + (NSDate *)dateFromString:(NSString *)string {
 	NSDate *date = nil;

@@ -89,6 +89,7 @@
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
 	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:sortDescriptor, nil];
 	[fetchRequest setSortDescriptors:sortDescriptors];
+	[sortDescriptors release];
 	
 	NSError *error;
 	NSArray *guides = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];

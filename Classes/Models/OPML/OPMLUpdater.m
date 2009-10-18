@@ -13,6 +13,7 @@
 #import "OPMLGuide.h"
 #import "OPMLFeed.h"
 #import "Guide.h"
+#import "Feed.h"
 #import "Article.h"
 
 @implementation OPMLUpdater
@@ -62,14 +63,8 @@
 
 /** Adds new feeds and removes those no longer on the list. */
 - (void)syncFeeds:(NSSet *)feeds inManagedObjectContext:(NSManagedObjectContext *)context {
-	// Get all present feeds
-	NSArray *presentFeeds = [self requestAll:@"Feed" inManagedObjectContext:context];
-	
 	// Collect present URLs for matching
-	NSMutableSet *presentURLs = [NSMutableSet new];
-	for (NSManagedObject *feed in presentFeeds) {
-		[presentURLs addObject:[feed valueForKey:@"url"]];
-	}
+	NSDictionary *urlsToFeeds = [self getURLsToFeedsInContext:context];
 	
 	// See what feeds to add
 	int added = 0;
@@ -80,15 +75,24 @@
 		NSString *xmlURL = [opmlFeed xmlURL];
 		[newURLs addObject:xmlURL];
 		
-		if (![presentURLs containsObject:xmlURL]) {
+		Feed *presentFeed = [urlsToFeeds objectForKey:xmlURL];
+		
+		if (presentFeed == nil) {
 			// New feed -- add
-			NSManagedObject *feed = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
-			[feed setValue:opmlFeed.title  forKey:@"name"];
-			[feed setValue:opmlFeed.xmlURL forKey:@"url"];
+			Feed *feed = [[NSManagedObject alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+			feed.name			= opmlFeed.title;
+			feed.url			= opmlFeed.xmlURL;
+			feed.handlingType	= opmlFeed.handlingType;
+			feed.incomingReadArticlesKeys = opmlFeed.readArticleKeys;
+
 			[context insertObject:feed];
 			[feed release];
 			
 			added++;
+		} else {
+			// Mark articles in this feed as read (those mentioned in the list of read keys)
+			presentFeed.incomingReadArticlesKeys = opmlFeed.readArticleKeys;
+			[presentFeed markArticlesAsReadWithIncomingKeys];
 		}
 	}
 	
@@ -107,11 +111,7 @@
 	}
 	
 	// Add all new guides back and link them to feeds
-	NSArray *presentFeeds = [self requestAll:@"Feed" inManagedObjectContext:context];
-	NSMutableDictionary *urlsToFeeds = [NSMutableDictionary new];
-	for (NSManagedObject *feed in presentFeeds) {
-		[urlsToFeeds setObject:feed forKey:[feed valueForKey:@"url"]];
-	}
+	NSDictionary *urlsToFeeds = [self getURLsToFeedsInContext:context];
 
 	NSEntityDescription *guideEntity = [NSEntityDescription entityForName:@"Guide" inManagedObjectContext:context];
 	for (OPMLGuide *opmlGuide in guides) {
@@ -127,7 +127,7 @@
 			if (feed != nil) {
 				[guide addFeedsObject:feed];
 				for (Article *article in [feed valueForKey:@"articles"]) {
-					if (!article.read) unread++;
+					if (![article.read boolValue]) unread++;
 				}
 			}
 		}
@@ -137,8 +137,16 @@
 		
 		[guide release];
 	}
-	
-	[urlsToFeeds release];
+}
+
+/** Returns the dictionary of all URLs to Feeds. */
+- (NSDictionary *) getURLsToFeedsInContext:(NSManagedObjectContext *)context {
+	NSArray *presentFeeds = [self requestAll:@"Feed" inManagedObjectContext:context];
+	NSMutableDictionary *urlsToFeeds = [NSMutableDictionary new];
+	for (Feed *feed in presentFeeds) {
+		[urlsToFeeds setObject:feed forKey:[feed valueForKey:@"url"]];
+	}
+	return [urlsToFeeds autorelease];
 }
 
 /** Removes unlinked feeds with their articles. */

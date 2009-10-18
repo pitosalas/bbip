@@ -11,6 +11,7 @@
 #import "RSSFeedParser.h"
 #import "RSSItem.h"
 #import "Article.h"
+#import "Feed.h"
 #import "Guide.h"
 #import "Reachability.h"
 
@@ -121,14 +122,17 @@
 	NSManagedObjectID *feedID	= [args objectForKey:@"feedID"];
 	NSArray *items				= [args objectForKey:@"items"];
 	
-	NSManagedObject *feed = [context objectWithID:feedID];
+	Feed *feed = (Feed *)[context objectWithID:feedID];
+	
+	NSLog(@"Keys=%@", feed.incomingReadArticlesKeys);
 
 	// See if there are any updates
 	NSMutableArray *addedArticles		= [NSMutableArray array];
-	NSString *latestSeenArticleKey		= [feed valueForKey:@"latestArticleKey"];
+	NSString *latestSeenArticleKey		= feed.latestArticleKey;
 	NSEntityDescription *articleEntity	= [NSEntityDescription entityForName:@"Article" inManagedObjectContext:context];
 	int timeOffset						= 0;
 	BOOL addedNewArticles				= NO;
+	int addedUnreadArticles             = 0;
 	
 	for (RSSItem *item in items) {
 		if ([item.key caseInsensitiveCompare:latestSeenArticleKey]) {
@@ -140,10 +144,14 @@
 			article.body	= item.body;
 			article.url		= item.url;
 			article.pubDate	= item.pubDateObject ? item.pubDateObject : [NSDate dateWithTimeIntervalSinceNow:-(timeOffset++)];
-			article.read	= NO;
 			article.feed    = feed;
+			[article computeMatchKeyForFeedHandlingType:[feed.handlingType intValue]];
+
+			article.read	= [NSNumber numberWithBool:[feed knowsArticleAsRead:article]];
 			
 			[addedArticles addObject:article];
+			
+			if (![article.read boolValue]) addedUnreadArticles++;
 			
 			[article release];
 		} else break;
@@ -151,17 +159,19 @@
 
 	// Set last update date, last seen article key and save changes
 	NSError *error;
-	[feed setValue:[NSDate date] forKey:@"updatedOn"];
 	if (addedNewArticles) {
-		[feed setValue:((RSSItem *)[items objectAtIndex:0]).key forKey:@"latestArticleKey"];
+		feed.latestArticleKey = ((RSSItem *)[items objectAtIndex:0]).key;
 		
 		// Update guides' unread counters
-		NSSet *guides = [feed valueForKeyPath:@"guides"];
-		for (Guide *guide in guides) {
-			guide.unreadCount = [NSNumber numberWithInt:([guide.unreadCount intValue] + [addedArticles count])];
+		for (Guide *guide in feed.guides) {
+			guide.unreadCount = [NSNumber numberWithInt:([guide.unreadCount intValue] + addedUnreadArticles)];
 		}
 	}
 
+	/** Reset incoming read article keys. */
+	feed.incomingReadArticlesKeys = nil;
+	feed.updatedOn = [NSDate date];
+	
 	if (![context save:&error]) {
 		NSLog(@"Failed to update: %@", error);
 	}

@@ -25,3 +25,6 @@ NSString * const BBNotificationReachability		= @"kNetworkReachabilityChangedNoti
 
 float const BBArticleCellTextFontSize			= 16.0;
 float const BBArticleCellDetailFontSize			= 12.0;
+
+int const HTYPE_STANDARD						= 0;
+int const HTYPE_WIKI							= 1;

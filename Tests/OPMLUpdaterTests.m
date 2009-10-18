@@ -28,10 +28,12 @@
 
 - (void)testCollectFeedsFromGuides {
 	// Create 4 feeds with one duplicate (feed22)
-	OPMLFeed *feed11  = [[OPMLFeed alloc] initWithTitle:@"t11" xmlURL:@"1" htmlURL:@"" readArticleKeys:nil];
-	OPMLFeed *feed12  = [[OPMLFeed alloc] initWithTitle:@"t12" xmlURL:@"2" htmlURL:@"" readArticleKeys:nil];
-	OPMLFeed *feed21  = [[OPMLFeed alloc] initWithTitle:@"t21" xmlURL:@"3" htmlURL:@"" readArticleKeys:nil];
-	OPMLFeed *feed22  = [[OPMLFeed alloc] initWithTitle:@"t11" xmlURL:@"1" htmlURL:@"" readArticleKeys:nil];
+	NSNumber *ht = [NSNumber numberWithInt:0];
+	OPMLFeed *feed11  = [[OPMLFeed alloc] initWithTitle:@"t11" xmlURL:@"1" htmlURL:@"" readArticleKeys:nil handlingType:ht];
+	OPMLFeed *feed12  = [[OPMLFeed alloc] initWithTitle:@"t12" xmlURL:@"2" htmlURL:@"" readArticleKeys:nil handlingType:ht];
+	OPMLFeed *feed21  = [[OPMLFeed alloc] initWithTitle:@"t21" xmlURL:@"3" htmlURL:@"" readArticleKeys:nil handlingType:ht];
+	OPMLFeed *feed22  = [[OPMLFeed alloc] initWithTitle:@"t11" xmlURL:@"1" htmlURL:@"" readArticleKeys:nil handlingType:ht];
+	[ht release];
 
 	// Create two guides with feeds in them
 	OPMLGuide *guide1 = [[OPMLGuide alloc] initWithName:@"g1" iconName:@"i1"];

@@ -21,16 +21,6 @@
 	[parser release];
 }
 
-- (void)testParseReadKeys {
-	NSDictionary *attrs = [NSDictionary dictionaryWithObject:@"a,b,c" forKey:@"bb:readArticles"];
-	NSArray *keys = [parser parseReadKeys:attrs];
-
-	STAssertEquals(3, (int)[keys count], @"Should include all 3 keys");
-	STAssertEqualObjects(@"a", [keys objectAtIndex:0], @"Wrong key");
-	STAssertEqualObjects(@"b", [keys objectAtIndex:1], @"Wrong key");
-	STAssertEqualObjects(@"c", [keys objectAtIndex:2], @"Wrong key");
-}
-
 #pragma mark Feeds
 
 - (void)testParseFeedFull {
@@ -42,13 +32,12 @@
 						   @"html",  @"htmlUrl",
 						   nil];
 
-	NSArray *keys  = [NSArray arrayWithObjects:@"a", @"b", @"c", nil];
 	OPMLFeed *feed = [parser parseFeed:attrs];
 
 	STAssertEqualObjects(feed.title, @"title", @"Wrong title");
 	STAssertEqualObjects(feed.xmlURL, @"xml", @"Wrong XML URL");
 	STAssertEqualObjects(feed.htmlURL, @"html", @"Wrong HTML URL");
-	STAssertEqualObjects(feed.readArticleKeys, keys, @"Wrong keys");
+	STAssertEqualObjects(feed.readArticleKeys, @"a,b,c", @"Wrong keys");
 }
 
 - (void)testParseFeedNoKeys {

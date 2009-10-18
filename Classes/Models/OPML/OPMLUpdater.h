@@ -35,4 +35,7 @@
 /** Removes unlinked feeds with their articles. */
 - (void)removeUnlinkedFeedsInManagedObjectContext:(NSManagedObjectContext *)context;
 
+/** Returns the dictionary of all URLs to Feeds. */
+- (NSDictionary *) getURLsToFeedsInContext:(NSManagedObjectContext *)context;
+
 @end

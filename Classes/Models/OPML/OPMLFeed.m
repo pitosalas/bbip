@@ -11,14 +11,15 @@
 
 @implementation OPMLFeed
 
-@synthesize title, xmlURL, htmlURL, readArticleKeys;
+@synthesize title, xmlURL, htmlURL, readArticleKeys, handlingType;
 
-- (id)initWithTitle:(NSString *)aTitle xmlURL:(NSString *)anXmlURL htmlURL:(NSString *)anHtmlURL readArticleKeys:(NSArray *)aReadArticleKeys {
+- (id)initWithTitle:(NSString *)aTitle xmlURL:(NSString *)anXmlURL htmlURL:(NSString *)anHtmlURL readArticleKeys:(NSString *)aReadArticleKeys handlingType:(NSNumber *)aHandlingType {
 	if (self = [super init]) {
 		title			= [aTitle copy];
 		xmlURL			= [anXmlURL copy];
 		htmlURL			= [anHtmlURL copy];
-		readArticleKeys	= [aReadArticleKeys retain];
+		readArticleKeys	= [aReadArticleKeys copy];
+		handlingType	= [aHandlingType copy];
 	}
 	
 	return self;
@@ -29,6 +30,7 @@
 	[xmlURL release];
 	[htmlURL release];
 	[readArticleKeys release];
+	[handlingType release];
 	[super dealloc];
 }
 
