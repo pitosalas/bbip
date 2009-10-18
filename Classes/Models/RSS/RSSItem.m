@@ -49,25 +49,6 @@ static NSString* DateFormats[] = {
 	return [NSString stringWithFormat:@"%x", code];
 }
 
-//+ (int)stringHashCode:(NSString *)string {
-/*
- public int hashCode() {
-	int h = hash;
-	if (h == 0) {
-		int off = offset;
-		char val[] = value;
-		int len = count;
- 
-		for (int i = 0; i < len; i++) {
-			h = 31*h + val[off++];
-		}
-		hash = h;
-	}
-	return h;
- }
- */
-//}
-
 + (NSDate *)dateFromString:(NSString *)string {
 	NSDate *date = nil;
 	
