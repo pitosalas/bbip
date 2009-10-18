@@ -1,5 +1,25 @@
-Notes for BBiP
+tweaks
 
 - spinner on the splash screen while waiting for first poll?
-- when is account checked?
-- need a way to remind people that they are running against a default set of guides
+- when is account checked? Should be checked as soon as info is entered in prefs, and error reported right there
+
+- article extracts in top level list could be shorter
+- article extracts also need a indication of what feed they are from
+
+bugs
+
+- when there is only one guide, there's no 'more' or icons. Looks ugly.
+- mark on guide as mobile, synch, use bbip, go back to bb, mark another guide as mobile, sync again, checkbox gets unset in bb
+
+new
+
+- need a way to remind people that they are running against a default set of guides. Maybe one of the 'guide' buttons is fixed and has an icon called "trial". Or maybe there's a permanent bar (like some iphone apps show ads) that say "trial mode" that when you click displays instructions to sign up.
+
+- Seems like we need an equivalent of the 'star' filter in BBiP. I am
+thinking that this is a preference because I dont think it is changed
+often enough but in my case I got many too many feeds in the guide I
+synched.
+
+Decisions:
+- no smartfeeds
+- 'simple' unread sync mechanism, that will break if we ever add a new feed type 
