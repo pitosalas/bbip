@@ -1,15 +1,26 @@
 tweaks
 
 - spinner on the splash screen while waiting for first poll?
+	A: 	What spinner?
+	
 - when is account checked? Should be checked as soon as info is entered in prefs, and error reported right there
+	A: 	Can't be checked there since when you see those prefs, the app isn't running -- it's the part of operating system.
+		That's why when you don't see the prefs, I tend to say "it's not our problem" -- we have no control over that part.
 
 - article extracts in top level list could be shorter
+	A: 	You need to tell exactly how short they should be.
+	
 - article extracts also need a indication of what feed they are from
+	A: 	Please advise the look.
 
 bugs
 
 - when there is only one guide, there's no 'more' or icons. Looks ugly.
+	A:  It's how the control works in any other app. Let's leave it as-is to save time. If you come up
+		with any ideas how to improve, let me know and we'll discuss and schedule the change.
+	
 - mark on guide as mobile, synch, use bbip, go back to bb, mark another guide as mobile, sync again, checkbox gets unset in bb
+	A: 	Can't see that. Probably fixed already. Played with mobile guides all day yesterday.
 
 new
 
