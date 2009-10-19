@@ -31,10 +31,9 @@
 	NSString *key;
 	
 	NSDateFormatter *df = [[NSDateFormatter new] autorelease];
-	[df setDateStyle:NSDateFormatterMediumStyle];
-	[df setTimeStyle:NSDateFormatterNoStyle];
+	[df setDateFormat:@"yyyy-MM-dd 'at' HH:mm:ss"];
 
-	NSDate *date = [df dateFromString:@"Jan 01, 2009"];
+	NSDate *date = [df dateFromString:@"2009-01-01 at 00:00:00"];
 	
 	key = [MatchKeyCalculator calculateForWikiWithTitle:nil link:nil pubDate:nil];
 	STAssertEqualObjects(key, @"0", @"Wrong key code");
