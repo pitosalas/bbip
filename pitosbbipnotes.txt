@@ -13,6 +13,9 @@ tweaks
 - article extracts also need a indication of what feed they are from
 	A: 	Please advise the look.
 
+- when clicking a link that takes you to safari, the 'title bar' should say 'safari' (or whatever the standard is to tell
+  user that they are now in the browser)
+
 bugs
 
 - when there is only one guide, there's no 'more' or icons. Looks ugly.
@@ -21,6 +24,7 @@ bugs
 	
 - mark on guide as mobile, synch, use bbip, go back to bb, mark another guide as mobile, sync again, checkbox gets unset in bb
 	A: 	Can't see that. Probably fixed already. Played with mobile guides all day yesterday.
+
 
 new
 
