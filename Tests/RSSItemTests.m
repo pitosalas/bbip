@@ -25,7 +25,7 @@
 	STAssertEquals([self parseDate:@"2006-08-22T08:21:00+05:30"],		1156215060.0, @"Wrong date");
 	STAssertEquals([self parseDate:@"2006-08-22T08:21:00+5:30"],		1156215060.0, @"Wrong date");
 	STAssertEquals([self parseDate:@"2006-08-22T08:21:00+0530"],		1156215060.0, @"Wrong date");
-	STAssertEquals([self parseDate:@"2006-08-22T07:15:12Z"],			1156220112.0, @"Wrong date");
+	STAssertEquals([self parseDate:@"2006-08-22T07:15:12+0300"],		1156220112.0, @"Wrong date");
 }
 
 - (NSTimeInterval)parseDate:(NSString *)date {
