@@ -29,18 +29,23 @@ static NSString* DateFormats[] = {
 @synthesize title, body, url, pubDate, pubDateObject;
 
 - (void)setPubDate:(NSString *)date {
-	[pubDate autorelease];
-	pubDate = [date retain];
-	
-	[pubDateObject autorelease];
-	pubDateObject = [[RSSItem dateFromString:date] retain];
+	if (pubDate != date) {
+		[pubDate release];
+		pubDate = [date retain];
+		
+		[pubDateObject release];
+		pubDateObject = [[RSSItem dateFromString:date] retain];
+	}
 }
 
 - (void)dealloc {
-	title	= nil;
-	body	= nil;
-	url		= nil;
-	pubDate	= nil;
+	self.title		= nil;
+	self.body		= nil;
+	self.url		= nil;
+	self.pubDate	= nil;
+	
+	[pubDateObject release];
+	pubDateObject	= nil;
 	[super dealloc];
 }
 
